@@ -144,3 +144,16 @@ tbody tr:hover {
     margin-left: 1rem;
     font-weight: bold;
 }
+
+.report-button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #ffd6d6;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #ffc5c5;
+    }
+}

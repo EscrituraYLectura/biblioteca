@@ -256,6 +256,7 @@ export default function TableFetch() {
                                 <th>Publicación</th>
                                 <th>Tipo</th>
                                 <th>Tema(s)</th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -266,6 +267,7 @@ export default function TableFetch() {
                                 <td>{book.Publicación}</td>
                                 <td>{book.Tipo}</td>
                                 <td>{book.Tema}</td>
+                                <td><button className="report-button" type="button" title="¿Hay información errada? ¿Falta información? ¡Haz clic aquí para reportar!">❌</button></td>
                             </tr>
                             ))}
                         </tbody>
