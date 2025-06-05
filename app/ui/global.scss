@@ -57,19 +57,28 @@ body {
     overflow-x: auto;
 }
 
+.table-container {
+    max-height: 100vh;
+    overflow-y: auto;
+    border-top: 1px solid #ccc;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background-color: #eeeeee;
+    z-index: 2;
 }
 
 th, td {
     padding: 0.65rem;
     text-align: left;
     border-bottom: 1px solid #eee;
-}
-
-tr th {
-    background-color: #eeeeee;
 }
 
 tbody tr:nth-child(even) {

@@ -247,34 +247,36 @@ export default function TableFetch() {
                 <p id="numero-resultados">
                     {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
                 </p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
-                            <th>Autor(es)</th>
-                            <th>Publicación</th>
-                            <th>Tipo</th>
-                            <th>Tema(s)</th>
-                            <th>Idioma</th>
-                            <th>Original</th>
-                            <th>Saga</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredData.map((book, index) => (
-                        <tr key={index}>
-                            <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
-                            <td>{book.Autor}</td>
-                            <td>{book.Publicación}</td>
-                            <td>{book.Tipo}</td>
-                            <td>{book.Tema}</td>
-                            <td>{book.Idioma}</td>
-                            <td>{book.Original}</td>
-                            <td>{book.Saga}</td>
-                        </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
+                                <th>Autor(es)</th>
+                                <th>Publicación</th>
+                                <th>Tipo</th>
+                                <th>Tema(s)</th>
+                                <th>Idioma</th>
+                                <th>Original</th>
+                                <th>Saga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {filteredData.map((book, index) => (
+                            <tr key={index}>
+                                <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
+                                <td>{book.Autor}</td>
+                                <td>{book.Publicación}</td>
+                                <td>{book.Tipo}</td>
+                                <td>{book.Tema}</td>
+                                <td>{book.Idioma}</td>
+                                <td>{book.Original}</td>
+                                <td>{book.Saga}</td>
+                            </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </main>
         </div>
     );
