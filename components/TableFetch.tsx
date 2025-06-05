@@ -256,9 +256,6 @@ export default function TableFetch() {
                                 <th>Publicación</th>
                                 <th>Tipo</th>
                                 <th>Tema(s)</th>
-                                <th>Idioma</th>
-                                <th>Original</th>
-                                <th>Saga</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -269,9 +266,6 @@ export default function TableFetch() {
                                 <td>{book.Publicación}</td>
                                 <td>{book.Tipo}</td>
                                 <td>{book.Tema}</td>
-                                <td>{book.Idioma}</td>
-                                <td>{book.Original}</td>
-                                <td>{book.Saga}</td>
                             </tr>
                             ))}
                         </tbody>
