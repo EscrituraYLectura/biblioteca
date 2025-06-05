@@ -6,11 +6,10 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
-    font-family: sans-serif;
 }
 
 .sidebar {
-    width: 300px;
+    width: 320px;
     padding: 1rem;
     background: #f4f4f4;
     position: sticky;
@@ -23,12 +22,24 @@ body {
     border-right: 1px solid #ccc;
 }
 
+.introduction {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
 .sidebar input,
 .sidebar select {
-    width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 6px;
+}
+
+.sidebar input {
+    width: 94%;
+}
+
+.sidebar select {
+    width: 100%;
 }
 
 .multiSelect {
@@ -39,7 +50,6 @@ body {
 
 .results {
     flex: 1;
-    padding: 1rem;
     overflow-x: auto;
 }
 
@@ -49,13 +59,17 @@ table {
 }
 
 th, td {
-    padding: 0.75rem;
+    padding: 0.65rem;
     text-align: left;
     border-bottom: 1px solid #eee;
 }
 
-tr:hover {
-    background: #f9f9f9;
+tr th {
+    background-color: #f4f4f4;
+}
+
+tbody tr:hover {
+    background: #cee5ff;
 }
 
 .tag-container {
@@ -70,7 +84,6 @@ tr:hover {
     border: none;
     border-radius: 1rem;
     padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -87,4 +100,26 @@ tr:hover {
 .information {
     color: #007bff;
     cursor: help;
+}
+
+#clear-filters-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #c0392b;
+    }
+}
+
+#numero-resultados {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    font-weight: bold;
 }

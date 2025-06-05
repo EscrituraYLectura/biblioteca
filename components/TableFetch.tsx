@@ -125,7 +125,30 @@ export default function TableFetch() {
     return (
         <div className="container">
             <aside className="sidebar">
-                <h2>Filtros:</h2>
+                <div className="introduction">
+                    <p>Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.</p>
+                    <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">Sitio web de código abierto.</a>
+                </div>
+
+                <button
+                    id="clear-filters-button"
+                    type="button"
+                    onClick={() => {
+                    setFilters({
+                        Título: "",
+                        Autor: "",
+                        Publicación: "",
+                        Tipo: "",
+                        Tema: [],
+                        Idioma: "",
+                        Original: "",
+                        Saga: "",
+                        });
+                    router.push("/");
+                    }}
+                >
+                    Borrar filtros
+                </button>
 
                 <label htmlFor="título">Título:</label>
                 <input
@@ -153,7 +176,7 @@ export default function TableFetch() {
                 onChange={(e) => updateFilter("Publicación", e.target.value)}
                 />
 
-                <label htmlFor="tipo">Tipo de libro:</label>
+                <label htmlFor="tipo">Tipo:</label>
                 <select
                 id="tipo"
                 value={filters.Tipo}
@@ -165,7 +188,7 @@ export default function TableFetch() {
                     ))}
                 </select>
 
-                <label htmlFor="temas">Temas de los libros:</label>
+                <label htmlFor="temas">Temas:</label>
                 <div id="temas" className="tag-container">
                 {Array.from(temasSet).map((opt) => {
                     const selected = filters.Tema.includes(opt);
@@ -221,33 +244,36 @@ export default function TableFetch() {
             </aside>
 
             <main className="results">
+                <p id="numero-resultados">
+                    {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
+                </p>
                 <table>
-                <thead>
-                    <tr>
-                    <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
-                    <th>Autor(es)</th>
-                    <th>Publicación</th>
-                    <th>Tipo</th>
-                    <th>Tema(s)</th>
-                    <th>Idioma</th>
-                    <th>Original</th>
-                    <th>Saga</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {filteredData.map((book, index) => (
-                    <tr key={index}>
-                        <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
-                        <td>{book.Autor}</td>
-                        <td>{book.Publicación}</td>
-                        <td>{book.Tipo}</td>
-                        <td>{book.Tema}</td>
-                        <td>{book.Idioma}</td>
-                        <td>{book.Original}</td>
-                        <td>{book.Saga}</td>
-                    </tr>
-                    ))}
-                </tbody>
+                    <thead>
+                        <tr>
+                            <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
+                            <th>Autor(es)</th>
+                            <th>Publicación</th>
+                            <th>Tipo</th>
+                            <th>Tema(s)</th>
+                            <th>Idioma</th>
+                            <th>Original</th>
+                            <th>Saga</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {filteredData.map((book, index) => (
+                        <tr key={index}>
+                            <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
+                            <td>{book.Autor}</td>
+                            <td>{book.Publicación}</td>
+                            <td>{book.Tipo}</td>
+                            <td>{book.Tema}</td>
+                            <td>{book.Idioma}</td>
+                            <td>{book.Original}</td>
+                            <td>{book.Saga}</td>
+                        </tr>
+                        ))}
+                    </tbody>
                 </table>
             </main>
         </div>
