@@ -17,6 +17,7 @@ interface Book {
     Subido: string;
     Formato: string;
     Editado: boolean;
+    Enlace: string;
 }
 
 interface Filters {
@@ -152,7 +153,7 @@ export default function TableFetch() {
                 onChange={(e) => updateFilter("Publicación", e.target.value)}
                 />
 
-                <label htmlFor="tipo">Tipo de ibro:</label>
+                <label htmlFor="tipo">Tipo de libro:</label>
                 <select
                 id="tipo"
                 value={filters.Tipo}
@@ -236,7 +237,7 @@ export default function TableFetch() {
                 <tbody>
                     {filteredData.map((book, index) => (
                     <tr key={index}>
-                        <td>{book.Título}</td>
+                        <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
                         <td>{book.Autor}</td>
                         <td>{book.Publicación}</td>
                         <td>{book.Tipo}</td>
