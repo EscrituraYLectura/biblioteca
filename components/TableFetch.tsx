@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import data from "@/public/data.json";
 
@@ -123,159 +123,161 @@ export default function TableFetch() {
     }, [filters]);
 
     return (
-        <div className="container">
-            <aside className="sidebar">
-                <div className="introduction">
-                    <p>Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.</p>
-                    <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">Sitio web de código abierto.</a>
-                </div>
+        <Suspense>
+            <div className="container">
+                <aside className="sidebar">
+                    <div className="introduction">
+                        <p>Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.</p>
+                        <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">Sitio web de código abierto.</a>
+                    </div>
 
-                <button
-                    id="clear-filters-button"
-                    type="button"
-                    onClick={() => {
-                    setFilters({
-                        Título: "",
-                        Autor: "",
-                        Publicación: "",
-                        Tipo: "",
-                        Tema: [],
-                        Idioma: "",
-                        Original: "",
-                        Saga: "",
-                        });
-                    router.push("/");
-                    }}
-                >
-                    Borrar filtros
-                </button>
+                    <button
+                        id="clear-filters-button"
+                        type="button"
+                        onClick={() => {
+                        setFilters({
+                            Título: "",
+                            Autor: "",
+                            Publicación: "",
+                            Tipo: "",
+                            Tema: [],
+                            Idioma: "",
+                            Original: "",
+                            Saga: "",
+                            });
+                        router.push("/");
+                        }}
+                    >
+                        Borrar filtros
+                    </button>
 
-                <label htmlFor="título">Título:</label>
-                <input
-                id="título"
-                type="text"
-                value={filters.Título}
-                onChange={(e) => updateFilter("Título", e.target.value)}
-                />
+                    <label htmlFor="título">Título:</label>
+                    <input
+                    id="título"
+                    type="text"
+                    value={filters.Título}
+                    onChange={(e) => updateFilter("Título", e.target.value)}
+                    />
 
-                <label htmlFor="autor">Autor:</label>
-                <input
-                id="autor"
-                type="text"
-                value={filters.Autor}
-                onChange={(e) => updateFilter("Autor", e.target.value)}
-                />
+                    <label htmlFor="autor">Autor:</label>
+                    <input
+                    id="autor"
+                    type="text"
+                    value={filters.Autor}
+                    onChange={(e) => updateFilter("Autor", e.target.value)}
+                    />
 
-                <label htmlFor="publicación">Año de publicación:
-                    <span className="information" title="Puedes escribir tres o dos dígitos para buscar por década o por siglo. Ej.: '198' para la década de 1980, '20' para el siglo XXI."> ⓘ</span>
-                </label>
-                <input
-                id="publicación"
-                type="text"
-                value={filters.Publicación}
-                onChange={(e) => updateFilter("Publicación", e.target.value)}
-                />
+                    <label htmlFor="publicación">Año de publicación:
+                        <span className="information" title="Puedes escribir tres o dos dígitos para buscar por década o por siglo. Ej.: '198' para la década de 1980, '20' para el siglo XXI."> ⓘ</span>
+                    </label>
+                    <input
+                    id="publicación"
+                    type="text"
+                    value={filters.Publicación}
+                    onChange={(e) => updateFilter("Publicación", e.target.value)}
+                    />
 
-                <label htmlFor="tipo">Tipo:</label>
-                <select
-                id="tipo"
-                value={filters.Tipo}
-                onChange={(e) => updateFilter("Tipo", e.target.value)}
-                >
-                    <option value="">Todos los tipos</option>
-                    {opcionesSet("Tipo").map((opt) => (
+                    <label htmlFor="tipo">Tipo:</label>
+                    <select
+                    id="tipo"
+                    value={filters.Tipo}
+                    onChange={(e) => updateFilter("Tipo", e.target.value)}
+                    >
+                        <option value="">Todos los tipos</option>
+                        {opcionesSet("Tipo").map((opt) => (
+                            <option key={opt} value={opt}>{opt}</option>
+                        ))}
+                    </select>
+
+                    <label htmlFor="temas">Temas:</label>
+                    <div id="temas" className="tag-container">
+                    {Array.from(temasSet).map((opt) => {
+                        const selected = filters.Tema.includes(opt);
+                        return (
+                            <button
+                            key={opt}
+                            type="button"
+                            className={`tag ${selected ? "selected" : ""}`}
+                            onClick={() => {
+                            const newTema = selected
+                                ? filters.Tema.filter((t) => t !== opt)
+                                : [...filters.Tema, opt];
+                            updateFilter("Tema", newTema);
+                            }}
+                            >
+                                {opt}
+                            </button>
+                        );
+                    })}
+                    </div>
+
+                    <label htmlFor="idiomas">Idioma:</label>
+                    <select
+                    id="idioma"
+                    value={filters.Idioma}
+                    onChange={(e) => updateFilter("Idioma", e.target.value)}
+                    >
+                    <option value="">Todos los idiomas</option>
+                    {opcionesSet("Idioma").map((opt) => (
                         <option key={opt} value={opt}>{opt}</option>
                     ))}
-                </select>
+                    </select>
 
-                <label htmlFor="temas">Temas:</label>
-                <div id="temas" className="tag-container">
-                {Array.from(temasSet).map((opt) => {
-                    const selected = filters.Tema.includes(opt);
-                    return (
-                        <button
-                        key={opt}
-                        type="button"
-                        className={`tag ${selected ? "selected" : ""}`}
-                        onClick={() => {
-                        const newTema = selected
-                            ? filters.Tema.filter((t) => t !== opt)
-                            : [...filters.Tema, opt];
-                        updateFilter("Tema", newTema);
-                        }}
-                        >
-                            {opt}
-                        </button>
-                    );
-                })}
-                </div>
+                    <label htmlFor="original">Idioma original:</label>
+                    <select
+                    id="original"
+                    value={filters.Original}
+                    onChange={(e) => updateFilter("Original", e.target.value)}
+                    >
+                    <option value="">Todos los idiomas</option>
+                    {opcionesSet("Original").map((opt) => (
+                        <option key={opt} value={opt}>{opt}</option>
+                    ))}
+                    </select>
 
-                <label htmlFor="idiomas">Idioma:</label>
-                <select
-                id="idioma"
-                value={filters.Idioma}
-                onChange={(e) => updateFilter("Idioma", e.target.value)}
-                >
-                <option value="">Todos los idiomas</option>
-                {opcionesSet("Idioma").map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                ))}
-                </select>
+                    <label htmlFor="saga">Saga:</label>
+                    <input
+                    id="saga"
+                    type="text"
+                    value={filters.Saga}
+                    onChange={(e) => updateFilter("Saga", e.target.value)}
+                    />
+                </aside>
 
-                <label htmlFor="original">Idioma original:</label>
-                <select
-                id="original"
-                value={filters.Original}
-                onChange={(e) => updateFilter("Original", e.target.value)}
-                >
-                <option value="">Todos los idiomas</option>
-                {opcionesSet("Original").map((opt) => (
-                    <option key={opt} value={opt}>{opt}</option>
-                ))}
-                </select>
-
-                <label htmlFor="saga">Saga:</label>
-                <input
-                id="saga"
-                type="text"
-                value={filters.Saga}
-                onChange={(e) => updateFilter("Saga", e.target.value)}
-                />
-            </aside>
-
-            <main className="results">
-                <p id="numero-resultados">
-                    {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
-                </p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
-                            <th>Autor(es)</th>
-                            <th>Publicación</th>
-                            <th>Tipo</th>
-                            <th>Tema(s)</th>
-                            <th>Idioma</th>
-                            <th>Original</th>
-                            <th>Saga</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {filteredData.map((book, index) => (
-                        <tr key={index}>
-                            <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
-                            <td>{book.Autor}</td>
-                            <td>{book.Publicación}</td>
-                            <td>{book.Tipo}</td>
-                            <td>{book.Tema}</td>
-                            <td>{book.Idioma}</td>
-                            <td>{book.Original}</td>
-                            <td>{book.Saga}</td>
-                        </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </main>
-        </div>
+                <main className="results">
+                    <p id="numero-resultados">
+                        {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
+                                <th>Autor(es)</th>
+                                <th>Publicación</th>
+                                <th>Tipo</th>
+                                <th>Tema(s)</th>
+                                <th>Idioma</th>
+                                <th>Original</th>
+                                <th>Saga</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {filteredData.map((book, index) => (
+                            <tr key={index}>
+                                <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
+                                <td>{book.Autor}</td>
+                                <td>{book.Publicación}</td>
+                                <td>{book.Tipo}</td>
+                                <td>{book.Tema}</td>
+                                <td>{book.Idioma}</td>
+                                <td>{book.Original}</td>
+                                <td>{book.Saga}</td>
+                            </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </main>
+            </div>
+        </Suspense>
     );
 }
