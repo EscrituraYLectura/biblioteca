@@ -1,9 +1,12 @@
 import TableFetch from '@/components/TableFetch';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
     <main>
-      <TableFetch />
+      <Suspense>
+        <TableFetch />
+      </Suspense>
     </main>
   );
 }
