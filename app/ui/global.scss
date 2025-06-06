@@ -6,6 +6,10 @@ body {
     font-size: small;
 }
 
+a {
+    color: #5095e9;
+}
+
 .container {
     display: flex;
     height: 100vh;
@@ -79,17 +83,20 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0.4rem 1rem 0.2rem;
+    padding: 0.4rem 1rem 0.2rem;
+    background-color: #202024;
 }
 
 #barra-superior .bs-1 {
-    background-color: #524d25;
-    padding: 0.1rem 0.2rem;
-    border-radius: 3px;
+    color: #007bff;
 }
 
 #barra-superior .bs-2 {
-    padding: 0.1rem 0.2rem;
+    background-color: #81623a;
+    border-radius: 3px;
+}
+
+#barra-superior .bs-3 {
     border-radius: 0.5rem;
     background-color: #202024;
     color: #f57976;
@@ -160,6 +167,39 @@ tbody tr {
     }
 }
 
+.tooltip {
+    color: #007bff;
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    margin-left: 0.4rem;
+
+    .tooltip-text {
+        visibility: hidden;
+        opacity: 0;
+        width: max-content;
+        max-width: 250px;
+        background-color: #333;
+        color: #fff;
+        text-align: left;
+        border-radius: 4px;
+        padding: 0.5rem;
+        position: absolute;
+        z-index: 10;
+        bottom: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.3s ease;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+    }
+
+    &:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
 .tag-container {
     display: flex;
     flex-wrap: wrap;
@@ -186,27 +226,22 @@ tbody tr {
 }
 
 .libro-editado {
-    background-color: #524d25;
+    background-color: #25201c;
+    border-left: 2px solid #ce9c5c;
     transition: background-color 0.2s ease;
 
     &:hover {
-        background-color: #857c3a;
+        background-color: #312d29;
     }
-}
-
-.information {
-    color: #007bff;
-    cursor: help;
 }
 
 #clear-filters-button {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     background-color: #202024;
-    color: #fff;
+    color: #f57976;
     border: none;
     cursor: pointer;
-    font-weight: bold;
     transition: background-color 0.3s ease;
 
     &:hover {
@@ -230,4 +265,12 @@ tbody tr {
     &:hover {
         background-color: #35292d;
     }
+}
+
+#barra-inferior {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding: 0.1rem 0.8rem;
+    background-color: #202024;
 }

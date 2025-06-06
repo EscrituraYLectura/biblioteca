@@ -162,7 +162,7 @@ export default function TableFetch() {
                 />
 
                 <label htmlFor="publicación">Año de publicación:
-                    <span className="information" title="Puedes escribir tres o dos dígitos para buscar por década o por siglo. Ej.: '198' para la década de 1980, '20' para el siglo XXI."> ⓘ</span>
+                    <span className="tooltip">ⓘ<span className="tooltip-text">Puedes escribir tres dígitos para buscar por década. Ej.: '198' para la década de 1980.</span></span>
                 </label>
                 <input
                 id="publicación"
@@ -243,6 +243,7 @@ export default function TableFetch() {
                         Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a>;
                         hosteado en <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">GitHub Pages</a>.
                         También puedes ver los datos en la <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">base de datos</a>.
+                        El estilo es una imitación del estilo de Discord.
                     </p>
                 </div>
             </aside>
@@ -252,14 +253,15 @@ export default function TableFetch() {
                     <p id="numero-resultados">
                         {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
                     </p>
-                    <p>Los libros con <span className="bs-1">fondo amarillo</span> son ediciones hechas por EyL.</p>
-                    <p>Usa el botón <span className="bs-2">✖</span> para reportar información errada o faltante.</p>
+                    <p>Párate sobre <span className="bs-1">✚</span> para ver otras ediciones del mismo libro.</p>
+                    <p>Los libros con <span className="bs-2">fondo amarillo</span> son ediciones hechas por EyL.</p>
+                    <p>Usa el botón <span className="bs-3">✖</span> para reportar información.</p>
                 </div>
                 <div className="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
+                                <th>Título<span className="tooltip">ⓘ<span className="tooltip-text">Los números entre paréntesis indican el orden dentro de la saga.</span></span></th>
                                 <th>Autor(es)</th>
                                 <th>Año</th>
                                 <th>Tipo</th>
@@ -270,7 +272,10 @@ export default function TableFetch() {
                         <tbody>
                             {filteredData.map((book, index) => (
                             <tr key={index} className={book.Editado ? "libro-editado" : undefined}>
-                                <td>{book.Enlace !== "" ? <a href={book.Enlace} target="_blank">{book.Título}</a> : book.Título}</td>
+                                <td>
+                                    {book.Enlace !== "" ? <a href={book.Enlace} target="_blank">{book.Título}</a> : book.Título}
+                                    {book.Otros !== "" ? <span className="tooltip">✚<span className="tooltip-text">Otras ediciones: {book.Otros}</span></span> : undefined}
+                                </td>
                                 <td>{book.Autor}</td>
                                 <td>{book.Publicación}</td>
                                 <td>{book.Tipo}</td>
@@ -280,6 +285,9 @@ export default function TableFetch() {
                             ))}
                         </tbody>
                     </table>
+                </div>
+                <div id="barra-inferior">
+                    <p>Puedes ayudar al servidor <a href="https://discord.com/channels/403377475947855882/1290810391089123388" target="_blank">donando los libros que tengas</a>. ¡Te lo agradecemos muchísimo!</p>
                 </div>
             </main>
         </div>
