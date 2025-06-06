@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import '@/app/ui/global.scss';
-import { Ibarra_Real_Nova } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: 'Biblioteca | Escritura y Lectura',
@@ -10,18 +9,13 @@ export const metadata: Metadata = {
   },
 };
 
-const ibarra = Ibarra_Real_Nova({
-  weight: '400',
-  subsets: ['latin'],
-})
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={ibarra.className}>
+    <html lang="es">
       <body>{children}</body>
     </html>
   );

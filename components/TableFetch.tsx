@@ -125,11 +125,6 @@ export default function TableFetch() {
     return (
         <div className="container">
             <aside className="sidebar">
-                <div className="introduction">
-                    <p>Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.</p>
-                    <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">Sitio web de código abierto.</a>
-                </div>
-
                 <button
                     id="clear-filters-button"
                     type="button"
@@ -228,7 +223,7 @@ export default function TableFetch() {
                 value={filters.Original}
                 onChange={(e) => updateFilter("Original", e.target.value)}
                 >
-                <option value="">Todos los idiomas</option>
+                <option value="">Todos los idiomas originales</option>
                 {opcionesSet("Original").map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
                 ))}
@@ -241,12 +236,21 @@ export default function TableFetch() {
                 value={filters.Saga}
                 onChange={(e) => updateFilter("Saga", e.target.value)}
                 />
+
+                <div className="introduction">
+                    <p>Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.</p>
+                    <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">Sitio web de código abierto.</a>
+                </div>
             </aside>
 
             <main className="results">
-                <p id="numero-resultados">
-                    {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
-                </p>
+                <div id="barra-superior">
+                    <p id="numero-resultados">
+                        {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
+                    </p>
+                    <p>Los libros con <span className="bs-1">fondo amarillo</span> son ediciones hechas por EyL</p>
+                    <p>Usa el botón <span className="bs-2">✖</span> para reportar información errada o faltante.</p>
+                </div>
                 <div className="table-container">
                     <table>
                         <thead>
@@ -261,13 +265,13 @@ export default function TableFetch() {
                         </thead>
                         <tbody>
                             {filteredData.map((book, index) => (
-                            <tr key={index}>
-                                <td><a href={book.Enlace !== "" ? book.Enlace : undefined} target="_blank">{book.Título}</a></td>
+                            <tr key={index} className={book.Editado ? "libro-editado" : undefined}>
+                                <td>{book.Enlace !== "" ? <a href={book.Enlace} target="_blank">{book.Título}</a> : book.Título}</td>
                                 <td>{book.Autor}</td>
                                 <td>{book.Publicación}</td>
                                 <td>{book.Tipo}</td>
                                 <td>{book.Tema}</td>
-                                <td><button className="report-button" type="button" title="¿Hay información errada? ¿Falta información? ¡Haz clic aquí para reportar!">❌</button></td>
+                                <td><button className="report-button" type="button" title="¿Hay información errada? ¿Falta información? ¡Haz clic aquí para reportar!">✖</button></td>
                             </tr>
                             ))}
                         </tbody>
