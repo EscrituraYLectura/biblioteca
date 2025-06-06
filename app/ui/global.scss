@@ -141,6 +141,18 @@ th, td {
     text-align: left;
 }
 
+th {
+    .sort-arrow {
+        cursor: pointer;
+        user-select: none;
+        margin-left: 0.5rem;
+        font-size: 0.75rem;
+        color: #999;
+        font-weight: normal;
+  }
+}
+
+
 td {
     border-bottom: 1px solid #6d6e771f;
 }
@@ -270,7 +282,7 @@ tbody tr {
 #barra-inferior {
     display: flex;
     flex-direction: row;
-    justify-content: right;
+    justify-content: space-between;
     padding: 0.1rem 0.8rem;
     background-color: #202024;
 }

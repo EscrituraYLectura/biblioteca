@@ -122,6 +122,39 @@ export default function TableFetch() {
         });
     }, [filters]);
 
+    type SortableKeys = "Título" | "Autor" | "Publicación" | "Tipo";
+    const [sortConfig, setSortConfig] = useState<{ key: SortableKeys; direction: "asc" | "desc" } | null>(null);
+
+    const sortedData = useMemo(() => {
+        const data = [...filteredData];
+        if (sortConfig !== null) {
+            data.sort((a, b) => {
+                const aValue = a[sortConfig.key] ?? "";
+                const bValue = b[sortConfig.key] ?? "";
+                return sortConfig.direction === "asc"
+                ? String(aValue).localeCompare(String(bValue))
+                : String(bValue).localeCompare(String(aValue));
+            });
+      }
+      return data;
+    }, [filteredData, sortConfig]);
+
+    const toggleSort = (key: SortableKeys) => {
+        setSortConfig((prev) => {
+            if (prev?.key === key) {
+                return {
+                key,
+                direction: prev.direction === "asc" ? "desc" : "asc",
+                };
+            } else {
+                return {
+                key,
+                direction: "asc",
+                };
+            }
+        });
+    };
+
     return (
         <div className="container">
             <aside className="sidebar">
@@ -250,27 +283,61 @@ export default function TableFetch() {
 
             <main className="results">
                 <div id="barra-superior">
-                    <p id="numero-resultados">
-                        {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
-                    </p>
-                    <p>Párate sobre <span className="bs-1">✚</span> para ver otras ediciones del mismo libro.</p>
-                    <p>Los libros con <span className="bs-2">fondo amarillo</span> son ediciones hechas por EyL.</p>
-                    <p>Usa el botón <span className="bs-3">✖</span> para reportar información.</p>
+                    <p>Números entre paréntesis indican el orden de la saga.</p>
+                    <p><span className="bs-1">✚</span> para ver otras ediciones del libro.</p>
+                    <p>Libros con <span className="bs-2">fondo amarillo</span> son ediciones de EyL.</p>
+                    <p><span className="bs-3">✖</span> para reportar información.</p>
                 </div>
                 <div className="table-container">
                     <table>
                         <thead>
                             <tr>
-                                <th>Título<span className="tooltip">ⓘ<span className="tooltip-text">Los números entre paréntesis indican el orden dentro de la saga.</span></span></th>
-                                <th>Autor(es)</th>
-                                <th>Año</th>
-                                <th>Tipo</th>
+                                <th onClick={() => toggleSort("Título")}>
+                                    Título
+                                    <span className="sort-arrow">
+                                    {sortConfig?.key === "Título"
+                                        ? sortConfig.direction === "asc"
+                                            ? "▲"
+                                            : "▼"
+                                        : "▼"}
+                                    </span>
+                                </th>
+                                <th onClick={() => toggleSort("Autor")}>
+                                    Autor(es)
+                                    <span className="sort-arrow">
+                                    {sortConfig?.key === "Autor"
+                                        ? sortConfig.direction === "asc"
+                                            ? "▲"
+                                            : "▼"
+                                        : "▼"}
+                                    </span>
+                                </th>
+                                <th onClick={() => toggleSort("Publicación")}>
+                                    Año
+                                    <span className="sort-arrow">
+                                    {sortConfig?.key === "Publicación"
+                                        ? sortConfig.direction === "asc"
+                                            ? "▲"
+                                            : "▼"
+                                        : "▼"}
+                                    </span>
+                                </th>
+                                <th onClick={() => toggleSort("Tipo")}>
+                                    Tipo
+                                    <span className="sort-arrow">
+                                    {sortConfig?.key === "Tipo"
+                                        ? sortConfig.direction === "asc"
+                                            ? "▲"
+                                            : "▼"
+                                        : "▼"}
+                                    </span>
+                                </th>
                                 <th>Tema(s)</th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
-                            {filteredData.map((book, index) => (
+                            {sortedData.map((book, index) => (
                             <tr key={index} className={book.Editado ? "libro-editado" : undefined}>
                                 <td>
                                     {book.Enlace !== "" ? <a href={book.Enlace} target="_blank">{book.Título}</a> : book.Título}
@@ -287,6 +354,9 @@ export default function TableFetch() {
                     </table>
                 </div>
                 <div id="barra-inferior">
+                    <p id="numero-resultados">
+                        {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
+                    </p>
                     <p>Puedes ayudar al servidor <a href="https://discord.com/channels/403377475947855882/1290810391089123388" target="_blank">donando los libros que tengas</a>. ¡Te lo agradecemos muchísimo!</p>
                 </div>
             </main>
