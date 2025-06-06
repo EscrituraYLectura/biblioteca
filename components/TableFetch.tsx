@@ -29,6 +29,7 @@ interface Filters {
     Idioma: string;
     Original: string;
     Saga: string;
+    Editado?: string;
 }
 
 const defaultFilters: Filters = {
@@ -40,6 +41,7 @@ const defaultFilters: Filters = {
     Idioma: "",
     Original: "",
     Saga: "",
+    Editado: "",
 };
 
 function parseQuery(searchParams: URLSearchParams): Filters {
@@ -50,7 +52,7 @@ function parseQuery(searchParams: URLSearchParams): Filters {
             if (key === "Tema") {
                 parsedFilters[key] = value.split(",").map((v) => v.trim());
             } else {
-            parsedFilters[key] = value as Filters[typeof key];
+            parsedFilters[key] = value ?? "";
             }
         }
     }
@@ -61,8 +63,8 @@ function serializeFilters(filters: Filters): string {
     const params = new URLSearchParams();
     for (const key of Object.keys(filters) as (keyof Filters)[]) {
         const value = filters[key];
-        if (key === "Tema" && value.length > 0) {
-            params.set(key, Array.isArray(value) ? value.join(",") : value);
+        if (key === "Tema" && Array.isArray(value) && value.length > 0) {
+            params.set(key, value.join(","));
         } else if (typeof value === "string" && value.trim() !== "") {
             params.set(key, value);
         }
@@ -117,7 +119,8 @@ export default function TableFetch() {
                 (filters.Tema.length === 0 || filters.Tema.every((t) => book.Tema.split(",").map(s => s.trim()).includes(t))) &&
                 (!filters.Idioma || book.Idioma === filters.Idioma) &&
                 (!filters.Original || book.Original === filters.Original) &&
-                (!filters.Saga || book.Saga.toLowerCase().includes(filters.Saga.toLowerCase()))
+                (!filters.Saga || book.Saga.toLowerCase().includes(filters.Saga.toLowerCase())) &&
+                (!filters.Editado || String(book.Editado) === filters.Editado)
             );
         });
     }, [filters]);
@@ -286,7 +289,7 @@ export default function TableFetch() {
                 <div id="barra-superior">
                     <p>Números entre paréntesis indican el orden de la saga.</p>
                     <p><span className="bs-1">✚</span> para ver otras ediciones del libro.</p>
-                    <p>Libros con <span className="bs-2">fondo amarillo</span> son ediciones de EyL.</p>
+                    <p>Libros con <span className={`bs-2 ${filters.Editado === "true" ? "editado-activado" : ""}`} onClick={() => updateFilter("Editado", filters.Editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones de EyL.</p>
                     <p><span className="bs-3">✖</span> para reportar información.</p>
                 </div>
                 <div className="table-container">

@@ -94,6 +94,11 @@ a {
 #barra-superior .bs-2 {
     background-color: #81623a;
     border-radius: 3px;
+    cursor: pointer;
+}
+
+#barra-superior .editado-activado {
+    background-color: #ce9c5c;
 }
 
 #barra-superior .bs-3 {
