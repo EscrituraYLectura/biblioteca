@@ -42,7 +42,7 @@ a {
 }
 
 .sidebar label {
-    color: #82838b;
+    color: #fff;
     margin-bottom: -0.5rem;
 }
 
@@ -52,7 +52,7 @@ a {
     border: 1px solid #97979f33;
     border-radius: 8px;
     background-color: #00000014;
-    color: white;
+    color: #82838b;
     outline: none;
     transition: border 0.3s ease;
 
@@ -219,17 +219,18 @@ tbody tr {
 }
 
 .tag {
-    color: #efeff0;
+    color: #82838b;
     border: 1px solid #97979f33;
     background-color: #121214;
     border-radius: 8px;
     padding: 0.4rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2 ease;
 }
 
 .tag:hover {
     background-color: #1d1d1e;
+    color: #efeff0;
 }
 
 .tag.selected {
