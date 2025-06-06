@@ -14,16 +14,18 @@ body {
 
 .sidebar {
     width: 320px;
-    padding: 1rem;
     background-color: #121214;
+    border-right: 1px solid #6d6e771f;
     position: sticky;
     top: 0;
-    height: 96vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
     gap: 1rem;
-    border-right: 1px solid #6d6e771f;
 }
 
 .introduction {
