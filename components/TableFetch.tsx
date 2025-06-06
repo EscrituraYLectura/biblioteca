@@ -173,6 +173,7 @@ export default function TableFetch() {
                         Saga: "",
                         });
                     router.push("/");
+                    toggleSort("Título");
                     }}
                 >
                     Borrar filtros
@@ -292,9 +293,9 @@ export default function TableFetch() {
                     <table>
                         <thead>
                             <tr>
-                                <th onClick={() => toggleSort("Título")}>
+                                <th>
                                     Título
-                                    <span className="sort-arrow">
+                                    <span onClick={() => toggleSort("Título")} className="sort-arrow">
                                     {sortConfig?.key === "Título"
                                         ? sortConfig.direction === "asc"
                                             ? "▲"
@@ -302,9 +303,9 @@ export default function TableFetch() {
                                         : "▼"}
                                     </span>
                                 </th>
-                                <th onClick={() => toggleSort("Autor")}>
+                                <th>
                                     Autor(es)
-                                    <span className="sort-arrow">
+                                    <span onClick={() => toggleSort("Autor")} className="sort-arrow">
                                     {sortConfig?.key === "Autor"
                                         ? sortConfig.direction === "asc"
                                             ? "▲"
@@ -312,9 +313,9 @@ export default function TableFetch() {
                                         : "▼"}
                                     </span>
                                 </th>
-                                <th onClick={() => toggleSort("Publicación")}>
+                                <th>
                                     Año
-                                    <span className="sort-arrow">
+                                    <span onClick={() => toggleSort("Publicación")} className="sort-arrow">
                                     {sortConfig?.key === "Publicación"
                                         ? sortConfig.direction === "asc"
                                             ? "▲"
@@ -322,9 +323,9 @@ export default function TableFetch() {
                                         : "▼"}
                                     </span>
                                 </th>
-                                <th onClick={() => toggleSort("Tipo")}>
+                                <th>
                                     Tipo
-                                    <span className="sort-arrow">
+                                    <span onClick={() => toggleSort("Tipo")} className="sort-arrow">
                                     {sortConfig?.key === "Tipo"
                                         ? sortConfig.direction === "asc"
                                             ? "▲"
