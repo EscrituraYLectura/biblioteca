@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import NavBar from '@/components/navbar';
 import data from "@/public/data.json";
 
 interface Book {
@@ -160,6 +161,7 @@ export default function TableFetch() {
 
     return (
         <div className="container">
+            <NavBar />
             <aside className="sidebar">
                 <button
                     id="clear-filters-button"
