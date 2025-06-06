@@ -1,6 +1,6 @@
 import TableFetch from '@/components/TableFetch';
-import NavBar from '@/components/navbar';
 import TopBar from '@/components/topbar';
+import NavBar from '@/components/navbar';
 import { Suspense } from 'react';
 
 export default function Home() {

@@ -1,10 +1,14 @@
+import TopBar from '@/components/topbar';
 import NavBar from '@/components/navbar';
 
 export default function Home() {
     return (
-        <main>
-            <NavBar />
-            <p>Realista</p>
-        </main>
+        <>
+            <TopBar />
+            <main className="contenedor">
+                <NavBar />
+                <p>Realista</p>
+            </main>
+        </>
     );
 }
