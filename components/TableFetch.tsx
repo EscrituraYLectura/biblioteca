@@ -238,8 +238,12 @@ export default function TableFetch() {
                 />
 
                 <div className="introduction">
-                    <p>Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.</p>
-                    <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">Sitio web de código abierto.</a>
+                    <p>
+                        Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.
+                        Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a>;
+                        hosteado en <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">GitHub Pages</a>.
+                        También puedes ver los datos en la <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">base de datos</a>.
+                    </p>
                 </div>
             </aside>
 
