@@ -248,7 +248,7 @@ export default function TableFetch() {
                     <p id="numero-resultados">
                         {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
                     </p>
-                    <p>Los libros con <span className="bs-1">fondo amarillo</span> son ediciones hechas por EyL</p>
+                    <p>Los libros con <span className="bs-1">fondo amarillo</span> son ediciones hechas por EyL.</p>
                     <p>Usa el botón <span className="bs-2">✖</span> para reportar información errada o faltante.</p>
                 </div>
                 <div className="table-container">

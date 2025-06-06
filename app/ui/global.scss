@@ -8,7 +8,8 @@ body {
 
 .container {
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -17,7 +18,7 @@ body {
     background-color: #121214;
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 96vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -94,12 +95,15 @@ body {
 
 .results {
     flex: 1;
-    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
     background-color: #1a1a1e;
 }
 
 .table-container {
-    max-height: 100vh;
+    flex: 1;
     overflow-y: auto;
     border-top: 1px solid #6d6e771f;
     border-bottom: 1px solid #6d6e771f;
