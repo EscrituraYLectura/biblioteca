@@ -24,7 +24,7 @@ body {
     overflow-y: auto;
     padding-inline: 1rem;
     padding-top: 1rem;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
     gap: 1rem;
 }
 
@@ -79,7 +79,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0.2rem 1rem;
+    margin: 0.4rem 1rem 0.2rem;
 }
 
 #barra-superior .bs-1 {
@@ -114,6 +114,11 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
+}
+
+table td:nth-child(6),
+table th:nth-child(6) {
+    text-align: right;
 }
 
 thead {

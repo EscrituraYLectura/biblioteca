@@ -261,7 +261,7 @@ export default function TableFetch() {
                             <tr>
                                 <th>Título<span className="information" title="Los números entre paréntesis indican el orden dentro de la saga."> ⓘ</span></th>
                                 <th>Autor(es)</th>
-                                <th>Publicación</th>
+                                <th>Año</th>
                                 <th>Tipo</th>
                                 <th>Tema(s)</th>
                                 <th></th>
