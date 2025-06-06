@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import NavBar from '@/components/navbar';
 import data from "@/public/data.json";
 
 interface Book {
@@ -160,8 +159,7 @@ export default function TableFetch() {
     };
 
     return (
-        <div className="container">
-            <NavBar />
+        <>
             <aside className="sidebar">
                 <button
                     id="clear-filters-button"
@@ -366,6 +364,6 @@ export default function TableFetch() {
                     <p>Puedes ayudar al servidor <a href="https://discord.com/channels/403377475947855882/1290810391089123388" target="_blank">donando los libros que tengas</a>. ¡Te lo agradecemos muchísimo!</p>
                 </div>
             </main>
-        </div>
+        </>
     );
 }
