@@ -360,12 +360,20 @@ tbody tr {
 }
 
 .contenedor-indices {
+    .i-letra {
+        margin: 3rem 0 0;
+    }
+
     .i-titulo {
         font-style: italic;
     }
 
     .i-mas-info {
         color: #969696;
+    }
+
+    ul {
+        list-style-type: circle;
     }
 
     ul li {

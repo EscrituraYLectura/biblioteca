@@ -116,7 +116,7 @@ export default function ListaOrdenada() {
                 if ("Título" in item) {
                     return (
                     <p key={`${item.Título}-${item.Autor}-${index}`}>
-                    – <Link href={item.Enlace} className="i-titulo">{item.Título}</Link>, {item.Autor}
+                    – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
                     {item.Idioma !== "Español" && (
                         <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
                     )}
@@ -130,7 +130,7 @@ export default function ListaOrdenada() {
                     <ul className="list-[circle] ml-6">
                     {item.libros.map((book, idx) => (
                         <li key={`${book.Título}-${book.Autor}-${idx}`}>
-                        <Link href={book.Enlace} className="i-titulo">{book.Título}</Link>
+                        <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
                         {autores.size > 1 && `, ${book.Autor}`}
                         {book.Idioma !== "Español" && (
                             <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
