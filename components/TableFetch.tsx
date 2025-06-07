@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import data from "@/public/data.json";
 
@@ -76,9 +76,16 @@ export default function TableFetch() {
     const searchParams = useSearchParams();
     const router = useRouter();
 
-    const [filters, setFilters] = useState<Filters>(() =>
-        parseQuery(searchParams)
-    );
+    const initialFilters = useMemo(() => parseQuery(searchParams), []);
+    const [filters, setFilters] = useState<Filters>(initialFilters);
+
+    useEffect(() => {
+        const query = serializeFilters(filters);
+        const current = serializeFilters(parseQuery(new URLSearchParams(window.location.search)));
+        if (query !== current) {
+            router.replace("?" + query, { scroll: false });
+        }
+    }, [filters]);
 
     const temasSet = useMemo(() => {
         const set = new Set<string>();
@@ -108,10 +115,7 @@ export default function TableFetch() {
     };
 
     const updateFilter = (key: keyof Filters, value: string | string[]) => {
-        const newFilters = { ...filters, [key]: value };
-        setFilters(newFilters);
-        const query = serializeFilters(newFilters);
-        router.push("?" + query);
+        setFilters((prev) => ({ ...prev, [key]: value }));
     };
 
     const filteredData = useMemo(() => {
@@ -181,7 +185,7 @@ export default function TableFetch() {
                         Saga: "",
                         Editado: "",
                         });
-                    router.push("/buscador");
+                    router.replace("/buscador");
                     toggleSort("Título");
                     }}
                 >
