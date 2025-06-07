@@ -82,10 +82,16 @@ export default function TableFetch() {
     useEffect(() => {
         const query = serializeFilters(filters);
         const current = serializeFilters(parseQuery(new URLSearchParams(window.location.search)));
-        if (query !== current) {
+
+        if (query === current) return;
+
+        const timeout = setTimeout(() => {
             router.replace("?" + query, { scroll: false });
-        }
+        }, 1000);
+
+        return () => clearTimeout(timeout);
     }, [filters]);
+
 
     const temasSet = useMemo(() => {
         const set = new Set<string>();
