@@ -1,13 +1,13 @@
 import TopBar from '@/components/topbar';
 import NavBar from '@/components/navbar';
 
-export default function Realista() {
+export default function Estadisticas() {
     return (
         <>
             <TopBar />
             <main className="contenedor">
                 <NavBar />
-                <p>Realista</p>
+                <p>Estadísticas</p>
             </main>
         </>
     );

@@ -15,6 +15,7 @@ export default function NavBar() {
                 <li onClick={() => irAPagina('/buscador')}>⌕</li>
                 <li onClick={() => irAPagina('/indices')}>≡</li>
                 <li onClick={() => irAPagina('/realista')}>⊞</li>
+                <li onClick={() => irAPagina('/estadisticas')}>◉</li>
             </ul>
         </nav>
     );

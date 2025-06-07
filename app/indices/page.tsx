@@ -1,7 +1,7 @@
 import TopBar from '@/components/topbar';
 import NavBar from '@/components/navbar';
 
-export default function Home() {
+export default function Indices() {
     return (
         <>
             <TopBar />

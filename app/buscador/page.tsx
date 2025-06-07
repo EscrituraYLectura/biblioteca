@@ -3,7 +3,7 @@ import TopBar from '@/components/topbar';
 import NavBar from '@/components/navbar';
 import { Suspense } from 'react';
 
-export default function Home() {
+export default function Buscador() {
     return (
         <>
             <TopBar />
