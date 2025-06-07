@@ -135,7 +135,7 @@ export default function TableFetch() {
                 (!filters.Idioma || book.Idioma === filters.Idioma) &&
                 (!filters.Original || book.Original === filters.Original) &&
                 (!filters.Saga || book.Saga.toLowerCase().includes(filters.Saga.toLowerCase())) &&
-                (!filters.Editado || String(book.Editado) === filters.Editado)
+                (!filters.Editado || book.Editado === filters.Editado)
             );
         });
     }, [filters]);
