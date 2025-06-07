@@ -16,7 +16,7 @@ interface Book {
     Otros: string;
     Subido: string;
     Formato: string;
-    Editado: boolean;
+    Editado: string;
     Enlace: string;
 }
 
@@ -29,7 +29,7 @@ interface Filters {
     Idioma: string;
     Original: string;
     Saga: string;
-    Editado?: string;
+    Editado: string;
 }
 
 const defaultFilters: Filters = {
@@ -92,14 +92,19 @@ export default function TableFetch() {
     }, []);
 
     const opcionesSet = (field: keyof Book): string[] => {
-        const set = new Set<string>();
+        const set = new Map<string, string>();
         data.forEach((book: Book) => {
             const value = book[field];
             if (typeof value === "string") {
-                set.add(value);
+                const normalized = value.normalize("NFC").trim().toLowerCase();
+
+                if (!set.has(normalized)) {
+                    set.set(normalized, value.trim());
+                }
             }
         });
-        return Array.from(set).sort();
+
+        return Array.from(set.values()).sort();
     };
 
     const updateFilter = (key: keyof Filters, value: string | string[]) => {
@@ -174,8 +179,9 @@ export default function TableFetch() {
                         Idioma: "",
                         Original: "",
                         Saga: "",
+                        Editado: "",
                         });
-                    router.push("/");
+                    router.push("/buscador");
                     toggleSort("Título");
                     }}
                 >
@@ -214,10 +220,10 @@ export default function TableFetch() {
                 value={filters.Tipo}
                 onChange={(e) => updateFilter("Tipo", e.target.value)}
                 >
-                    <option value="">Todos los tipos</option>
-                    {opcionesSet("Tipo").map((opt) => (
-                        <option key={opt} value={opt}>{opt}</option>
-                    ))}
+                <option value="">Todos los tipos</option>
+                {opcionesSet("Tipo").map((opt) => (
+                    <option key={opt} value={opt}>{opt}</option>
+                ))}
                 </select>
 
                 <label htmlFor="temas">Temas:</label>
