@@ -48,22 +48,22 @@ const ordenarSaga = (a: Book, b: Book) => {
 
 export default function ListaOrdenada() {
     const agrupado = useMemo(() => {
-        const agrupadoPorLetra: Record<string, (Book | { saga: string; autor: string; libros: Book[] })[]> = {};
+        const agrupadoPorLetra: Record<string, (Book | { saga: string; autores: Set<string>; libros: Book[] })[]> = {};
 
-        const sagas: Record<string, { saga: string; autor: string; libros: Book[] }> = {};
+        const sagas: Record<string, { saga: string; autores: Set<string>; libros: Book[] }> = {};
         const librosSueltos: Book[] = [];
 
         for (const book of data as Book[]) {
             if (book.Saga) {
-                const key = `${book.Saga}__${book.Autor}`;
-                if (!sagas[key]) {
-                    sagas[key] = {
+                if (!sagas[book.Saga]) {
+                    sagas[book.Saga] = {
                         saga: book.Saga,
-                        autor: book.Autor,
+                        autores: new Set(),
                         libros: []
                     };
                 }
-                sagas[key].libros.push(book);
+                sagas[book.Saga].libros.push(book);
+                sagas[book.Saga].autores.add(book.Autor);
             } else {
                 librosSueltos.push(book);
             }
@@ -76,7 +76,7 @@ export default function ListaOrdenada() {
             sagas[key].libros.sort(ordenarSaga);
         }
 
-        const todoJunto: (Book | { saga: string; autor: string; libros: Book[] })[] = [
+        const todoJunto: (Book | { saga: string; autores: Set<string>; libros: Book[] })[] = [
             ...librosSueltos,
             ...Object.values(sagas)
         ];
@@ -115,32 +115,33 @@ export default function ListaOrdenada() {
             {agrupado[letra]?.map((item, index) => {
                 if ("Título" in item) {
                     return (
-                    <p key={`${item.Título}-${item.Autor}-${index}`}>
-                    – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
-                    {item.Idioma !== "Español" && (
-                        <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
-                    )}
-                    </p>
-                );
-            } else {
-                const autores = new Set(item.libros.map((l) => l.Autor));
-                return (
-                <div key={`${item.saga}-${item.autor}-${index}`}>
-                    <p>– {item.saga}, {autores.size > 1 ? "AA. VV." : item.autor}:</p>
-                    <ul className="list-[circle] ml-6">
-                    {item.libros.map((book, idx) => (
-                        <li key={`${book.Título}-${book.Autor}-${idx}`}>
-                        <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
-                        {autores.size > 1 && `, ${book.Autor}`}
-                        {book.Idioma !== "Español" && (
-                            <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
-                        )}
-                        </li>
-                    ))}
-                    </ul>
-                </div>
-                );
-            }
+                        <p key={`${item.Título}-${item.Autor}-${index}`}>
+                            – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
+                            {item.Idioma !== "Español" && (
+                                <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
+                            )}
+                        </p>
+                    );
+                } else {
+                    const autores = item.autores;
+                    const mostrarAutores = autores.size > 1;
+                    return (
+                        <div key={`${item.saga}-${index}`}>
+                            <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(autores)[0]}:</p>
+                            <ul className="list-[circle] ml-6">
+                                {item.libros.map((book, idx) => (
+                                    <li key={`${book.Título}-${book.Autor}-${idx}`}>
+                                        <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
+                                        {mostrarAutores && `, ${book.Autor}`}
+                                        {book.Idioma !== "Español" && (
+                                            <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    );
+                }
             })}
             </div>
         ))}
