@@ -108,43 +108,49 @@ export default function ListaOrdenada() {
     ];
 
     return (
-        <div className="contenedor-indices">
-        {letras.map((letra) => (
-            <div key={letra}>
-            <h2 className="i-letra">{letra}</h2>
-            {agrupado[letra]?.map((item, index) => {
-                if ("Título" in item) {
-                    return (
-                        <p key={`${item.Título}-${item.Autor}-${index}`}>
-                            – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
-                            {item.Idioma !== "Español" && (
-                                <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
-                            )}
-                        </p>
-                    );
-                } else {
-                    const autores = item.autores;
-                    const mostrarAutores = autores.size > 1;
-                    return (
-                        <div key={`${item.saga}-${index}`}>
-                            <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(autores)[0]}:</p>
-                            <ul className="list-[circle] ml-6">
-                                {item.libros.map((book, idx) => (
-                                    <li key={`${book.Título}-${book.Autor}-${idx}`}>
-                                        <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
-                                        {mostrarAutores && `, ${book.Autor}`}
-                                        {book.Idioma !== "Español" && (
-                                            <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
-                                        )}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    );
-                }
-            })}
-            </div>
-        ))}
-        </div>
+        <>
+            <aside className="sidebar">
+                <p>a</p>
+            </aside>
+
+            <main className="contenedor-indices">
+            {letras.map((letra) => (
+                <div key={letra}>
+                <h2 className="i-letra">{letra}</h2>
+                {agrupado[letra]?.map((item, index) => {
+                    if ("Título" in item) {
+                        return (
+                            <p key={`${item.Título}-${item.Autor}-${index}`}>
+                                – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
+                                {item.Idioma !== "Español" && (
+                                    <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
+                                )}
+                            </p>
+                        );
+                    } else {
+                        const autores = item.autores;
+                        const mostrarAutores = autores.size > 1;
+                        return (
+                            <div key={`${item.saga}-${index}`}>
+                                <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(autores)[0]}:</p>
+                                <ul className="list-[circle] ml-6">
+                                    {item.libros.map((book, idx) => (
+                                        <li key={`${book.Título}-${book.Autor}-${idx}`}>
+                                            <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
+                                            {mostrarAutores && `, ${book.Autor}`}
+                                            {book.Idioma !== "Español" && (
+                                                <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
+                                            )}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        );
+                    }
+                })}
+                </div>
+            ))}
+            </main>
+        </>
     );
 }

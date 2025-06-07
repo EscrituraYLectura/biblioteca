@@ -7,7 +7,7 @@ export default function Indices() {
     return (
         <>
             <TopBar />
-            <main className="contenedor-2">
+            <main className="contenedor">
                 <NavBar />
                 <Suspense>
                     <GenerateIndex />
