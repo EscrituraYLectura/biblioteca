@@ -372,3 +372,105 @@ tbody tr {
         margin-bottom: 1rem;
     }
 }
+
+// Estilos para pantallas pequeñas (móviles)
+@media (max-width: 600px) {
+    body {
+        font-size: smaller;
+    }
+
+    .topbar {
+        height: auto;
+        padding: 0.5rem 0.25rem;
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+
+    .contenedor,
+    .contenedor-2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-height: none;
+        border-right: none;
+        border-top: 1px solid #6d6e771f;
+        padding-inline: 0.5rem;
+        padding-bottom: 0.5rem;
+        overflow-y: visible;
+        position: relative;
+    }
+
+    .results {
+        height: auto;
+        flex: none;
+    }
+
+    .table-container {
+        max-height: 50vh;
+        overflow-x: auto;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    table {
+        min-width: 600px; // para que no se contraiga demasiado en horizontal
+    }
+
+    thead {
+        position: relative; // no sticky en móvil para evitar problemas con scroll
+    }
+
+    th, td {
+        padding: 0.4rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid #6d6e771f;
+        overflow-x: auto;
+        gap: 0.5rem;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        padding: 0 0.5rem;
+    }
+
+    .navbar ul li {
+        font-size: 20px;
+        width: auto;
+        height: auto;
+        margin-bottom: 0;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+    }
+
+    #barra-superior {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #barra-inferior {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.3rem 1rem;
+    }
+
+    .sidebar label {
+        font-size: 0.9rem;
+    }
+
+    .sidebar input,
+    .sidebar select {
+        width: 100%;
+    }
+}
