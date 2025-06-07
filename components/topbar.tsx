@@ -2,7 +2,7 @@ export default function TopBar() {
     return (
         <div className="topbar">
             <img
-                src='./app/icon.png'
+                src='../app/icon.png'
                 alt='Logo de Escritura y Lectura'
                 width={20}
                 height={20}
