@@ -192,7 +192,7 @@ export default function TableFetch() {
                         Editado: "",
                         });
                     router.replace("/buscador");
-                    toggleSort("Título");
+                    setSortConfig({ key: "Título", direction: "asc" });
                     }}
                 >
                     Borrar filtros
