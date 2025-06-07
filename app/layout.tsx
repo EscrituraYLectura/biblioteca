@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Biblioteca | Escritura y Lectura',
   description: 'Sitio web oficial del servidor Escritura y Lectura.',
   icons: {
-    icon: '/icon.ico',
+    icon: './icon.ico',
   },
 };
 
