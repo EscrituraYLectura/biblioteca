@@ -1,13 +1,17 @@
+import GenerateIndex from '@/components/GenerateIndex';
 import TopBar from '@/components/topbar';
 import NavBar from '@/components/navbar';
+import { Suspense } from 'react';
 
 export default function Indices() {
     return (
         <>
             <TopBar />
-            <main className="contenedor">
+            <main className="contenedor-2">
                 <NavBar />
-                <p>Índices</p>
+                <Suspense>
+                    <GenerateIndex />
+                </Suspense>
             </main>
         </>
     );

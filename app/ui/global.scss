@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     color: white;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-size: small;
+    background-color: #1a1a1e;
 }
 
 a {
@@ -25,6 +28,11 @@ a {
     display: flex;
     height: 95vh;
     overflow: hidden;
+}
+
+.contenedor-2 {
+    display: flex;
+    height: 95vh;
 }
 
 .sidebar {
@@ -340,5 +348,27 @@ tbody tr {
 
     &:hover {
         background-color: #5764f0;
+    }
+}
+
+// INDICES
+
+.contenedor-indices {
+    font-family: "Ibarra Real Nova", serif;
+    padding-left: 1rem;
+    font-size: medium;
+}
+
+.contenedor-indices {
+    .i-titulo {
+        font-style: italic;
+    }
+
+    .i-mas-info {
+        color: #969696;
+    }
+
+    ul li {
+        margin-bottom: 1rem;
     }
 }
