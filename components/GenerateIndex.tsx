@@ -112,8 +112,8 @@ export default function ListaOrdenada() {
 
     return (
         <>
-            <aside className="sidebar">
-                <ul className="indice-indice">
+            <aside className="sidebar-indices">
+                <ul>
                     <li><a href="#A">Letra A</a></li>
                     <li><a href="#B">Letra B</a></li>
                     <li><a href="#C">Letra C</a></li>

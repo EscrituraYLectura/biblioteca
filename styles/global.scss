@@ -377,7 +377,7 @@ tbody tr {
 }
 
 .sidebar-indices {
-    width: 320px;
+    width: 140px;
     background-color: #121214;
     border-right: 1px solid #6d6e771f;
     border-top: 1px solid #6d6e771f;
@@ -388,9 +388,34 @@ tbody tr {
     max-height: 100vh;
     overflow-y: auto;
     padding-inline: 1rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
     gap: 1rem;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            padding: 0.5rem;
+            border-radius: 8px;
+            background-color: #00000014;
+            transition: background-color 0.1s ease;
+            margin-bottom: 0.15rem;
+
+            &:hover {
+                background-color: #1d1d1e;
+            }
+
+            a {
+                text-decoration: none;
+                color: #82838b;
+
+                &:hover {
+                    color: #efeff0;
+                }
+            }
+        }
+    }
 }
 
 // Estilos para pantallas pequeñas (móviles)
