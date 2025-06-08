@@ -27,16 +27,19 @@ const normalizar = (texto: string) =>
 
 const getLetra = (texto: string) => {
     if (!texto) return "#";
-    const primeraLetra = texto.trim()[0]?.toUpperCase();
-    if (primeraLetra === "Ñ") return "Ñ";
+    const contieneLatinas = /[a-zA-ZñÑ]/.test(texto);
+    if (!contieneLatinas) return "#";
 
-    const letraNormalizada = normalizar(texto)[0]?.toUpperCase() || "#";
-    return letraNormalizada.match(/[A-Z]/) ? letraNormalizada : "#";
+    const match = texto.match(/[a-zA-ZñÑ]/);
+    if (!match) return "#";
+
+    const letra = match[0].toUpperCase();
+    return letra === "Ñ" ? "Ñ" : letra;
 };
 
 const ordenar = (a: string, b: string) => {
-    const sa = IGNORAR_ESPACIOS ? a.replace(/\s/g, "") : a;
-    const sb = IGNORAR_ESPACIOS ? b.replace(/\s/g, "") : b;
+    const sa = normalizar(IGNORAR_ESPACIOS ? a.replace(/\s/g, "") : a).replace(/[^a-zñ0-9]/gi, "");
+    const sb = normalizar(IGNORAR_ESPACIOS ? b.replace(/\s/g, "") : b).replace(/[^a-zñ0-9]/gi, "");
     return sa.localeCompare(sb);
 };
 
@@ -104,7 +107,7 @@ export default function ListaOrdenada() {
     const letras = [
         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
         "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S",
-        "T", "U", "V", "W", "X", "Y", "Z"
+        "T", "U", "V", "W", "X", "Y", "Z", "#"
     ];
 
     return (
@@ -138,6 +141,7 @@ export default function ListaOrdenada() {
                     <li><a href="#X">Letra X</a></li>
                     <li><a href="#Y">Letra Y</a></li>
                     <li><a href="#Z">Letra Z</a></li>
+                    <li><a href="#%23">Otros</a></li>
                 </ul>
             </aside>
 
