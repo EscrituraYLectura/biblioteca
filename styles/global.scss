@@ -352,7 +352,6 @@ tbody tr {
     overflow: auto;
     background-color: #1a1a1e;
     border-top: 1px solid #6d6e771f;
-    font-family: "Ibarra Real Nova", serif;
     font-size: medium;
 
     .i-letra {
@@ -374,6 +373,10 @@ tbody tr {
     ul li {
         margin-bottom: 1rem;
     }
+}
+
+.table-container-indices {
+    font-family: "Ibarra Real Nova", serif;
 }
 
 .sidebar-indices {

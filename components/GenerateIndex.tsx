@@ -146,7 +146,7 @@ export default function ListaOrdenada() {
             </aside>
 
             <main className="contenedor-indices">
-                <div className="table-container">
+                <div className="table-container table-container-indices">
                 {letras.map((letra) => (
                     <div key={letra} id={letra}>
                         <h2 className="i-letra">{letra}</h2>
