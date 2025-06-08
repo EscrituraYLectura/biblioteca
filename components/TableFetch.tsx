@@ -368,7 +368,7 @@ export default function TableFetch() {
                         </tbody>
                     </table>
                 </div>
-                <div id="barra-inferior">
+                <div className="barra-inferior">
                     <p id="numero-resultados">
                         {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
                         <Tooltip text="ⓘ">

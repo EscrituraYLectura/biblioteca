@@ -297,7 +297,7 @@ tbody tr {
     }
 }
 
-#barra-inferior {
+.barra-inferior {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -348,11 +348,12 @@ tbody tr {
     flex: 1;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    overflow: auto;
     background-color: #1a1a1e;
     border-top: 1px solid #6d6e771f;
     font-family: "Ibarra Real Nova", serif;
     font-size: medium;
-    padding-left: 1.5rem;
 
     .i-letra {
         margin: 3rem 0 0;
@@ -472,13 +473,7 @@ tbody tr {
         border-radius: 0.5rem;
     }
 
-    #barra-superior {
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0.5rem 1rem;
-    }
-
-    #barra-inferior {
+    .barra-inferior {
         flex-direction: column;
         gap: 0.5rem;
         padding: 0.3rem 1rem;

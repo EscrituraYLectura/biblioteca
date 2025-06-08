@@ -110,46 +110,79 @@ export default function ListaOrdenada() {
     return (
         <>
             <aside className="sidebar">
-                <p>a</p>
+                <ul className="indice-indice">
+                    <li><a href="#A">Letra A</a></li>
+                    <li><a href="#B">Letra B</a></li>
+                    <li><a href="#C">Letra C</a></li>
+                    <li><a href="#D">Letra D</a></li>
+                    <li><a href="#E">Letra E</a></li>
+                    <li><a href="#F">Letra F</a></li>
+                    <li><a href="#G">Letra G</a></li>
+                    <li><a href="#H">Letra H</a></li>
+                    <li><a href="#I">Letra I</a></li>
+                    <li><a href="#J">Letra J</a></li>
+                    <li><a href="#K">Letra K</a></li>
+                    <li><a href="#L">Letra L</a></li>
+                    <li><a href="#M">Letra M</a></li>
+                    <li><a href="#N">Letra N</a></li>
+                    <li><a href="#Ñ">Letra Ñ</a></li>
+                    <li><a href="#O">Letra O</a></li>
+                    <li><a href="#P">Letra P</a></li>
+                    <li><a href="#Q">Letra Q</a></li>
+                    <li><a href="#R">Letra R</a></li>
+                    <li><a href="#S">Letra S</a></li>
+                    <li><a href="#T">Letra T</a></li>
+                    <li><a href="#U">Letra U</a></li>
+                    <li><a href="#V">Letra V</a></li>
+                    <li><a href="#W">Letra W</a></li>
+                    <li><a href="#X">Letra X</a></li>
+                    <li><a href="#Y">Letra Y</a></li>
+                    <li><a href="#Z">Letra Z</a></li>
+                </ul>
             </aside>
 
             <main className="contenedor-indices">
-            {letras.map((letra) => (
-                <div key={letra}>
-                <h2 className="i-letra">{letra}</h2>
-                {agrupado[letra]?.map((item, index) => {
-                    if ("Título" in item) {
-                        return (
-                            <p key={`${item.Título}-${item.Autor}-${index}`}>
-                                – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
-                                {item.Idioma !== "Español" && (
-                                    <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
-                                )}
-                            </p>
-                        );
-                    } else {
-                        const autores = item.autores;
-                        const mostrarAutores = autores.size > 1;
-                        return (
-                            <div key={`${item.saga}-${index}`}>
-                                <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(autores)[0]}:</p>
-                                <ul className="list-[circle] ml-6">
-                                    {item.libros.map((book, idx) => (
-                                        <li key={`${book.Título}-${book.Autor}-${idx}`}>
-                                            <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
-                                            {mostrarAutores && `, ${book.Autor}`}
-                                            {book.Idioma !== "Español" && (
-                                                <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
-                                            )}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        );
-                    }
-                })}
+                <div className="table-container">
+                {letras.map((letra) => (
+                    <div key={letra} id={letra}>
+                        <h2 className="i-letra">{letra}</h2>
+                        {agrupado[letra]?.map((item, index) => {
+                            if ("Título" in item) {
+                                return (
+                                    <p key={`${item.Título}-${item.Autor}-${index}`}>
+                                        – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
+                                        {item.Idioma !== "Español" && (
+                                            <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
+                                        )}
+                                    </p>
+                                );
+                            } else {
+                                const autores = item.autores;
+                                const mostrarAutores = autores.size > 1;
+                                return (
+                                    <div key={`${item.saga}-${index}`}>
+                                        <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(autores)[0]}:</p>
+                                        <ul className="list-[circle] ml-6">
+                                            {item.libros.map((book, idx) => (
+                                                <li key={`${book.Título}-${book.Autor}-${idx}`}>
+                                                    <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
+                                                    {mostrarAutores && `, ${book.Autor}`}
+                                                    {book.Idioma !== "Español" && (
+                                                        <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
+                                                    )}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                );
+                            }
+                        })}
+                    </div>
+                ))}
                 </div>
-            ))}
+                <div className="barra-inferior">
+                    <p>Información</p>
+                </div>
             </main>
         </>
     );
