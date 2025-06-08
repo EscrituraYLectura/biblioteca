@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Tooltip } from "@/components/Tooltip";
 import data from "@/public/data.json";
 
 interface Book {
@@ -215,7 +216,7 @@ export default function TableFetch() {
                 />
 
                 <label htmlFor="publicación">Año de publicación:
-                    <span className="tooltip">ⓘ<span className="tooltip-text">Puedes escribir tres dígitos para buscar por década. Ej.: '198' para la década de 1980.</span></span>
+                    <Tooltip text="ⓘ">Puedes escribir tres dígitos para buscar por década. Ej.: '198' para la década de 1980.</Tooltip>
                 </label>
                 <input
                 id="publicación"
@@ -258,7 +259,7 @@ export default function TableFetch() {
                 })}
                 </div>
 
-                <label htmlFor="idiomas">Idioma:</label>
+                <label htmlFor="idioma">Idioma:</label>
                 <select
                 id="idioma"
                 value={filters.Idioma}
@@ -302,12 +303,6 @@ export default function TableFetch() {
             </aside>
 
             <main className="results">
-                <div id="barra-superior">
-                    <p>Números entre paréntesis indican el orden de la saga.</p>
-                    <p><span className="bs-1">✚</span> para ver otras ediciones del libro.</p>
-                    <p>Libros con <span className={`bs-2 ${filters.Editado === "true" ? "editado-activado" : ""}`} onClick={() => updateFilter("Editado", filters.Editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones de EyL.</p>
-                    <p><span className="bs-3">✖</span> para reportar información.</p>
-                </div>
                 <div className="table-container">
                     <table>
                         <thead>
@@ -361,7 +356,7 @@ export default function TableFetch() {
                             <tr key={index} className={book.Editado ? "libro-editado" : undefined}>
                                 <td>
                                     {book.Enlace !== "" ? <a href={book.Enlace} target="_blank">{book.Título}</a> : book.Título}
-                                    {book.Otros !== "" ? <span className="tooltip">✚<span className="tooltip-text">Otras ediciones: {book.Otros}</span></span> : undefined}
+                                    {book.Otros !== "" ? <Tooltip text="✚">Otras ediciones: {book.Otros}</Tooltip> : undefined}
                                 </td>
                                 <td>{book.Autor}</td>
                                 <td>{book.Publicación}</td>
@@ -376,6 +371,14 @@ export default function TableFetch() {
                 <div id="barra-inferior">
                     <p id="numero-resultados">
                         {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
+                        <Tooltip text="ⓘ">
+                            <span>
+                                - Los números entre paréntesis indican el orden dentro de la saga.<br/>
+                                - Párate sobre <span className="bs-1">✚</span> para ver otras ediciones del mismo libro.<br/>
+                                - Los libros con <span className={`bs-2 ${filters.Editado === "true" ? "editado-activado" : ""}`} onClick={() => updateFilter("Editado", filters.Editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones hechas por EyL.<br/>
+                                - Haz clic en <span className="bs-3">✖</span> para reportar información errada o faltante.
+                            </span>
+                        </Tooltip>
                     </p>
                     <p>Puedes ayudar al servidor <a href="https://discord.com/channels/403377475947855882/1290810391089123388" target="_blank">donando los libros que tengas</a>. ¡Te lo agradecemos muchísimo!</p>
                 </div>
