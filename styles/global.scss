@@ -383,10 +383,11 @@ tbody tr {
 
 .table-container-indices {
     font-family: "Ibarra Real Nova", serif;
+    padding-left: 1rem;
 }
 
 .sidebar-indices {
-    width: 120px;
+    width: 160px;
     background-color: #121214;
     border-right: 1px solid #6d6e771f;
     border-top: 1px solid #6d6e771f;
@@ -397,7 +398,6 @@ tbody tr {
     max-height: 100vh;
     overflow-y: auto;
     padding-inline: 1rem;
-    padding-bottom: 1rem;
     gap: 1rem;
 
     ul {
