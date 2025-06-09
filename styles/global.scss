@@ -1,3 +1,5 @@
+// ESTILOS GLOBALES
+
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
@@ -13,6 +15,8 @@ a {
     color: #5095e9;
 }
 
+// BARRA SUPERIOR
+
 .topbar {
     background-color: #121214;
     display: flex;
@@ -24,11 +28,50 @@ a {
     height: 5vh;
 }
 
+// BARRA DE NAVEGACIÓN
+
+.navbar {
+    width: 80px;
+    background-color: #121214;
+    border-right: 1px solid #6d6e771f;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 1rem;
+
+    ul {
+        padding: 0 0.8rem;
+        list-style: none;
+
+        li {
+            border-radius: 0.5rem;
+            background-color: #1d1d1e;
+            border: none;
+            color: #fff;
+            font-size: 26px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-out;
+            margin-bottom: 1rem;
+            width: 100%;
+            height: 27%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: #5764f0;
+            }
+        }
+    }
+}
+
 .contenedor {
     display: flex;
     height: 95vh;
     overflow: hidden;
 }
+
+// BARRAS LATERALES
 
 .sidebar {
     width: 320px;
@@ -51,10 +94,10 @@ a {
     padding-top: 1rem;
     border-top: 1px solid #6d6e771f;
     color: #82838b;
-}
 
-.introduction p {
-    margin: 0;
+    p {
+        margin: 0;
+    }
 }
 
 .sidebar label {
@@ -169,19 +212,19 @@ th {
 
 td {
     border-bottom: 1px solid #6d6e771f;
-}
 
-td a {
-    background-color: #292c51;
-    transition: background-color 0.1s ease-out,color 0.1s ease-out;
-    padding: 0.2rem;
-    border-radius: 3px;
-    color: #a9baff;
-    text-decoration: none;
+    a {
+        background-color: #292c51;
+        transition: background-color 0.1s ease-out,color 0.1s ease-out;
+        padding: 0.2rem;
+        border-radius: 3px;
+        color: #a9baff;
+        text-decoration: none;
 
-    &:hover {
-        background-color: #5865f2;
-        color: #fff;
+        &:hover {
+            background-color: #5865f2;
+            color: #fff;
+        }
     }
 }
 
@@ -305,43 +348,6 @@ tbody tr {
     background-color: #202024;
 }
 
-// NAVBAR
-
-.navbar {
-    width: 80px;
-    background-color: #121214;
-    border-right: 1px solid #6d6e771f;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    gap: 1rem;
-}
-
-.navbar ul {
-    padding: 0 0.8rem;
-    list-style: none;
-}
-
-.navbar ul li {
-    border-radius: 0.5rem;
-    background-color: #1d1d1e;
-    border: none;
-    color: #fff;
-    font-size: 26px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-out;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: 27%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        background-color: #5764f0;
-    }
-}
-
 // INDICES
 
 .contenedor-indices {
@@ -368,10 +374,10 @@ tbody tr {
 
     ul {
         list-style-type: circle;
-    }
 
-    ul li {
-        margin-bottom: 1rem;
+        li {
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -464,11 +470,11 @@ tbody tr {
     }
 
     table {
-        min-width: 600px; // para que no se contraiga demasiado en horizontal
+        min-width: 600px;
     }
 
     thead {
-        position: relative; // no sticky en móvil para evitar problemas con scroll
+        position: relative;
     }
 
     th, td {
