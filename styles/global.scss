@@ -466,97 +466,73 @@ tbody tr {
 }
 
 // Estilos para pantallas pequeñas (móviles)
-@media (max-width: 600px) {
-    body {
-        font-size: smaller;
-    }
-
+@media (max-width: 768px) {
     .topbar {
+        flex-direction: column;
         height: auto;
-        padding: 0.5rem 0.25rem;
-        gap: 0.25rem;
-        flex-wrap: wrap;
+        padding: 0.5rem;
     }
 
-    .contenedor,
-    .contenedor-2 {
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #6d6e771f;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0.5rem;
+
+            li {
+                font-size: 1.5rem;
+                margin-bottom: 0;
+                height: auto;
+            }
+        }
+    }
+
+    .contenedor {
         flex-direction: column;
         height: auto;
     }
 
-    .sidebar {
+    .sidebar,
+    .sidebar-indices {
         width: 100%;
-        max-height: none;
         border-right: none;
-        border-top: 1px solid #6d6e771f;
-        padding-inline: 0.5rem;
-        padding-bottom: 0.5rem;
-        overflow-y: visible;
+        border-bottom: 1px solid #6d6e771f;
+        flex-shrink: 0;
         position: relative;
+        max-height: none;
     }
 
-    .results {
+    .results,
+    .contenedor-indices {
         height: auto;
-        flex: none;
+        overflow: visible;
     }
 
     .table-container {
-        max-height: 50vh;
         overflow-x: auto;
-        border-top: none;
-        border-bottom: none;
-    }
-
-    table {
-        min-width: 600px;
-    }
-
-    thead {
-        position: relative;
-    }
-
-    th, td {
-        padding: 0.4rem 0.5rem;
-        font-size: 0.85rem;
-    }
-
-    .navbar {
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        border-right: none;
-        border-bottom: 1px solid #6d6e771f;
-        overflow-x: auto;
-        gap: 0.5rem;
-    }
-
-    .navbar ul {
-        display: flex;
-        flex-direction: row;
-        padding: 0 0.5rem;
-    }
-
-    .navbar ul li {
-        font-size: 20px;
-        width: auto;
-        height: auto;
-        margin-bottom: 0;
-        padding: 0.5rem 0.75rem;
-        border-radius: 0.5rem;
     }
 
     .barra-inferior {
         flex-direction: column;
+        align-items: flex-start;
         gap: 0.5rem;
-        padding: 0.3rem 1rem;
+        padding: 1rem;
     }
 
-    .sidebar label {
-        font-size: 0.9rem;
+    table {
+        font-size: 0.85rem;
     }
 
-    .sidebar input,
-    .sidebar select {
-        width: 100%;
+    .popup-box {
+        width: 95%;
+        max-width: none;
+        max-height: 80vh;
     }
 }
