@@ -290,16 +290,6 @@ export default function TableFetch() {
                 value={filters.Saga}
                 onChange={(e) => updateFilter("Saga", e.target.value)}
                 />
-
-                <div className="introduction">
-                    <p>
-                        Herramienta de búsqueda de la Biblioteca de Escritura y Lectura.
-                        Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a>;
-                        hosteado en <a href="https://github.com/EscrituraYLectura/biblioteca" target="_blank">GitHub Pages</a>.
-                        También puedes ver los datos en la <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">base de datos</a>.
-                        El estilo es una imitación del estilo de Discord.
-                    </p>
-                </div>
             </aside>
 
             <main className="results">
