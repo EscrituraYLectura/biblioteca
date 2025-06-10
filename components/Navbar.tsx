@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Popup from '@/components/Popup'
 
 export default function NavBar() {
@@ -13,13 +13,15 @@ export default function NavBar() {
 
     const [mostrarPopup, setMostrarPopup] = useState(false);
 
+    const pathname = usePathname();
+
     return (
         <nav className="navbar">
             <div className="navbar-pages">
                 <ul>
-                    <li onClick={() => irAPagina('/buscador')}>⌕</li>
-                    <li onClick={() => irAPagina('/indices')}>≡</li>
-                    <li onClick={() => irAPagina('/estadisticas')}>⊞</li>
+                    <li onClick={() => irAPagina('/buscador')} className={pathname.startsWith('/buscador') ? 'pagina-activa' : ''}>⌕</li>
+                    <li onClick={() => irAPagina('/indices')} className={pathname.startsWith('/indices') ? 'pagina-activa' : ''}>≡</li>
+                    <li onClick={() => irAPagina('/estadisticas')} className={pathname.startsWith('/estadisticas') ? 'pagina-activa' : ''}>⊞</li>
                 </ul>
             </div>
             <div className="navbar-info">
