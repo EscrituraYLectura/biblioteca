@@ -18,8 +18,7 @@ export default function NavBar() {
             <ul>
                 <li onClick={() => irAPagina('/buscador')}>⌕</li>
                 <li onClick={() => irAPagina('/indices')}>≡</li>
-                <li onClick={() => irAPagina('/realista')}>⊞</li>
-                <li onClick={() => irAPagina('/estadisticas')}>◉</li>
+                <li onClick={() => irAPagina('/estadisticas')}>⊞</li>
                 <li onClick={() => setMostrarPopup(true)}>ⓘ</li>
                 {mostrarPopup && (
                     <Popup onClose={() => setMostrarPopup(false)}>
