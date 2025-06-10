@@ -1,5 +1,5 @@
-import TopBar from '@/components/topbar';
-import NavBar from '@/components/navbar';
+import TopBar from '@/components/Topbar';
+import NavBar from '@/components/Navbar';
 
 export default function Estadisticas() {
     return (
