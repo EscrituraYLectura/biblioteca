@@ -15,6 +15,35 @@ a {
     color: #5095e9;
 }
 
+label {
+    color: #fff;
+    margin-bottom: -0.5rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    border: 1px solid #97979f33;
+    border-radius: 8px;
+    background-color: #00000014;
+    color: #82838b;
+    outline: none;
+    transition: border 0.3s ease-out;
+
+    &:focus {
+        border: 1px solid #5197ed;
+    }
+}
+
+select option {
+    background-color: #121214;
+}
+
+textarea {
+    height: 100px;
+}
+
 // BARRA SUPERIOR
 
 .topbar {
@@ -112,36 +141,12 @@ a {
     //border-top-left-radius: 12px;
 }
 
-.sidebar label {
-    color: #fff;
-    margin-bottom: -0.5rem;
-}
-
-.sidebar input,
-.sidebar select {
-    padding: 0.5rem;
-    border: 1px solid #97979f33;
-    border-radius: 8px;
-    background-color: #00000014;
-    color: #82838b;
-    outline: none;
-    transition: border 0.3s ease-out;
-
-    &:focus {
-        border: 1px solid #5197ed;
-    }
-}
-
 .sidebar input {
     width: 94%;
 }
 
 .sidebar select {
     width: 100%;
-}
-
-.sidebar select option {
-    background-color: #121214;
 }
 
 .multiSelect {
@@ -466,12 +471,16 @@ tbody tr {
     max-width: 90%;
     max-height: 90%;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
 
     h2 {
         color: #fff;
+        margin: 0 0 1rem 0;
     }
 
     p {
+        margin: 0;
         line-height: 1rem;
     }
 }
@@ -482,9 +491,47 @@ tbody tr {
     right: 0.25rem;
     background: none;
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
     color: #82838b;
+    margin-left: 55rem;
+}
+
+.reportar-eyl-form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .reportar-eyl-form-inputs {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            input {
+                width: 317px;
+            }
+        }
+    }
+}
+
+#send-report-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #5865f2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: #4654c0;
+    }
 }
 
 // Estilos para pantallas pequeñas (móviles)
