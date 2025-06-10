@@ -24,7 +24,7 @@ export default function NavBar() {
             </div>
             <div className="navbar-info">
                 <ul>
-                    <li>✖</li>
+                    <li className="navbar-report">✖</li>
                     <li onClick={() => setMostrarPopup(true)}>ⓘ</li>
                     {mostrarPopup && (
                         <Popup onClose={() => setMostrarPopup(false)}>
