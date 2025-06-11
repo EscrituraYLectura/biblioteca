@@ -27,14 +27,14 @@ const normalizar = (texto: string) =>
 
 const getLetra = (texto: string) => {
     if (!texto) return "#";
-    const contieneLatinas = /[a-zA-ZñÑ]/.test(texto);
-    if (!contieneLatinas) return "#";
-
-    const match = texto.match(/[a-zA-ZñÑ]/);
+    const match = texto.match(/\p{Letter}/u);
     if (!match) return "#";
 
-    const letra = match[0].toUpperCase();
-    return letra === "Ñ" ? "Ñ" : letra;
+    let letra = match[0].toUpperCase();
+    if (letra === "Ñ") return "Ñ";
+
+    letra = letra.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    return /^[A-Z]$/.test(letra) ? letra : "#";
 };
 
 const ordenar = (a: string, b: string) => {
