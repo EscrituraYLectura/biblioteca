@@ -1,14 +1,13 @@
-import TopBar from '@/components/Topbar';
-import NavBar from '@/components/Navbar';
+'use client';
+
+import { redirect, usePathname } from 'next/navigation';
 
 export default function Home() {
-    return (
-        <>
-            <TopBar />
-            <main className="contenedor">
-                <NavBar />
-                <p>Página principal</p>
-            </main>
-        </>
-    );
+    const pathname = usePathname();
+
+    if (pathname === '/') {
+        redirect('/buscador')
+    }
+
+    return;
 }
