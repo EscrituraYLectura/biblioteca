@@ -32,28 +32,38 @@ export default function NavBar() {
                         <Popup onClose={() => setPopupActivo(null)}>
                             <h2>Reportar errores</h2>
                             <p>
-                                Si encuentras algún error en el funcionamiento de la página (filtros, orden,<br/>
-                                página no encontrada, elementos mal posicionados, etc.) puedes usar este<br/>
-                                formulario para reportarlo. Por favor, sé lo más exacto posible para poder<br/>
-                                replicar el error. Opcionalmente, y si tienes una cuenta en GitHub, puedes<br/>
-                                escribir tu nombre de usuario para poder mencionarte. Si encuentras información<br/>
-                                errada o faltante sobre un libro, usa el botón correspondiente que aparece en<br/>
-                                el lateral derecho de la tabla.
+                                Si encuentras algún error en el funcionamiento del sitio, puedes<br/>
+                                usar este formulario para reportarlo. Por favor, sé lo más exacto<br/>
+                                posible. Opcionalmente, puedes escribir tu nombre de usuario de<br/>
+                                GitHub para poder mencionarte.
                             </p>
                             <div className="reportar-eyl-form">
-                                <label htmlFor="reportar-mensaje">Explicación del error:</label>
-                                <textarea id="reportar-mensaje" placeholder="Sé lo más descriptivo posible."/>
-
                                 <div className="reportar-eyl-form-inputs">
                                     <div>
-                                        <label htmlFor="reporte-error">Tipo de error:</label>
-                                        <select id="reporte-error">
-                                        <option value="">Otro</option>
-                                        <option value="">Estilo (PC)</option>
-                                        <option value="">Estilo (teléfonos)</option>
+                                        <label htmlFor="reporte-tipo">Tipo de error: <span className="error-asterisk">*</span></label>
+                                        <select id="reporte-tipo" required>
+                                            <option value="" disabled selected>Selecciona una opción</option>
+                                            <option value="">Página no encontrada (404)</option>
+                                            <option value="">Estilo (PC)</option>
+                                            <option value="">Estilo (teléfonos)</option>
+                                            <option value="">Otro</option>
                                         </select>
-                                    </div>
-                                    <div>
+
+                                        <label htmlFor="reporte-navegador">Navegador usado: <span className="error-asterisk">*</span></label>
+                                        <select id="reporte-navegador" required>
+                                            <option value="" disabled selected>Selecciona una opción</option>
+                                            <option value="">Chrome</option>
+                                            <option value="">Edge</option>
+                                            <option value="">Safari</option>
+                                            <option value="">Firefox</option>
+                                            <option value="">Opera</option>
+                                            <option value="">Brave</option>
+                                            <option value="">Otro</option>
+                                        </select>
+
+                                        <label htmlFor="reportar-mensaje">Explicación del error: <span className="error-asterisk">*</span></label>
+                                        <textarea id="reportar-mensaje" placeholder="Describe paso a paso cómo ocurrió el error." required/>
+
                                         <label htmlFor="usuario-github">Nombre de usuario de GitHub:</label>
                                         <input id="usuario-github" type="text" placeholder="Este campo es opcional."/>
                                     </div>
@@ -69,10 +79,12 @@ export default function NavBar() {
                             <h2>Biblioteca</h2>
                             <p>
                                 Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript).
-                                Hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-                                Puedes ver el código fuente <a href="https://github.com/EscrituraYLectura/biblioteca">aquí</a>.<br/>
-                                Si quieres contribuir, puedes abrir un issue o pull request en el repositorio. En la wiki hay más información.<br/>
-                                Usamos Google Drive para guardar los datos de los libros; puedes ver el archivo <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">aquí</a>.<br/>
+                                Hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.<br/>
+                                Puedes ver el código fuente <a href="https://github.com/EscrituraYLectura/biblioteca">aquí</a>.
+                                Si quieres contribuir, puedes abrir<br/>
+                                un issue o pull request en el repositorio. En la wiki hay más información.<br/>
+                                Usamos Google Drive para guardar los datos de los libros; puedes ver<br/>
+                                el archivo <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">aquí</a>.
                                 El estilo es una imitación del <a href="https://discord.com/branding" target="_blank">estilo de Discord</a>.
                             </p>
                         </Popup>

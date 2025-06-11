@@ -30,6 +30,8 @@ textarea {
     color: #82838b;
     outline: none;
     transition: border 0.3s ease-out;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
 
     &:focus {
         border: 1px solid #5197ed;
@@ -505,17 +507,13 @@ tbody tr {
 
     .reportar-eyl-form-inputs {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 0.5rem;
 
         div {
             display: flex;
             flex-direction: column;
             gap: 1rem;
-
-            input {
-                width: 317px;
-            }
         }
     }
 }
@@ -532,6 +530,10 @@ tbody tr {
     &:hover {
       background-color: #4654c0;
     }
+}
+
+.error-asterisk {
+    color: red;
 }
 
 // Estilos para pantallas pequeñas (móviles)
