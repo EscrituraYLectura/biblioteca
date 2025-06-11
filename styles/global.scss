@@ -137,7 +137,6 @@ textarea {
     max-height: 100vh;
     overflow-y: auto;
     padding-inline: 1rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
     gap: 1rem;
     //border-top-left-radius: 12px;
@@ -155,6 +154,18 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
+
+.pagina-subtitulo {
+    font-weight: bold;
+    font-size: small;
+    margin: 0 -1rem;
+    padding: 0.64rem 1rem;
+    border-bottom: 1px solid #6d6e771f;
+    background-color: #121214;
+    position: sticky;
+    top: 0;
+    z-index: 4;
 }
 
 .bs-1 {
@@ -208,7 +219,7 @@ thead {
     position: sticky;
     top: 0;
     background-color: #121214;
-    z-index: 2;
+    z-index: 4;
     border-bottom: 1px solid #6d6e771f;
 }
 
@@ -261,7 +272,7 @@ tbody tr {
     margin-left: 0.4rem;
     font-weight: bold;
     color: #007bff;
-    z-index: 10;
+    z-index: 2;
     position: relative;
 }
 

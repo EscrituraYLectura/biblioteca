@@ -177,6 +177,8 @@ export default function TableFetch() {
     return (
         <>
             <aside className="sidebar">
+                <h2 className="pagina-subtitulo">Buscador</h2>
+
                 <button
                     id="clear-filters-button"
                     type="button"
