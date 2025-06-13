@@ -76,7 +76,7 @@ export default function NavBar() {
                     <li onClick={() => setPopupActivo('sobre-eyl')}>ⓘ</li>
                     {popupActivo === 'sobre-eyl' && (
                         <Popup onClose={() => setPopupActivo(null)}>
-                            <h2>Biblioteca</h2>
+                            <h2>Sobre la Biblioteca</h2>
                             <p>
                                 Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript).
                                 Hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.<br/>
