@@ -391,7 +391,11 @@ tbody tr {
     font-size: medium;
 
     .i-letra {
-        margin: 3rem 0 0;
+        margin-top: 3rem;
+
+        &:nth-child(1) {
+            margin-top: 1rem;
+        }
     }
 
     .i-titulo {
