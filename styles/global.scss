@@ -435,21 +435,19 @@ tbody tr {
         padding: 0;
 
         li {
-            padding: 0.5rem;
-            border-radius: 8px;
-            background-color: #00000014;
-            transition: background-color 0.1s ease-out;
             margin-bottom: 0.15rem;
 
-            &:hover {
-                background-color: #1d1d1e;
-            }
-
-            a {
-                text-decoration: none;
+            a.indice-enlace {
+                display: block;
+                padding: 0.5rem;
+                border-radius: 8px;
+                background-color: #00000014;
+                transition: background-color 0.1s ease-out;
                 color: #82838b;
+                text-decoration: none;
 
                 &:hover {
+                    background-color: #1d1d1e;
                     color: #efeff0;
                 }
             }

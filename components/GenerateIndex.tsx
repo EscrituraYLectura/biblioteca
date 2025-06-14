@@ -114,34 +114,13 @@ export default function ListaOrdenada() {
         <>
             <aside className="sidebar-indices">
                 <ul>
-                    <li><a href="#A">Letra A</a></li>
-                    <li><a href="#B">Letra B</a></li>
-                    <li><a href="#C">Letra C</a></li>
-                    <li><a href="#D">Letra D</a></li>
-                    <li><a href="#E">Letra E</a></li>
-                    <li><a href="#F">Letra F</a></li>
-                    <li><a href="#G">Letra G</a></li>
-                    <li><a href="#H">Letra H</a></li>
-                    <li><a href="#I">Letra I</a></li>
-                    <li><a href="#J">Letra J</a></li>
-                    <li><a href="#K">Letra K</a></li>
-                    <li><a href="#L">Letra L</a></li>
-                    <li><a href="#M">Letra M</a></li>
-                    <li><a href="#N">Letra N</a></li>
-                    <li><a href="#Ñ">Letra Ñ</a></li>
-                    <li><a href="#O">Letra O</a></li>
-                    <li><a href="#P">Letra P</a></li>
-                    <li><a href="#Q">Letra Q</a></li>
-                    <li><a href="#R">Letra R</a></li>
-                    <li><a href="#S">Letra S</a></li>
-                    <li><a href="#T">Letra T</a></li>
-                    <li><a href="#U">Letra U</a></li>
-                    <li><a href="#V">Letra V</a></li>
-                    <li><a href="#W">Letra W</a></li>
-                    <li><a href="#X">Letra X</a></li>
-                    <li><a href="#Y">Letra Y</a></li>
-                    <li><a href="#Z">Letra Z</a></li>
-                    <li><a href="#%23">Otros</a></li>
+                    {letras.map((letra) => (
+                        <li key={letra}>
+                            <a href={`#${letra === "#" ? "%23" : letra}`} className="indice-enlace">
+                                {letra === "#" ? "Otros" : `Letra ${letra}`}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </aside>
 
