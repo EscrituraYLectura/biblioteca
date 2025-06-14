@@ -113,6 +113,8 @@ export default function ListaOrdenada() {
     return (
         <>
             <aside className="sidebar-indices">
+                <h2 className="pagina-subtitulo">Índices</h2>
+
                 <ul>
                     {letras.map((letra) => (
                         <li key={letra}>
