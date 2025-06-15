@@ -461,25 +461,29 @@ tbody tr {
 
 .vista-selector {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
 
     button {
-        padding: 0.25rem 0.5rem;
-        border: none;
-        background-color: #1d1d1e;
+        padding: 0.4rem;
+        border: 1px solid #97979f33;
+        background-color: #121214;
         cursor: pointer;
-        color: #fff;
-        border-radius: 12px;
-        transition: background-color 0.2s ease-out;
+        color: #82838b;
+        border-radius: 8px;
+        width: 100%;
+        transition: background-color 0.2s ease-out,color 0.2 ease-out;
 
         &:hover:not(:disabled) {
-            background-color: #5764f0;
+            background-color: #1d1d1e;
+            color: #efeff0;
         }
 
         &:disabled {
-            background-color: #5764f0;
-            cursor: default;
+            background-color: #2c2c30;
+            color: white;
         }
     }
 }
