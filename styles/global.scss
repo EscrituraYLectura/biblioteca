@@ -462,22 +462,23 @@ tbody tr {
 .vista-selector {
     display: flex;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 
     button {
         padding: 0.25rem 0.5rem;
         border: none;
-        background-color: #eaeaea;
+        background-color: #1d1d1e;
         cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.2s;
+        color: #fff;
+        border-radius: 12px;
+        transition: background-color 0.2s ease-out;
 
         &:hover:not(:disabled) {
-            background-color: #d0d0d0;
+            background-color: #5764f0;
         }
 
         &:disabled {
-            background-color: #c0c0c0;
+            background-color: #5764f0;
             cursor: default;
         }
     }
