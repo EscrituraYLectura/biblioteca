@@ -105,19 +105,22 @@ const agruparPorAutor = (libros: Book[]) => {
     const autores: Record<string, Book[]> = {};
 
     for (const libro of libros) {
-        if (!autores[libro.Autor]) autores[libro.Autor] = [];
-        autores[libro.Autor].push(libro);
+        const autoresLista = libro.Autor.split(",").map(a => a.trim());
+
+        for (const autorIndividual of autoresLista) {
+            if (!autores[autorIndividual]) autores[autorIndividual] = [];
+            autores[autorIndividual].push(libro);
+        }
     }
 
-    const ordenados = Object.entries(autores)
-    .sort(([a], [b]) => ordenar(a, b));
+    const ordenados = Object.entries(autores).sort(([a], [b]) => ordenar(a, b));
 
     const agrupado: Record<string, { autor: string; libros: Book[] }[]> = {};
-        for (const [autor, libros] of ordenados) {
-            const letra = getLetra(autor);
-            if (!agrupado[letra]) agrupado[letra] = [];
-            agrupado[letra].push({ autor, libros });
-        }
+    for (const [autor, libros] of ordenados) {
+        const letra = getLetra(autor);
+        if (!agrupado[letra]) agrupado[letra] = [];
+        agrupado[letra].push({ autor, libros });
+    }
 
     return agrupado;
 };
@@ -138,7 +141,7 @@ function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; 
             return (
                 <div key={`${item.saga}-${index}`}>
                     <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(item.autores)[0]}:</p>
-                    <ul className="list-[circle] ml-6">
+                    <ul>
                         {item.libros.map((book, idx) => (
                             <li key={`${book.Título}-${book.Autor}-${idx}`}>
                             <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
@@ -159,15 +162,22 @@ function renderVistaAutores(items: { autor: string; libros: Book[] }[]) {
     return items.map(({ autor, libros }, index) => (
         <div key={`${autor}-${index}`}>
             <p><strong>{autor}:</strong></p>
-            <ul className="list-[circle] ml-6">
-                {libros.map((libro, idx) => (
-                    <li key={`${libro.Título}-${idx}`}>
-                    <Link href={libro.Enlace} target="_blank" className="i-titulo">{libro.Título}</Link>
-                    {libro.Idioma !== "Español" && (
-                        <span className="i-mas-info"> (en {libro.Idioma.toLowerCase()})</span>
-                    )}
-                    </li>
-                ))}
+            <ul>
+                {libros.map((libro, idx) => {
+                    const coautores = libro.Autor.split(",").map(a => a.trim()).filter(a => a !== autor);
+                    const idiomaExtra = libro.Idioma !== "Español" ? `(en ${libro.Idioma.toLowerCase()})` : "";
+                    const colaboracion = coautores.length > 0 ? `(en colaboración con ${coautores.join(", ")})` : "";
+                    const sagaExtra = libro.Saga ? `(de la saga ${libro.Saga})` : "";
+
+                    return (
+                        <li key={`${libro.Título}-${idx}`}>
+                            <Link href={libro.Enlace} target="_blank" className="i-titulo">{libro.Título}</Link>{" "}
+                            {idiomaExtra && <span className="i-mas-info"> {idiomaExtra}</span>}
+                            {colaboracion && <span className="i-mas-info"> {colaboracion}</span>}
+                            {sagaExtra && <span className="i-mas-info"> {sagaExtra}</span>}
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     ));
@@ -210,7 +220,7 @@ export default function GenerateIndex() {
             <main className="contenedor-indices">
                 <div className="table-container table-container-indices">
                     {letras.map((letra) => (
-                        <div key={letra} id={letra}>
+                        <div key={letra} id={letra} className="contenedor-letra-libros">
                             <h2 className="i-letra">{letra}</h2>
                             {vistaLibros
                             ? renderVistaLibros((datos[letra] ?? []) as (Book | { saga: string; autores: Set<string>; libros: Book[] })[])
