@@ -391,34 +391,34 @@ tbody tr {
     border-top: 1px solid #6d6e771f;
     font-size: medium;
 
-    .i-letra {
-        margin-top: 3rem;
+    .table-container-indices {
+        font-family: "Ibarra Real Nova", serif;
+        padding-left: 1rem;
 
-        &:nth-child(1) {
-            margin-top: 1rem;
+        .contenedor-letra-libros {
+            margin-top: 3rem;
+
+            &:nth-child(1) {
+                margin-top: 1rem;
+            }
+        }
+
+        .i-titulo {
+            font-style: italic;
+        }
+
+        .i-mas-info {
+            color: #969696;
+        }
+
+        ul {
+            list-style-type: circle;
+
+            li {
+                margin-bottom: 1rem;
+            }
         }
     }
-
-    .i-titulo {
-        font-style: italic;
-    }
-
-    .i-mas-info {
-        color: #969696;
-    }
-
-    ul {
-        list-style-type: circle;
-
-        li {
-            margin-bottom: 1rem;
-        }
-    }
-}
-
-.table-container-indices {
-    font-family: "Ibarra Real Nova", serif;
-    padding-left: 1rem;
 }
 
 .sidebar-indices {

@@ -210,7 +210,7 @@ export default function GenerateIndex() {
             <main className="contenedor-indices">
                 <div className="table-container table-container-indices">
                     {letras.map((letra) => (
-                        <div key={letra} id={letra}>
+                        <div key={letra} id={letra} className="contenedor-letra-libros">
                             <h2 className="i-letra">{letra}</h2>
                             {vistaLibros
                             ? renderVistaLibros((datos[letra] ?? []) as (Book | { saga: string; autores: Set<string>; libros: Book[] })[])
