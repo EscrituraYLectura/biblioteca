@@ -44,6 +44,7 @@ export default function NavBar() {
                                         <select id="reporte-tipo" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="">Página no encontrada (404)</option>
+                                            <option value="">Tipografía (ortografía/gramática)</option>
                                             <option value="">Estilo (PC)</option>
                                             <option value="">Estilo (teléfonos)</option>
                                             <option value="">Otro</option>
