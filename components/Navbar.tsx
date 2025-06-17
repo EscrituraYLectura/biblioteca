@@ -34,7 +34,8 @@ export default function NavBar() {
                             <p>
                                 Si encuentras algún error en el funcionamiento del sitio, puedes<br/>
                                 usar este formulario para reportarlo. Al enviar el reporte, se<br/>
-                                abrirá una pestaña de Google Forms, que es el servicio que usamos.
+                                abrirá una pestaña de Google Forms, que es el servicio que<br/>
+                                utilizamos. Es totalmente anónimo.
                             </p>
                             <div className="reportar-eyl-form">
                                 <div className="reportar-eyl-form-inputs">
