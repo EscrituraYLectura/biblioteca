@@ -161,7 +161,7 @@ function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; 
 function renderVistaAutores(items: { autor: string; libros: Book[] }[]) {
     return items.map(({ autor, libros }, index) => (
         <div key={`${autor}-${index}`}>
-            <p><strong>{autor}:</strong></p>
+            <p>{autor}:</p>
             <ul>
                 {libros.map((libro, idx) => {
                     const coautores = libro.Autor.split(",").map(a => a.trim()).filter(a => a !== autor);
