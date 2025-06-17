@@ -33,9 +33,7 @@ export default function NavBar() {
                             <h2>Reportar errores</h2>
                             <p>
                                 Si encuentras algún error en el funcionamiento del sitio, puedes<br/>
-                                usar este formulario para reportarlo. Por favor, sé lo más exacto<br/>
-                                posible. Opcionalmente, puedes escribir tu nombre de usuario de<br/>
-                                GitHub para poder mencionarte.
+                                usar este formulario para reportarlo.
                             </p>
                             <div className="reportar-eyl-form">
                                 <div className="reportar-eyl-form-inputs">
