@@ -33,39 +33,40 @@ export default function NavBar() {
                             <h2>Reportar errores</h2>
                             <p>
                                 Si encuentras algún error en el funcionamiento del sitio, puedes<br/>
-                                usar este formulario para reportarlo.
+                                usar este formulario para reportarlo. Al enviar el reporte, se<br/>
+                                abrirá una pestaña de Google Forms, que es el servicio que usamos.
                             </p>
                             <div className="reportar-eyl-form">
                                 <div className="reportar-eyl-form-inputs">
-                                    <div>
+                                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHE1YEpt1XLPOlbxV_cWI4-4VAKARRzWI7SRW5UKkTA_dewQ/formResponse" method="POST" target="_blank">
                                         <label htmlFor="reporte-tipo">Tipo de error: <span className="error-asterisk">*</span></label>
-                                        <select id="reporte-tipo" required>
+                                        <select name="entry.1658570772" id="reporte-tipo" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <option value="">Página no encontrada (404)</option>
-                                            <option value="">Tipografía (ortografía/gramática)</option>
-                                            <option value="">Estilo (PC)</option>
-                                            <option value="">Estilo (teléfonos)</option>
-                                            <option value="">Otro</option>
+                                            <option value="Página no encontrada (404)">Página no encontrada (404)</option>
+                                            <option value="Tipografía (ortografía/gramática)">Tipografía (ortografía/gramática)</option>
+                                            <option value="Estilo (PC)">Estilo (PC)</option>
+                                            <option value="Estilo (teléfonos)">Estilo (teléfonos)</option>
+                                            <option value="Otro">Otro</option>
                                         </select>
 
                                         <label htmlFor="reporte-navegador">Navegador usado: <span className="error-asterisk">*</span></label>
-                                        <select id="reporte-navegador" required>
+                                        <select name="entry.982016317" id="reporte-navegador" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
-                                            <option value="">Chrome</option>
-                                            <option value="">Edge</option>
-                                            <option value="">Safari</option>
-                                            <option value="">Firefox</option>
-                                            <option value="">Opera</option>
-                                            <option value="">Brave</option>
-                                            <option value="">Otro</option>
+                                            <option value="Chrome">Chrome</option>
+                                            <option value="Edge">Edge</option>
+                                            <option value="Safari">Safari</option>
+                                            <option value="Firefox">Firefox</option>
+                                            <option value="Opera">Opera</option>
+                                            <option value="Brave">Brave</option>
+                                            <option value="Otro">Otro</option>
                                         </select>
 
                                         <label htmlFor="reportar-mensaje">Explicación del error: <span className="error-asterisk">*</span></label>
-                                        <textarea id="reportar-mensaje" placeholder="Describe paso a paso cómo ocurrió el error." required/>
-                                    </div>
-                                </div>
+                                        <textarea name="entry.440380913" id="reportar-mensaje" placeholder="Describe paso a paso cómo ocurrió el error." required/>
 
-                                <button id="send-report-button" type="button">Enviar reporte</button>
+                                        <button id="send-report-button" type="submit">Enviar reporte</button>
+                                    </form>
+                                </div>
                             </div>
                         </Popup>
                     )}
