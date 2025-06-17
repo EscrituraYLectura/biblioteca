@@ -64,13 +64,10 @@ export default function NavBar() {
 
                                         <label htmlFor="reportar-mensaje">Explicación del error: <span className="error-asterisk">*</span></label>
                                         <textarea id="reportar-mensaje" placeholder="Describe paso a paso cómo ocurrió el error." required/>
-
-                                        <label htmlFor="usuario-github">Nombre de usuario de GitHub:</label>
-                                        <input id="usuario-github" type="text" placeholder="Este campo es opcional."/>
                                     </div>
                                 </div>
 
-                                <button id="send-report-button" type="button">Enviar</button>
+                                <button id="send-report-button" type="button">Enviar reporte</button>
                             </div>
                         </Popup>
                     )}
