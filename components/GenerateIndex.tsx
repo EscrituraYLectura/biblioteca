@@ -219,15 +219,23 @@ export default function GenerateIndex() {
 
             <main className="contenedor-indices">
                 <div className="table-container table-container-indices">
-                    {letras.map((letra) => (
-                        <div key={letra} id={letra} className="contenedor-letra-libros">
-                            <h2 className="i-letra">{letra}</h2>
-                            {vistaLibros
-                            ? renderVistaLibros((datos[letra] ?? []) as (Book | { saga: string; autores: Set<string>; libros: Book[] })[])
-                            : renderVistaAutores((datos[letra] ?? []) as { autor: string; libros: Book[] }[])
-                            }
-                        </div>
-                    ))}
+                    {letras.map((letra) => {
+                        const items = datos[letra] ?? [];
+                        const sinElementos = items.length === 0;
+
+                        return (
+                            <div key={letra} id={letra} className="contenedor-letra-libros">
+                                <h2 className="i-letra">{letra}</h2>
+                                {sinElementos ? (
+                                    <p className="i-sin-elementos">No hay elementos con esta letra.</p>
+                                ) : vistaLibros ? (
+                                    renderVistaLibros(items as (Book | { saga: string; autores: Set<string>; libros: Book[] })[])
+                                ) : (
+                                    renderVistaAutores(items as { autor: string; libros: Book[] }[])
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
             </main>
         </>
