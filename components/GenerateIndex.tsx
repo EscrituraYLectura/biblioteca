@@ -229,9 +229,6 @@ export default function GenerateIndex() {
                         </div>
                     ))}
                 </div>
-                <div className="barra-inferior">
-                    <p>Información</p>
-                </div>
             </main>
         </>
     );
