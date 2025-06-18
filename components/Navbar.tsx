@@ -13,7 +13,6 @@ export default function NavBar() {
 
     const [popupActivo, setPopupActivo] = useState<string | null>(null);
 
-
     const pathname = usePathname();
 
     return (

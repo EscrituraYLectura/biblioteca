@@ -583,6 +583,16 @@ tbody tr {
     color: red;
 }
 
+.reportar-form-titulo-libro {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.reportar-form-hidden {
+    visibility: 0;
+    display: none;
+}
+
 // Estilos para pantallas pequeñas (móviles)
 @media (max-width: 768px) {
     .topbar {
