@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Popup from '@/components/Popup'
+import { puedeEnviarReporte, registrarReporte } from "@/utils/reportLimiter";
 
 export default function NavBar() {
     const router = useRouter();
@@ -32,13 +33,25 @@ export default function NavBar() {
                             <h2>Reportar errores</h2>
                             <p>
                                 Si encuentras algún error en el funcionamiento del sitio, puedes
-                                usar este formulario para reportarlo. Al enviar el reporte, se
-                                abrirá una pestaña de Google Forms, que es el servicio que
-                                utilizamos. Es totalmente anónimo.
+                                usar este formulario para reportarlo. Puedes enviar un reporte por
+                                día. Al enviar el reporte, se abrirá una pestaña de Google Forms,
+                                que es el servicio que utilizamos. Es totalmente anónimo.
                             </p>
                             <div className="reportar-eyl-form">
                                 <div className="reportar-eyl-form-inputs">
-                                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHE1YEpt1XLPOlbxV_cWI4-4VAKARRzWI7SRW5UKkTA_dewQ/formResponse" method="POST" target="_blank">
+                                    <form
+                                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfHE1YEpt1XLPOlbxV_cWI4-4VAKARRzWI7SRW5UKkTA_dewQ/formResponse"
+                                    method="POST"
+                                    target="_blank"
+                                    onSubmit={(e) => {
+                                        if (!puedeEnviarReporte()) {
+                                            e.preventDefault();
+                                            alert("Sólo puede enviarse un reporte por día. Inténtalo de nuevo mañana.");
+                                            return;
+                                        }
+                                        registrarReporte();
+                                    }}
+                                    >
                                         <label htmlFor="reporte-tipo">Tipo de error: <span className="error-asterisk">*</span></label>
                                         <select name="entry.1658570772" id="reporte-tipo" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
