@@ -31,9 +31,9 @@ export default function NavBar() {
                         <Popup onClose={() => setPopupActivo(null)}>
                             <h2>Reportar errores</h2>
                             <p>
-                                Si encuentras algún error en el funcionamiento del sitio, puedes<br/>
-                                usar este formulario para reportarlo. Al enviar el reporte, se<br/>
-                                abrirá una pestaña de Google Forms, que es el servicio que<br/>
+                                Si encuentras algún error en el funcionamiento del sitio, puedes
+                                usar este formulario para reportarlo. Al enviar el reporte, se
+                                abrirá una pestaña de Google Forms, que es el servicio que
                                 utilizamos. Es totalmente anónimo.
                             </p>
                             <div className="reportar-eyl-form">
@@ -76,11 +76,11 @@ export default function NavBar() {
                             <h2>Sobre la Biblioteca</h2>
                             <p>
                                 Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript).
-                                Hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.<br/>
+                                Hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
                                 Puedes ver el código fuente <a href="https://github.com/EscrituraYLectura/biblioteca">aquí</a>.
-                                Si quieres contribuir, puedes abrir<br/>
-                                un issue o pull request en el repositorio. En la wiki hay más información.<br/>
-                                Usamos Google Drive para guardar los datos de los libros; puedes ver<br/>
+                                Si quieres contribuir, puedes abrir
+                                un issue o pull request en el repositorio. En la wiki hay más información.
+                                Usamos Google Drive para guardar los datos de los libros; puedes ver
                                 el archivo <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">aquí</a>.
                                 El estilo es una imitación del <a href="https://discord.com/branding" target="_blank">estilo de Discord</a>.
                             </p>
