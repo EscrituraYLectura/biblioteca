@@ -5,6 +5,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Tooltip } from "@/components/Tooltip";
 import Popup from '@/components/Popup'
 import data from "@/public/data.json";
+import reportes from "@/public/reportes.json";
+const reportados: string[] = reportes as string[];
 
 interface Book {
     Título: string;
@@ -20,6 +22,7 @@ interface Book {
     Formato: string;
     Editado: string;
     Enlace: string;
+    ID: string;
 }
 
 interface Filters {
@@ -359,7 +362,18 @@ export default function TableFetch() {
                                 <td>{book.Tipo}</td>
                                 <td>{book.Tema}</td>
                                 <td>
-                                    <button className="report-button" type="button" onClick={() => { setLibroSeleccionado(book); setPopupActivo('reportar-libro');} }>✖</button>
+                                    {!reportados.includes(book.ID) && (
+                                        <button
+                                        className="report-button"
+                                        type="button"
+                                        onClick={() => {
+                                            setLibroSeleccionado(book);
+                                            setPopupActivo("reportar-libro");
+                                        }}
+                                        >
+                                        ✖
+                                        </button>
+                                    )}
                                 </td>
                             </tr>
                             ))}
@@ -393,6 +407,8 @@ export default function TableFetch() {
                         <div className="reportar-eyl-form">
                             <div className="reportar-eyl-form-inputs">
                                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdZ02qn6Q_GOFbqeKiD0vwl6xH62XHGBFnVJ43OOEmSiGpT6Q/formResponse" method="POST" target="_blank">
+                                    <input name="entry.491655063" id="reportar-id-libro" type="text" value={libroSeleccionado.ID} className="reportar-form-hidden" readOnly/>
+
                                     <input name="entry.431514674" id="reportar-titulo-libro" type="text" value={libroSeleccionado.Título} className="reportar-form-hidden" readOnly/>
 
                                     <label htmlFor="reportar-mensaje-libro">Explicación del reporte: <span className="error-asterisk">*</span></label>
