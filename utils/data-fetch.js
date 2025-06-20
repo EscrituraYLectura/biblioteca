@@ -19,7 +19,7 @@ https.get(URL, (res) => {
         return obj;
       });
 
-      fs.writeFileSync("./utils/libros.json", JSON.stringify(rows, null, 2));
+      fs.writeFileSync("./public/libros.json", JSON.stringify(rows, null, 2));
       console.log("✅ Sheet data saved to libros.json");
     } catch (err) {
       console.error("❌ Failed to parse sheet data:", err);
