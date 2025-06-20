@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Tooltip } from "@/components/Tooltip";
 import Popup from '@/components/Popup'
-import data from "@/public/data.json";
+import data from "@/public/libros.json";
 import reportes from "@/public/reportes.json";
 const reportados: string[] = reportes as string[];
 

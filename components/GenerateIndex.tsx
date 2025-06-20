@@ -1,6 +1,6 @@
 "use client";
 
-import data from "@/public/data.json";
+import data from "@/public/libros.json";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
