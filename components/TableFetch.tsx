@@ -385,11 +385,10 @@ export default function TableFetch() {
                         <h2>Reportar libro</h2>
                         <p>
                             Rellena este formulario para reportar información errada, faltante, o que quieras
-                            añadir al libro <span className="reportar-form-titulo-libro">{libroSeleccionado.Título}</span>. Por ejemplo: hay un error de tipeo en el título del
-                            libro, quieres cambiar el tipo de libro, quieres añadir un tema ya existente,
-                            quieres crear un tema y añadirlo, etc. Sé lo más descriptivo posible. Al enviar el
-                            reporte, se abrirá una pestaña de Google Forms, que es el servicio que utilizamos.
-                            Es totalmente anónimo.
+                            añadir al libro <span className="reportar-form-titulo-libro">{libroSeleccionado.Título}</span>.
+                            ¡Es de mucha ayuda que nos ayudes a clasificar los libros según sus temas! Sé lo más descriptivo
+                            posible. Al enviar el reporte, se abrirá una pestaña de Google Forms, que es el servicio que
+                            utilizamos. Es totalmente anónimo.
                         </p>
                         <div className="reportar-eyl-form">
                             <div className="reportar-eyl-form-inputs">
