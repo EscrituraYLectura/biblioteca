@@ -371,7 +371,7 @@ export default function TableFetch() {
                                             setPopupActivo("reportar-libro");
                                         }}
                                         >
-                                        ✖
+                                        ❌
                                         </button>
                                     )}
                                 </td>
