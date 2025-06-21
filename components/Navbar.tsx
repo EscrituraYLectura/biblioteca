@@ -77,6 +77,10 @@ export default function NavBar() {
                                         <label htmlFor="reportar-mensaje">Explicación del error: <span className="error-asterisk">*</span></label>
                                         <textarea name="entry.440380913" id="reportar-mensaje" placeholder="Describe paso a paso cómo ocurrió el error." required/>
 
+                                        <select name="entry.440380913" id="reporte-estado" className="reportar-form-hidden">
+                                            <option value="Faltante">Faltante</option>
+                                        </select>
+
                                         <button id="send-report-button" type="submit">Enviar reporte</button>
                                     </form>
                                 </div>

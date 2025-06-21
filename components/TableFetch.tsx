@@ -414,6 +414,10 @@ export default function TableFetch() {
                                     <label htmlFor="reportar-mensaje-libro">Explicación del reporte: <span className="error-asterisk">*</span></label>
                                     <textarea name="entry.1960922008" id="reportar-mensaje-libro" placeholder="Describe los cambios que quieras ver." required/>
 
+                                    <select name="entry.327392589" id="reportar-estado-libro" className="reportar-form-hidden">
+                                        <option value="Faltante">Faltante</option>
+                                    </select>
+
                                     <button id="send-report-button" type="submit">Enviar reporte</button>
                                 </form>
                             </div>
