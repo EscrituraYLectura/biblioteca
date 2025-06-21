@@ -463,7 +463,6 @@ tbody tr {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
     margin-top: 1rem;
 
     button {
@@ -472,7 +471,6 @@ tbody tr {
         background-color: #121214;
         cursor: pointer;
         color: #82838b;
-        border-radius: 8px;
         width: 100%;
         transition: background-color 0.2s ease-out,color 0.2 ease-out;
 
@@ -484,6 +482,16 @@ tbody tr {
         &:disabled {
             background-color: #2c2c30;
             color: white;
+        }
+
+        &:nth-child(1) {
+            border-right: none;
+            border-radius: 8px 0 0 8px;
+        }
+
+        &:nth-child(2) {
+            border-left: none;
+            border-radius: 0 8px 8px 0;
         }
     }
 }
