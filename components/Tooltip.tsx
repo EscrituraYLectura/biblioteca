@@ -20,7 +20,7 @@ export function Tooltip({ text, children }: TooltipProps) {
     };
 
     const hide = () => {
-        timeoutRef.current = setTimeout(() => setVisible(false), 300);
+        timeoutRef.current = setTimeout(() => setVisible(false), 200);
     };
 
     useEffect(() => {
