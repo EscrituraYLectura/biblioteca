@@ -1,5 +1,7 @@
+import GenerateGraphics from '@/components/GenerateGraphics';
 import TopBar from '@/components/Topbar';
 import NavBar from '@/components/Navbar';
+import { Suspense } from 'react';
 
 export default function Estadisticas() {
     return (
@@ -7,7 +9,9 @@ export default function Estadisticas() {
             <TopBar />
             <main className="contenedor">
                 <NavBar />
-                <p>Estadísticas</p>
+                <Suspense>
+                    <GenerateGraphics />
+                </Suspense>
             </main>
         </>
     );
