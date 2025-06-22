@@ -706,4 +706,8 @@ tbody tr {
         max-width: none;
         max-height: 80vh;
     }
+
+    .contenedor-estadisticas {
+        grid-template-columns: 1fr;
+    }
 }
