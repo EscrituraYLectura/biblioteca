@@ -1,6 +1,6 @@
 "use client";
 
-import { Bar, Pie } from 'react-chartjs-2';
+import { Bar, Pie, Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   BarElement,
@@ -9,11 +9,13 @@ import {
   Tooltip,
   Legend,
   ArcElement,
+  LineElement,
+  PointElement,
   ChartOptions,
 } from 'chart.js';
 import data from "@/public/libros.json";
 
-ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend, ArcElement);
+ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 interface Book {
   Título: string;
@@ -156,8 +158,12 @@ export default function GraficoSubidas() {
       {
         label: 'Libros subidos por año',
         data: cantidadesSubidas,
-        backgroundColor: 'rgba(75, 192, 192, 0.6)',
-        borderRadius: 8,
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 4,
+        pointHoverRadius: 6,
       },
     ],
   };
@@ -192,7 +198,7 @@ export default function GraficoSubidas() {
         <main className="contenedor-estadisticas">
             <div className="contenedor-grafico">
                 <h2>Libros subidos por año</h2>
-                <Bar data={datosSubidas} options={crearOpciones(añosSubidas)} />
+                <Line data={datosSubidas} options={crearOpciones(añosSubidas)} />
             </div>
 
             <div className="contenedor-grafico">
