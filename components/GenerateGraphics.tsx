@@ -196,6 +196,7 @@ export default function GraficoSubidas() {
     return (
         <>
             <main className="contenedor-estadisticas">
+                <h2 className="titulo-estadisticas">Estadísticas</h2>
                 <div className="contenedor-grafico">
                     <h2>Libros subidos por año</h2>
                     <Line data={datosSubidas} options={crearOpciones(añosSubidas)} />
