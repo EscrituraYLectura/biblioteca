@@ -67,6 +67,7 @@ const generarDatosPie = (items: string[]) => {
             {
                 data,
                 backgroundColor: backgroundColors,
+                borderWidth: 0,
             },
         ],
     };
