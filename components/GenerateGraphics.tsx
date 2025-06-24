@@ -106,7 +106,7 @@ const generarDatosTopTemas = (items: string[], topN: number = 10) => {
     };
 };
 
-const crearOpciones = (años: string[]) => ({
+const crearOpciones = (etiquetas: string[]) => ({
     responsive: true,
     plugins: {
         legend: { display: false },
@@ -115,8 +115,11 @@ const crearOpciones = (años: string[]) => ({
         x: {
             ticks: {
                 callback: function (_val: any, index: number) {
-                    if (index === 0 || index === años.length - 1) {
-                        return años[index];
+                    const label = etiquetas[index];
+                    if (index === 0 || index === etiquetas.length - 1) {
+                        const [año, mes] = label.split("-");
+                        const nombresMeses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+                        return `${nombresMeses[+mes - 1]} ${año}`;
                     }
                     return '';
                 },
@@ -124,7 +127,9 @@ const crearOpciones = (años: string[]) => ({
         },
         y: {
             beginAtZero: true,
-            stepSize: 1,
+            ticks: {
+                precision: 0,
+            },
         },
     },
 });
@@ -146,19 +151,31 @@ const opcionesTemas = {
 };
 
 export default function GraficoSubidas() {
-  // Datos por año de subida
-    const subidasAnios = data
-    .map((book: Book) => parseFechaSubida(book.Subido)?.getFullYear().toString() || null)
+    // Datos por mes de subida
+    const subidasMeses = data
+    .map((book: Book) => {
+        const fecha = parseFechaSubida(book.Subido);
+        if (!fecha) return null;
+        const mes = (fecha.getMonth() + 1).toString().padStart(2, "0");
+        return `${fecha.getFullYear()}-${mes}`;
+    })
     .filter((a): a is string => !!a);
 
-    const { años: añosSubidas, cantidades: cantidadesSubidas } = generarDatosPorAño(subidasAnios);
+    // Generar conteo por mes
+    const conteoMeses: Record<string, number> = {};
+    subidasMeses.forEach((mes) => {
+        conteoMeses[mes] = (conteoMeses[mes] || 0) + 1;
+    });
+
+    const mesesOrdenados = Object.keys(conteoMeses).sort();
+    const cantidadesMeses = mesesOrdenados.map((mes) => conteoMeses[mes]);
 
     const datosSubidas = {
-        labels: añosSubidas,
+        labels: mesesOrdenados,
         datasets: [
             {
-                label: 'Libros subidos por año',
-                data: cantidadesSubidas,
+                label: 'Libros subidos por mes',
+                data: cantidadesMeses,
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 fill: true,
@@ -199,7 +216,7 @@ export default function GraficoSubidas() {
                 <h2 className="titulo-estadisticas">Estadísticas</h2>
                 <div className="contenedor-grafico">
                     <h2>Libros subidos por año</h2>
-                    <Line data={datosSubidas} options={crearOpciones(añosSubidas)} />
+                    <Line data={datosSubidas} options={crearOpciones(datosSubidas.labels)} />
                 </div>
 
                 <div className="contenedor-grafico">
