@@ -306,7 +306,7 @@ export default function GraficoSubidas() {
 
                 <div className="contenedor-grafico">
                     <h2>Distribución por tipo</h2>
-                    <Pie data={datosTipo} />
+                    <Pie data={datosTipo} options={{ aspectRatio: 1.5 }} />
                 </div>
 
                 <div className="contenedor-grafico">
@@ -316,12 +316,12 @@ export default function GraficoSubidas() {
 
                 <div className="contenedor-grafico">
                     <h2>Distribución por idioma</h2>
-                    <Pie data={datosIdioma} />
+                    <Pie data={datosIdioma} options={{ aspectRatio: 1.5 }} />
                 </div>
 
                 <div className="contenedor-grafico">
                     <h2>Distribución por idioma original</h2>
-                    <Pie data={datosOriginal} />
+                    <Pie data={datosOriginal} options={{ aspectRatio: 1.5 }} />
                 </div>
             </main>
         </>
