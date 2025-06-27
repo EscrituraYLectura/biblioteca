@@ -116,6 +116,7 @@ const crearOpciones = (etiquetas: string[]) => ({
     },
     scales: {
         x: {
+            grid: { display: false },
             ticks: {
                 callback: function (_val: any, index: number) {
                     const label = etiquetas[index];
@@ -126,9 +127,12 @@ const crearOpciones = (etiquetas: string[]) => ({
                     }
                     return '';
                 },
+                maxRotation: 0,
+                minRotation: 0,
             },
         },
         y: {
+            grid: { display: false },
             beginAtZero: true,
             ticks: {
                 precision: 0,
@@ -145,11 +149,15 @@ const opcionesTemas = {
     },
     scales: {
         x: {
-          beginAtZero: true,
-          ticks: {
+            grid: { display: false },
+            beginAtZero: true,
+            ticks: {
                 precision: 0,
-          },
+            },
         },
+        y: {
+            grid: { display: false },
+        }
     },
 };
 
