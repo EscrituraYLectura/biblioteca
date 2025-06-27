@@ -17,10 +17,13 @@ import data from "@/public/libros.json";
 
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
+import { useState } from 'react';
+
 interface Book {
     Título: string;
     Subido: string;
     Publicación: string;
+    Tipo: string;
     Tema?: string;
 }
 
@@ -209,6 +212,70 @@ export default function GraficoSubidas() {
     const datosIdioma = generarDatosPie(data.map((book) => book.Idioma || ''));
     const datosOriginal = generarDatosPie(data.map((book) => book.Original || ''));
     const datosTemas = generarDatosTopTemas(data.map((book) => book.Tema || ''));
+    const [tiposSeleccionados, setTiposSeleccionados] = useState<string[]>([]);
+
+    // Obtener todos los tipos únicos
+    const tiposUnicos = Array.from(new Set(data.map((book) => book.Tipo?.trim() || 'Sin especificar'))).sort();
+
+    const toggleTipo = (tipo: string) => {
+        setTiposSeleccionados((prev) =>
+            prev.includes(tipo) ? prev.filter((t) => t !== tipo) : [...prev, tipo]
+        );
+    };
+
+    // Construir datasets dinámicos según selección
+    const subidasPorTipo: Record<string, Record<string, number>> = {};
+
+    data.forEach((book: Book) => {
+        const tipo = book.Tipo?.trim() || 'Sin especificar';
+        const fecha = parseFechaSubida(book.Subido);
+        if (!fecha) return;
+        const mes = `${fecha.getFullYear()}-${(fecha.getMonth() + 1).toString().padStart(2, "0")}`;
+        if (!subidasPorTipo[tipo]) subidasPorTipo[tipo] = {};
+        subidasPorTipo[tipo][mes] = (subidasPorTipo[tipo][mes] || 0) + 1;
+    });
+
+    const etiquetasMeses = Object.keys(conteoMeses).sort();
+    const colores = [
+        'rgba(255, 99, 132, 0.8)',
+        'rgba(54, 162, 235, 0.8)',
+        'rgba(255, 206, 86, 0.8)',
+        'rgba(75, 192, 192, 0.8)',
+        'rgba(153, 102, 255, 0.8)',
+        'rgba(255, 159, 64, 0.8)',
+    ];
+
+    const datosSubidasFiltrado = {
+        labels: etiquetasMeses,
+        datasets:
+            tiposSeleccionados.length === 0
+                ? [
+                    {
+                        label: 'Libros subidos por mes',
+                        data: cantidadesMeses,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                    },
+                ]
+                : tiposSeleccionados.map((tipo, idx) => {
+                    const dataMeses = etiquetasMeses.map((mes) => subidasPorTipo[tipo]?.[mes] || 0);
+                    return {
+                        label: `${tipo}`,
+                        data: dataMeses,
+                        borderColor: colores[idx % colores.length],
+                        backgroundColor: colores[idx % colores.length].replace('0.8', '0.2'),
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                    };
+                }),
+    };
+
 
     return (
         <>
@@ -216,7 +283,18 @@ export default function GraficoSubidas() {
                 <h2 className="titulo-estadisticas">Estadísticas</h2>
                 <div className="contenedor-grafico">
                     <h2>Libros subidos por año</h2>
-                    <Line data={datosSubidas} options={crearOpciones(datosSubidas.labels)} />
+                    <Line data={datosSubidasFiltrado} options={crearOpciones(etiquetasMeses)} />
+                    <div className="botones-tipo">
+                        {tiposUnicos.map((tipo) => (
+                            <button
+                                key={tipo}
+                                onClick={() => toggleTipo(tipo)}
+                                className={tiposSeleccionados.includes(tipo) ? 'seleccionado' : ''}
+                            >
+                                {tipo}
+                            </button>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="contenedor-grafico">
