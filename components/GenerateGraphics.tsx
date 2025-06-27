@@ -273,47 +273,49 @@ export default function GraficoSubidas() {
         <>
             <main className="contenedor-estadisticas">
                 <h2 className="titulo-estadisticas">Estadísticas</h2>
-                <div className="contenedor-grafico">
-                    <h2>Libros subidos por año</h2>
-                    <Line data={datosSubidasFiltrado} options={crearOpciones(etiquetasMeses)} />
-                    <div className="grafico-opciones">
-                        <div className="tag-container">
-                            {tiposUnicos.map((tipo) => (
-                                <button
-                                    key={tipo}
-                                    onClick={() => toggleTipo(tipo)}
-                                    className={`tag ${tiposSeleccionados.includes(tipo) ? "selected" : ""}`}
-                                >
-                                    {tipo}
-                                </button>
-                            ))}
+                <div className="contenedor-grid-estadisticas">
+                    <div className="contenedor-grafico">
+                        <h2>Libros subidos por año</h2>
+                        <Line data={datosSubidasFiltrado} options={crearOpciones(etiquetasMeses)} />
+                        <div className="grafico-opciones">
+                            <div className="tag-container">
+                                {tiposUnicos.map((tipo) => (
+                                    <button
+                                        key={tipo}
+                                        onClick={() => toggleTipo(tipo)}
+                                        className={`tag ${tiposSeleccionados.includes(tipo) ? "selected" : ""}`}
+                                    >
+                                        {tipo}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="contenedor-grafico">
-                    <h2>Libros por año de publicación</h2>
-                    <Bar data={datosPublicacion} options={crearOpciones(añosPublicacion)} />
-                </div>
+                    <div className="contenedor-grafico">
+                        <h2>Libros por año de publicación</h2>
+                        <Bar data={datosPublicacion} options={crearOpciones(añosPublicacion)} />
+                    </div>
 
-                <div className="contenedor-grafico">
-                    <h2>Distribución por tipo</h2>
-                    <Pie data={datosTipo} options={{ aspectRatio: 1.5 }} />
-                </div>
+                    <div className="contenedor-grafico">
+                        <h2>Distribución por tipo</h2>
+                        <Pie data={datosTipo} options={{ aspectRatio: 1.5 }} />
+                    </div>
 
-                <div className="contenedor-grafico">
-                    <h2>Top 10 de temas más frecuentes</h2>
-                    <Bar data={datosTemas} options={opcionesTemas} />
-                </div>
+                    <div className="contenedor-grafico">
+                        <h2>Top 10 de temas más frecuentes</h2>
+                        <Bar data={datosTemas} options={opcionesTemas} />
+                    </div>
 
-                <div className="contenedor-grafico">
-                    <h2>Distribución por idioma</h2>
-                    <Pie data={datosIdioma} options={{ aspectRatio: 1.5 }} />
-                </div>
+                    <div className="contenedor-grafico">
+                        <h2>Distribución por idioma</h2>
+                        <Pie data={datosIdioma} options={{ aspectRatio: 1.5 }} />
+                    </div>
 
-                <div className="contenedor-grafico">
-                    <h2>Distribución por idioma original</h2>
-                    <Pie data={datosOriginal} options={{ aspectRatio: 1.5 }} />
+                    <div className="contenedor-grafico">
+                        <h2>Distribución por idioma original</h2>
+                        <Pie data={datosOriginal} options={{ aspectRatio: 1.5 }} />
+                    </div>
                 </div>
             </main>
         </>

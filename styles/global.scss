@@ -509,21 +509,26 @@ tbody tr {
     font-weight: bold;
     font-size: small;
     padding: 0.64rem 1rem;
+    margin: 0;
+    border-top: 1px solid #6d6e771f;
     border-bottom: 1px solid #6d6e771f;
     background-color: #121214;
-    position: absolute;
+    top: 0;
+    position: sticky;
     z-index: 4;
 }
 
 .contenedor-estadisticas {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     width: 100%;
     height: 100%;
     overflow: auto;
     background-color: #1a1a1e;
-    border-top: 1px solid #6d6e771f;
+}
+
+.contenedor-grid-estadisticas {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     font-size: medium;
     padding: 1rem;
     gap: 1rem;
