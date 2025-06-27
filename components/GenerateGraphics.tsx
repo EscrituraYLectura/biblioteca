@@ -173,22 +173,6 @@ export default function GraficoSubidas() {
     const mesesOrdenados = Object.keys(conteoMeses).sort();
     const cantidadesMeses = mesesOrdenados.map((mes) => conteoMeses[mes]);
 
-    const datosSubidas = {
-        labels: mesesOrdenados,
-        datasets: [
-            {
-                label: 'Libros subidos por mes',
-                data: cantidadesMeses,
-                borderColor: 'rgba(75, 192, 192, 1)',
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                fill: true,
-                tension: 0.3,
-                pointRadius: 4,
-                pointHoverRadius: 6,
-            },
-        ],
-    };
-
     // Datos por año de publicación
     const publicacionesAnios = data
     .map((book: Book) => book.Publicación?.trim())
