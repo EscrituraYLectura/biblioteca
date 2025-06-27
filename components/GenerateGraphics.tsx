@@ -299,7 +299,25 @@ export default function GraficoSubidas() {
 
                     <div className="contenedor-grafico">
                         <h2>Distribución por tipo</h2>
-                        <Pie data={datosTipo} options={{ aspectRatio: 1.5 }} />
+                        <Pie data={datosTipo} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <div className="grafico-opciones">
+                            <div className="tag-container">
+                                {datosTipo.labels.map((label, i) => (
+                                    <span
+                                        key={label}
+                                        className="tag"
+                                        style={{
+                                            backgroundColor: datosTipo.datasets[0].backgroundColor[i],
+                                            color: 'white',
+                                            border: 'none',
+                                            cursor: 'default',
+                                        }}
+                                    >
+                                        {label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
                     <div className="contenedor-grafico">
@@ -309,12 +327,48 @@ export default function GraficoSubidas() {
 
                     <div className="contenedor-grafico">
                         <h2>Distribución por idioma</h2>
-                        <Pie data={datosIdioma} options={{ aspectRatio: 1.5 }} />
+                        <Pie data={datosIdioma} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <div className="grafico-opciones">
+                            <div className="tag-container">
+                                {datosIdioma.labels.map((label, i) => (
+                                    <span
+                                        key={label}
+                                        className="tag"
+                                        style={{
+                                            backgroundColor: datosIdioma.datasets[0].backgroundColor[i],
+                                            color: 'white',
+                                            border: 'none',
+                                            cursor: 'default',
+                                        }}
+                                    >
+                                        {label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
                     <div className="contenedor-grafico">
                         <h2>Distribución por idioma original</h2>
-                        <Pie data={datosOriginal} options={{ aspectRatio: 1.5 }} />
+                        <Pie data={datosOriginal} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <div className="grafico-opciones">
+                            <div className="tag-container">
+                                {datosOriginal.labels.map((label, i) => (
+                                    <span
+                                        key={label}
+                                        className="tag"
+                                        style={{
+                                            backgroundColor: datosOriginal.datasets[0].backgroundColor[i],
+                                            color: 'white',
+                                            border: 'none',
+                                            cursor: 'default',
+                                        }}
+                                    >
+                                        {label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
