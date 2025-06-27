@@ -284,16 +284,18 @@ export default function GraficoSubidas() {
                 <div className="contenedor-grafico">
                     <h2>Libros subidos por año</h2>
                     <Line data={datosSubidasFiltrado} options={crearOpciones(etiquetasMeses)} />
-                    <div className="botones-tipo">
-                        {tiposUnicos.map((tipo) => (
-                            <button
-                                key={tipo}
-                                onClick={() => toggleTipo(tipo)}
-                                className={tiposSeleccionados.includes(tipo) ? 'seleccionado' : ''}
-                            >
-                                {tipo}
-                            </button>
-                        ))}
+                    <div className="grafico-opciones">
+                        <div className="tag-container">
+                            {tiposUnicos.map((tipo) => (
+                                <button
+                                    key={tipo}
+                                    onClick={() => toggleTipo(tipo)}
+                                    className={`tag ${tiposSeleccionados.includes(tipo) ? "selected" : ""}`}
+                                >
+                                    {tipo}
+                                </button>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
