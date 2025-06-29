@@ -121,9 +121,13 @@ const crearOpciones = (etiquetas: string[]) => ({
                 callback: function (_val: any, index: number) {
                     const label = etiquetas[index];
                     if (index === 0 || index === etiquetas.length - 1) {
-                        const [año, mes] = label.split("-");
-                        const nombresMeses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
-                        return `${nombresMeses[+mes - 1]} ${año}`;
+                        if (label.includes("-")) {
+                            const [año, mes] = label.split("-");
+                            const nombresMeses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+                            return `${nombresMeses[+mes - 1]} ${año}`;
+                        } else {
+                            return label; // solo año
+                        }
                     }
                     return '';
                 },
