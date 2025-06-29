@@ -358,7 +358,13 @@ export default function TableFetch() {
                                     {book.Otros !== "" ? <TooltipInternal text="✚">Otras ediciones: {book.Otros}</TooltipInternal> : undefined}
                                 </td>
                                 <td>{book.Autor}</td>
-                                <td>{book.Publicación}</td>
+                                <td>
+                                    {book.Publicación.startsWith("-")
+                                        ? `${book.Publicación.slice(1)} a. C.`
+                                        : book.Publicación.startsWith("0")
+                                            ? book.Publicación.replace(/^0+/, "")
+                                            : book.Publicación}
+                                </td>
                                 <td>{book.Tipo}</td>
                                 <td>{book.Tema}</td>
                                 <td>
