@@ -14,6 +14,7 @@ import {
     ChartOptions,
 } from 'chart.js';
 import data from "@/public/libros.json";
+import { TooltipInternal } from "@/components/Tooltip";
 
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -308,7 +309,9 @@ export default function GraficoSubidas() {
                     </div>
 
                     <div className="contenedor-grafico">
-                        <h2>Libros por año de publicación</h2>
+                        <h2>Libros por año de publicación
+                            <TooltipInternal text="ⓘ">No se muestran los años con sólo 1 libro.</TooltipInternal>
+                        </h2>
                         <Bar data={datosPublicacion} options={crearOpciones(añosPublicacion)} />
                     </div>
 

@@ -8,7 +8,7 @@ interface TooltipProps {
     children: React.ReactNode;
 }
 
-export function Tooltip({ text, children }: TooltipProps) {
+export function TooltipInternal({ text, children }: TooltipProps) {
     const [visible, setVisible] = useState(false);
     const [position, setPosition] = useState({ top: 0, left: 0 });
     const triggerRef = useRef<HTMLSpanElement>(null);
