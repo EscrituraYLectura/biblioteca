@@ -190,8 +190,19 @@ export default function GraficoSubidas() {
     .map((book: Book) => book.Publicación?.trim())
     .filter((a): a is string => !!a && !isNaN(Number(a)));
 
-    const { años: añosPublicacion, cantidades: cantidadesPublicacion } = generarDatosPorAño(publicacionesAnios);
+    const { años: añosPublicacionRaw, cantidades: cantidadesPublicacionRaw } = generarDatosPorAño(publicacionesAnios);
 
+    // Filtrar años con al menos 2 libros
+    const añosPublicacion: string[] = [];
+    const cantidadesPublicacion: number[] = [];
+    
+    añosPublicacionRaw.forEach((año, idx) => {
+        if (cantidadesPublicacionRaw[idx] >= 2) {
+            añosPublicacion.push(año);
+            cantidadesPublicacion.push(cantidadesPublicacionRaw[idx]);
+        }
+    });
+    
     const datosPublicacion = {
         labels: añosPublicacion,
         datasets: [
