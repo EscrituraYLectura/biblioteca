@@ -19,6 +19,7 @@ import { TooltipInternal } from "@/components/Tooltip";
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 import { useState } from "react";
+import stylesStatistics from "@/styles/pages/estadisticas.module.scss";
 
 interface Book {
     Título: string;
@@ -284,22 +285,21 @@ export default function GraficoSubidas() {
                 }),
     };
 
-
     return (
         <>
-            <main className="contenedor-estadisticas">
-                <h2 className="titulo-estadisticas">Estadísticas</h2>
-                <div className="contenedor-grid-estadisticas">
-                    <div className="contenedor-grafico">
+            <main className={stylesStatistics.contenedor_estadisticas}>
+                <h2 className={stylesStatistics.titulo_estadisticas}>Estadísticas</h2>
+                <div className={stylesStatistics.contenedor_grid_estadisticas}>
+                    <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Libros subidos por año</h2>
                         <Line data={datosSubidasFiltrado} options={crearOpciones(etiquetasMeses)} />
-                        <div className="grafico-opciones">
-                            <div className="tag-container">
+                        <div className={stylesStatistics.grafico_opciones}>
+                            <div className={stylesStatistics.tag_container}>
                                 {tiposUnicos.map((tipo) => (
                                     <button
                                         key={tipo}
                                         onClick={() => toggleTipo(tipo)}
-                                        className={`tag ${tiposSeleccionados.includes(tipo) ? "selected" : ""}`}
+                                        className={`${stylesStatistics.tag} ${tiposSeleccionados.includes(tipo) ? stylesStatistics.selected : ""}`}
                                     >
                                         {tipo}
                                     </button>
@@ -308,22 +308,22 @@ export default function GraficoSubidas() {
                         </div>
                     </div>
 
-                    <div className="contenedor-grafico">
+                    <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Libros por año de publicación
                             <TooltipInternal text="ⓘ">No se muestran los años con sólo 1 libro.</TooltipInternal>
                         </h2>
                         <Bar data={datosPublicacion} options={crearOpciones(añosPublicacion)} />
                     </div>
 
-                    <div className="contenedor-grafico">
+                    <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por tipo</h2>
                         <Pie data={datosTipo} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
-                        <div className="grafico-opciones">
-                            <div className="tag-container">
+                        <div className={stylesStatistics.grafico_opciones}>
+                            <div className={stylesStatistics.tag_container}>
                                 {datosTipo.labels.map((label, i) => (
                                     <span
                                         key={label}
-                                        className="tag"
+                                        className={stylesStatistics.tag}
                                         style={{
                                             backgroundColor: datosTipo.datasets[0].backgroundColor[i],
                                             color: "white",
@@ -338,20 +338,20 @@ export default function GraficoSubidas() {
                         </div>
                     </div>
 
-                    <div className="contenedor-grafico">
+                    <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Top 10 de temas más frecuentes</h2>
                         <Bar data={datosTemas} options={opcionesTemas} />
                     </div>
 
-                    <div className="contenedor-grafico">
+                    <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por idioma</h2>
                         <Pie data={datosIdioma} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
-                        <div className="grafico-opciones">
-                            <div className="tag-container">
+                        <div className={stylesStatistics.grafico_opciones}>
+                            <div className={stylesStatistics.tag_container}>
                                 {datosIdioma.labels.map((label, i) => (
                                     <span
                                         key={label}
-                                        className="tag"
+                                        className={stylesStatistics.tag}
                                         style={{
                                             backgroundColor: datosIdioma.datasets[0].backgroundColor[i],
                                             color: "white",
@@ -366,15 +366,15 @@ export default function GraficoSubidas() {
                         </div>
                     </div>
 
-                    <div className="contenedor-grafico">
+                    <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por idioma original</h2>
                         <Pie data={datosOriginal} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
-                        <div className="grafico-opciones">
-                            <div className="tag-container">
+                        <div className={stylesStatistics.grafico_opciones}>
+                            <div className={stylesStatistics.tag_container}>
                                 {datosOriginal.labels.map((label, i) => (
                                     <span
                                         key={label}
-                                        className="tag"
+                                        className={stylesStatistics.tag}
                                         style={{
                                             backgroundColor: datosOriginal.datasets[0].backgroundColor[i],
                                             color: "white",

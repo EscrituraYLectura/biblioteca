@@ -4,6 +4,7 @@ import data from "@/public/libros.json";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+import stylesIndex from "@/styles/pages/indices.module.scss";
 
 interface Book {
     Título: string;
@@ -130,9 +131,9 @@ function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; 
         if ("Título" in item) {
             return (
                 <p key={`${item.Título}-${item.Autor}-${index}`}>
-                – <Link href={item.Enlace} target="_blank" className="i-titulo">{item.Título}</Link>, {item.Autor}
+                – <Link href={item.Enlace} target="_blank" className={stylesIndex.i_titulo}>{item.Título}</Link>, {item.Autor}
                 {item.Idioma !== "Español" && (
-                    <span className="i-mas-info"> (en {item.Idioma.toLowerCase()})</span>
+                    <span className={stylesIndex.i_mas_info}> (en {item.Idioma.toLowerCase()})</span>
                 )}
                 </p>
             );
@@ -144,10 +145,10 @@ function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; 
                     <ul>
                         {item.libros.map((book, idx) => (
                             <li key={`${book.Título}-${book.Autor}-${idx}`}>
-                            <Link href={book.Enlace} target="_blank" className="i-titulo">{book.Título}</Link>
+                            <Link href={book.Enlace} target="_blank" className={stylesIndex.i_titulo}>{book.Título}</Link>
                             {mostrarAutores && `, ${book.Autor}`}
                             {book.Idioma !== "Español" && (
-                                <span className="i-mas-info"> (en {book.Idioma.toLowerCase()})</span>
+                                <span className={stylesIndex.i_mas_info}> (en {book.Idioma.toLowerCase()})</span>
                             )}
                             </li>
                         ))}
@@ -171,10 +172,10 @@ function renderVistaAutores(items: { autor: string; libros: Book[] }[]) {
 
                     return (
                         <li key={`${libro.Título}-${idx}`}>
-                            <Link href={libro.Enlace} target="_blank" className="i-titulo">{libro.Título}</Link>{" "}
-                            {idiomaExtra && <span className="i-mas-info"> {idiomaExtra}</span>}
-                            {colaboracion && <span className="i-mas-info"> {colaboracion}</span>}
-                            {sagaExtra && <span className="i-mas-info"> {sagaExtra}</span>}
+                            <Link href={libro.Enlace} target="_blank" className={stylesIndex.i_titulo}>{libro.Título}</Link>{" "}
+                            {idiomaExtra && <span className={stylesIndex.i_mas_info}> {idiomaExtra}</span>}
+                            {colaboracion && <span className={stylesIndex.i_mas_info}> {colaboracion}</span>}
+                            {sagaExtra && <span className={stylesIndex.i_mas_info}> {sagaExtra}</span>}
                         </li>
                     );
                 })}
@@ -198,10 +199,10 @@ export default function GenerateIndex() {
 
     return (
         <>
-            <aside className="sidebar-indices">
-                <h2 className="pagina-subtitulo">Índices</h2>
+            <aside className={stylesIndex.sidebar_indices}>
+                <h2 className={stylesIndex.pagina_subtitulo}>Índices</h2>
 
-                <div className="vista-selector">
+                <div className={stylesIndex.vista_selector}>
                     <button onClick={() => cambiarVista("libros")} disabled={vistaLibros}>Por título</button>
                     <button onClick={() => cambiarVista("autores")} disabled={!vistaLibros}>Por autor</button>
                 </div>
@@ -209,7 +210,7 @@ export default function GenerateIndex() {
                 <ul>
                     {letras.map((letra) => (
                         <li key={letra}>
-                            <a href={`#${letra === "#" ? "%23" : letra}`} className="indice-enlace">
+                            <a href={`#${letra === "#" ? "%23" : letra}`} className={stylesIndex.indice_enlace}>
                             {letra === "#" ? "Otros" : `Letra ${letra}`}
                             </a>
                         </li>
@@ -217,17 +218,17 @@ export default function GenerateIndex() {
                 </ul>
             </aside>
 
-            <main className="contenedor-indices">
-                <div className="table-container table-container-indices">
+            <main className={stylesIndex.contenedor_indices}>
+                <div className={`${stylesIndex.table_container} ${stylesIndex.table_container_indices}`}>
                     {letras.map((letra) => {
                         const items = datos[letra] ?? [];
                         const sinElementos = items.length === 0;
 
                         return (
-                            <div key={letra} id={letra} className="contenedor-letra-libros">
-                                <h2 className="i-letra">{letra}</h2>
+                            <div key={letra} id={letra} className={stylesIndex.contenedor_letra_libros}>
+                                <h2 className={stylesIndex.i_letra}>{letra}</h2>
                                 {sinElementos ? (
-                                    <p className="i-sin-elementos">No hay elementos con esta letra.</p>
+                                    <p className={stylesIndex.i_sin_elementos}>No hay elementos con esta letra.</p>
                                 ) : vistaLibros ? (
                                     renderVistaLibros(items as (Book | { saga: string; autores: Set<string>; libros: Book[] })[])
                                 ) : (

@@ -1,0 +1,238 @@
+.sidebar {
+    width: 320px;
+    background-color: #121214;
+    border-right: 1px solid #6d6e771f;
+    border-top: 1px solid #6d6e771f;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow-y: auto;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
+    gap: 1rem;
+}
+
+.sidebar input {
+    width: 94%;
+}
+
+.sidebar select {
+    width: 100%;
+}
+
+.multiSelect {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.bs_1 {
+    color: #007bff;
+}
+
+.bs_2 {
+    background-color: #81623a;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #dde0eb;
+}
+
+.editado_activado {
+    background-color: #ce9c5c;
+}
+
+.bs_3 {
+    border-radius: 0.5rem;
+    background-color: #202024;
+    color: #f57976;
+}
+
+// TABLA DE RESULTADOS
+
+.results {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background-color: #1a1a1e;
+    border-top: 1px solid #6d6e771f;
+}
+
+.table_container {
+    flex: 1;
+    overflow-y: auto;
+    border-bottom: 1px solid #6d6e771f;
+}
+
+.tabla_principal {
+    width: 100%;
+    border-collapse: collapse;
+
+    td:nth-child(6),
+    th:nth-child(6) {
+        text-align: right;
+    }
+
+    thead {
+        position: sticky;
+        top: 0;
+        background-color: #121214;
+        z-index: 4;
+        border-bottom: 1px solid #6d6e771f;
+    }
+
+    th, td {
+        padding: 0.65rem;
+        text-align: left;
+    }
+
+    th {
+        .sort-arrow {
+            cursor: pointer;
+            user-select: none;
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+            color: #999;
+            font-weight: normal;
+        }
+    }
+
+    td {
+        border-bottom: 1px solid #6d6e771f;
+
+        a {
+            background-color: #292c51;
+            transition: background-color 0.1s ease-out,color 0.1s ease-out;
+            padding: 0.2rem;
+            border-radius: 3px;
+            color: #a9baff;
+            text-decoration: none;
+            line-height: 1.6rem;
+
+            &:hover {
+                background-color: #5865f2;
+                color: #fff;
+            }
+        }
+    }
+
+    tbody tr {
+        transition: background-color 0.2s ease-out;
+
+        &:hover {
+            background: #242428;
+        }
+    }
+}
+
+.estilo_tipo {
+    padding: 0.2rem;
+    border-radius: 4px;
+}
+
+.estilo_tipo_morado {
+    background-color: #4b2951;
+    color: #f1a8ff;
+}
+
+.estilo_tipo_azul {
+    background-color: #293851;
+    color: #a8c8ff;
+}
+
+.estilo_tipo_verde {
+    background-color: #3a5129;
+    color: #caffa8;
+}
+
+.tag_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    color: #82838b;
+    border: 1px solid #97979f33;
+    background-color: #121214;
+    border-radius: 8px;
+    padding: 0.4rem;
+    cursor: pointer;
+    font-size: smaller;
+    transition: background-color 0.2s ease-out,color 0.2 ease-out;
+
+    &:hover {
+        background-color: #1d1d1e;
+        color: #efeff0;
+    }
+}
+
+.tag.selected {
+    background-color: #2c2c30;
+    color: white;
+}
+
+.libro_editado {
+    background-color: #25201c;
+    border-left: 2px solid #ce9c5c;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+        background-color: #312d29;
+    }
+}
+
+#clear_filters_button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #202024;
+    color: #f57976;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: #35292d;
+    }
+}
+
+#numero_resultados {
+    font-weight: bold;
+}
+
+.report_button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #202024;
+    border: none;
+    color: #f57976;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+        background-color: #35292d;
+    }
+}
+
+.barra_inferior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.6rem;
+    background-color: #202024;
+}
+
+.pagina_subtitulo {
+    font-weight: bold;
+    font-size: small;
+    margin: 0 -1rem;
+    padding: 0.64rem 1rem;
+    border-bottom: 1px solid #6d6e771f;
+    background-color: #121214;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}

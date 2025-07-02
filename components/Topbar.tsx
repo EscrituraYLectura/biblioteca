@@ -1,6 +1,8 @@
+import stylesTopbar from "@/styles/components/topbar.module.scss";
+
 export default function TopBar() {
     return (
-        <div className="topbar">
+        <div className={stylesTopbar.topbar}>
             <img
                 src="/biblioteca/icon.png"
                 alt="Logo de Escritura y Lectura"

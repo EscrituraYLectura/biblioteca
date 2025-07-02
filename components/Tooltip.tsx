@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
+import stylesTooltip from "@/styles/components/tooltip.module.scss";
 
 interface TooltipProps {
     text: React.ReactNode;
@@ -36,7 +37,7 @@ export function TooltipInternal({ text, children }: TooltipProps) {
     return (
         <>
             <span
-                className="tooltip"
+                className={stylesTooltip.tooltip}
                 ref={triggerRef}
                 onMouseEnter={show}
                 onMouseLeave={hide}
@@ -47,7 +48,7 @@ export function TooltipInternal({ text, children }: TooltipProps) {
             {visible &&
                 createPortal(
                     <div
-                        className={`tooltip-text ${visible ? "visible" : ""}`}
+                        className={`${stylesTooltip.tooltip_text} ${visible ? stylesTooltip.visible : ""}`}
                         style={{
                             top: position.top,
                             left: position.left,
