@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { redirect, usePathname } from 'next/navigation';
+import { redirect, usePathname } from "next/navigation";
 
 export default function Home() {
     const pathname = usePathname();
 
-    if (pathname === '/') {
-        redirect('/buscador')
+    if (pathname === "/") {
+        redirect("/buscador")
     }
 
     return;

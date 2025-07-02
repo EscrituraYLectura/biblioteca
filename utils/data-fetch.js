@@ -1,5 +1,5 @@
-const fs = require('fs');
-const https = require('https');
+const fs = require("fs");
+const https = require("https");
 
 const SHEET_ID = "1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM";
 const URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json`;

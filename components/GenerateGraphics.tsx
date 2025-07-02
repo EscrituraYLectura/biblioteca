@@ -1,6 +1,6 @@
 "use client";
 
-import { Bar, Pie, Line } from 'react-chartjs-2';
+import { Bar, Pie, Line } from "react-chartjs-2";
 import {
     Chart as ChartJS,
     BarElement,
@@ -12,13 +12,13 @@ import {
     LineElement,
     PointElement,
     ChartOptions,
-} from 'chart.js';
+} from "chart.js";
 import data from "@/public/libros.json";
 import { TooltipInternal } from "@/components/Tooltip";
 
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-import { useState } from 'react';
+import { useState } from "react";
 
 interface Book {
     Título: string;
@@ -54,7 +54,7 @@ const generarDatosPie = (items: string[]) => {
     const conteo: Record<string, number> = {};
 
     items.forEach((valor) => {
-        const clave = valor.trim() || 'Sin especificar';
+        const clave = valor.trim() || "Sin especificar";
         conteo[clave] = (conteo[clave] || 0) + 1;
     });
 
@@ -82,7 +82,7 @@ const generarDatosTopTemas = (items: string[], topN: number = 10) => {
 
     items.forEach((valor) => {
         valor
-        .split(',')
+        .split(",")
         .map((tema) => tema.trim())
         .filter((tema) => tema.length > 0)
         .forEach((tema) => {
@@ -101,9 +101,9 @@ const generarDatosTopTemas = (items: string[], topN: number = 10) => {
         labels,
         datasets: [
             {
-                label: 'Cantidad de libros por tema',
+                label: "Cantidad de libros por tema",
                 data,
-                backgroundColor: 'rgba(153, 102, 255, 0.6)',
+                backgroundColor: "rgba(153, 102, 255, 0.6)",
                 borderRadius: 8,
             },
         ],
@@ -130,7 +130,7 @@ const crearOpciones = (etiquetas: string[]) => ({
                             return label; // solo año
                         }
                     }
-                    return '';
+                    return "";
                 },
                 maxRotation: 0,
                 minRotation: 0,
@@ -148,7 +148,7 @@ const crearOpciones = (etiquetas: string[]) => ({
 
 const opcionesTemas = {
     responsive: true,
-    indexAxis: 'y' as const,
+    indexAxis: "y" as const,
     plugins: {
         legend: { display: false },
     },
@@ -208,22 +208,22 @@ export default function GraficoSubidas() {
         labels: añosPublicacion,
         datasets: [
             {
-                label: 'Libros por año de publicación',
+                label: "Libros por año de publicación",
                 data: cantidadesPublicacion,
-                backgroundColor: 'rgba(255, 159, 64, 0.6)',
+                backgroundColor: "rgba(255, 159, 64, 0.6)",
                 borderRadius: 8,
             },
         ],
     };
 
-    const datosTipo = generarDatosPie(data.map((book) => book.Tipo || ''));
-    const datosIdioma = generarDatosPie(data.map((book) => book.Idioma || ''));
-    const datosOriginal = generarDatosPie(data.map((book) => book.Original || ''));
-    const datosTemas = generarDatosTopTemas(data.map((book) => book.Tema || ''));
+    const datosTipo = generarDatosPie(data.map((book) => book.Tipo || ""));
+    const datosIdioma = generarDatosPie(data.map((book) => book.Idioma || ""));
+    const datosOriginal = generarDatosPie(data.map((book) => book.Original || ""));
+    const datosTemas = generarDatosTopTemas(data.map((book) => book.Tema || ""));
     const [tiposSeleccionados, setTiposSeleccionados] = useState<string[]>([]);
 
     // Obtener todos los tipos únicos
-    const tiposUnicos = Array.from(new Set(data.map((book) => book.Tipo?.trim() || 'Sin especificar'))).sort();
+    const tiposUnicos = Array.from(new Set(data.map((book) => book.Tipo?.trim() || "Sin especificar"))).sort();
 
     const toggleTipo = (tipo: string) => {
         setTiposSeleccionados((prev) =>
@@ -235,7 +235,7 @@ export default function GraficoSubidas() {
     const subidasPorTipo: Record<string, Record<string, number>> = {};
 
     data.forEach((book: Book) => {
-        const tipo = book.Tipo?.trim() || 'Sin especificar';
+        const tipo = book.Tipo?.trim() || "Sin especificar";
         const fecha = parseFechaSubida(book.Subido);
         if (!fecha) return;
         const mes = `${fecha.getFullYear()}-${(fecha.getMonth() + 1).toString().padStart(2, "0")}`;
@@ -245,12 +245,12 @@ export default function GraficoSubidas() {
 
     const etiquetasMeses = Object.keys(conteoMeses).sort();
     const colores = [
-        'rgba(255, 99, 132, 0.8)',
-        'rgba(54, 162, 235, 0.8)',
-        'rgba(255, 206, 86, 0.8)',
-        'rgba(75, 192, 192, 0.8)',
-        'rgba(153, 102, 255, 0.8)',
-        'rgba(255, 159, 64, 0.8)',
+        "rgba(255, 99, 132, 0.8)",
+        "rgba(54, 162, 235, 0.8)",
+        "rgba(255, 206, 86, 0.8)",
+        "rgba(75, 192, 192, 0.8)",
+        "rgba(153, 102, 255, 0.8)",
+        "rgba(255, 159, 64, 0.8)",
     ];
 
     const datosSubidasFiltrado = {
@@ -259,10 +259,10 @@ export default function GraficoSubidas() {
             tiposSeleccionados.length === 0
                 ? [
                     {
-                        label: 'Libros subidos por mes',
+                        label: "Libros subidos por mes",
                         data: cantidadesMeses,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: "rgba(75, 192, 192, 1)",
+                        backgroundColor: "rgba(75, 192, 192, 0.2)",
                         fill: true,
                         tension: 0.3,
                         pointRadius: 4,
@@ -275,7 +275,7 @@ export default function GraficoSubidas() {
                         label: `${tipo}`,
                         data: dataMeses,
                         borderColor: colores[idx % colores.length],
-                        backgroundColor: colores[idx % colores.length].replace('0.8', '0.2'),
+                        backgroundColor: colores[idx % colores.length].replace("0.8", "0.2"),
                         fill: true,
                         tension: 0.3,
                         pointRadius: 4,
@@ -326,9 +326,9 @@ export default function GraficoSubidas() {
                                         className="tag"
                                         style={{
                                             backgroundColor: datosTipo.datasets[0].backgroundColor[i],
-                                            color: 'white',
-                                            border: 'none',
-                                            cursor: 'default',
+                                            color: "white",
+                                            border: "none",
+                                            cursor: "default",
                                         }}
                                     >
                                         {label}
@@ -354,9 +354,9 @@ export default function GraficoSubidas() {
                                         className="tag"
                                         style={{
                                             backgroundColor: datosIdioma.datasets[0].backgroundColor[i],
-                                            color: 'white',
-                                            border: 'none',
-                                            cursor: 'default',
+                                            color: "white",
+                                            border: "none",
+                                            cursor: "default",
                                         }}
                                     >
                                         {label}
@@ -377,9 +377,9 @@ export default function GraficoSubidas() {
                                         className="tag"
                                         style={{
                                             backgroundColor: datosOriginal.datasets[0].backgroundColor[i],
-                                            color: 'white',
-                                            border: 'none',
-                                            cursor: 'default',
+                                            color: "white",
+                                            border: "none",
+                                            cursor: "default",
                                         }}
                                     >
                                         {label}

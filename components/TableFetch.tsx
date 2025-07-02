@@ -3,7 +3,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { TooltipInternal } from "@/components/Tooltip";
-import Popup from '@/components/Popup'
+import Popup from "@/components/Popup"
 import data from "@/public/libros.json";
 import reportes from "@/public/reportes.json";
 const reportados: string[] = reportes as string[];
@@ -225,7 +225,7 @@ export default function TableFetch() {
                 />
 
                 <label htmlFor="publicación">Año de publicación:
-                    <TooltipInternal text="ⓘ">Puedes escribir tres dígitos para buscar por década. Ej.: '198' para la década de 1980.</TooltipInternal>
+                    <TooltipInternal text="ⓘ">Puedes escribir tres dígitos para buscar por década. Ej.: "198" para la década de 1980.</TooltipInternal>
                 </label>
                 <input
                 id="publicación"
@@ -400,7 +400,7 @@ export default function TableFetch() {
                     </p>
                     <p>Puedes ayudar al servidor <a href="https://discord.com/channels/403377475947855882/1290810391089123388" target="_blank">donando los libros que tengas</a>. ¡Te lo agradecemos muchísimo!</p>
                 </div>
-                {popupActivo === 'reportar-libro' && libroSeleccionado && (
+                {popupActivo === "reportar-libro" && libroSeleccionado && (
                     <Popup onClose={() => { setPopupActivo(null); setLibroSeleccionado(null); }}>
                         <h2>Reportar libro</h2>
                         <p>

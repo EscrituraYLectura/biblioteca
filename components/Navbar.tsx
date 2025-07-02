@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
-import Popup from '@/components/Popup'
+import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
+import Popup from "@/components/Popup"
 import { puedeEnviarReporte, registrarReporte } from "@/utils/reportLimiter";
 
 export default function NavBar() {
@@ -20,15 +20,15 @@ export default function NavBar() {
         <nav className="navbar">
             <div className="navbar-pages">
                 <ul>
-                    <li onClick={() => irAPagina('/buscador')} className={pathname.startsWith('/buscador') ? 'pagina-activa' : ''}>🔍</li>
-                    <li onClick={() => irAPagina('/indices')} className={pathname.startsWith('/indices') ? 'pagina-activa' : ''}>📄</li>
-                    <li onClick={() => irAPagina('/estadisticas')} className={pathname.startsWith('/estadisticas') ? 'pagina-activa' : ''}>📊</li>
+                    <li onClick={() => irAPagina("/buscador")} className={pathname.startsWith("/buscador") ? "pagina-activa" : ""}>🔍</li>
+                    <li onClick={() => irAPagina("/indices")} className={pathname.startsWith("/indices") ? "pagina-activa" : ""}>📄</li>
+                    <li onClick={() => irAPagina("/estadisticas")} className={pathname.startsWith("/estadisticas") ? "pagina-activa" : ""}>📊</li>
                 </ul>
             </div>
             <div className="navbar-info">
                 <ul>
-                    <li onClick={() => setPopupActivo('reportar-eyl')} className="navbar-report">❌</li>
-                    {popupActivo === 'reportar-eyl' && (
+                    <li onClick={() => setPopupActivo("reportar-eyl")} className="navbar-report">❌</li>
+                    {popupActivo === "reportar-eyl" && (
                         <Popup onClose={() => setPopupActivo(null)}>
                             <h2>Reportar errores</h2>
                             <p>
@@ -91,8 +91,8 @@ export default function NavBar() {
                             </div>
                         </Popup>
                     )}
-                    <li onClick={() => setPopupActivo('sobre-eyl')}>ℹ️</li>
-                    {popupActivo === 'sobre-eyl' && (
+                    <li onClick={() => setPopupActivo("sobre-eyl")}>ℹ️</li>
+                    {popupActivo === "sobre-eyl" && (
                         <Popup onClose={() => setPopupActivo(null)}>
                             <h2>Sobre la Biblioteca</h2>
                             <p>
