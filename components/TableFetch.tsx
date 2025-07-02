@@ -397,10 +397,10 @@ export default function TableFetch() {
                         {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
                         <TooltipInternal text="ⓘ">
                             <span>
-                                - Los números entre paréntesis indican el orden dentro de la saga.<br/>
-                                - Párate sobre <span className="bs-1">✚</span> para ver otras ediciones del mismo libro.<br/>
-                                - Los libros con <span className={`bs-2 ${filters.Editado === "true" ? "editado-activado" : ""}`} onClick={() => updateFilter("Editado", filters.Editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones hechas por EyL.<br/>
-                                - Haz clic en <span className="bs-3">✖</span> para reportar información errada o faltante.
+                                · Los números entre paréntesis indican el orden dentro de la saga.<br/>
+                                · Párate sobre <span className="bs-1">✚</span> para ver otras ediciones del mismo libro.<br/>
+                                · Los libros con <span className={`bs-2 ${filters.Editado === "true" ? "editado-activado" : ""}`} onClick={() => updateFilter("Editado", filters.Editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones hechas por EyL.<br/>
+                                · Haz clic en <span className="bs-3">✖</span> para reportar información errada o faltante.
                             </span>
                         </TooltipInternal>
                     </p>
