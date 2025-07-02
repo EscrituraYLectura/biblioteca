@@ -181,6 +181,12 @@ export default function TableFetch() {
         });
     };
 
+    const typeStyles = {
+        "estilo-tipo-morado": ["Novela", "Cuento", "Poesía", "Teatro", "Diálogo"],
+        "estilo-tipo-azul": ["Ensayo", "Consulta", "Biografía", "Diario"],
+        "estilo-tipo-verde": ["Manga", "Cómic", "Arte"],
+    };
+
     return (
         <>
             <aside className="sidebar">
@@ -365,7 +371,7 @@ export default function TableFetch() {
                                             ? book.Publicación.replace(/^0+/, "")
                                             : book.Publicación}
                                 </td>
-                                <td>{book.Tipo}</td>
+                                <td><span className={`estilo-tipo ${Object.entries(typeStyles).find(([, list]) => list.includes(book.Tipo))?.[0] ?? ""}`}>{book.Tipo}</span></td>
                                 <td>{book.Tema}</td>
                                 <td>
                                     {!reportados.includes(book.ID) && (

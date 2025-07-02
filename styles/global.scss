@@ -189,6 +189,8 @@ textarea {
     color: #f57976;
 }
 
+// TABLA DE RESULTADOS
+
 .results {
     flex: 1;
     display: flex;
@@ -265,6 +267,23 @@ tbody tr {
     &:hover {
         background: #242428;
     }
+}
+
+.estilo-tipo {
+    padding: 0.2rem;
+    border-radius: 4px;
+}
+
+.estilo-tipo-morado {
+    background-color: #a541f2;
+}
+
+.estilo-tipo-azul {
+    background-color: #2ea7f6;
+}
+
+.estilo-tipo-verde {
+    background-color: #95e847;
 }
 
 // TOOLTIP
