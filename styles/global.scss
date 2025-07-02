@@ -274,18 +274,15 @@ tbody tr {
 }
 
 .estilo-tipo-morado {
-    background-color: #4b2951;
-    color: #f1a8ff;
+    background-color: #a541f2;
 }
 
 .estilo-tipo-azul {
-    background-color: #293851;
-    color: #a8c8ff;
+    background-color: #2ea7f6;
 }
 
 .estilo-tipo-verde {
-    background-color: #3a5129;
-    color: #caffa8;
+    background-color: #95e847;
 }
 
 // TOOLTIP
@@ -684,6 +681,7 @@ tbody tr {
     }
 
     .navbar {
+        flex-direction: row;
         width: 100%;
         height: auto;
         border-right: none;
