@@ -86,7 +86,7 @@ export default function NavBar() {
                                             <option value="Externo" selected>Externo</option>
                                         </select>
 
-                                        <button id={stylesNavbar.send_report_button} type="submit">Enviar reporte</button>
+                                        <button className={stylesNavbar.send_report_button} type="submit">Enviar reporte</button>
                                     </form>
                                 </div>
                             </div>

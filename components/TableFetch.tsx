@@ -436,7 +436,7 @@ export default function TableFetch() {
                                         <option value="Externo" selected>Externo</option>
                                     </select>
 
-                                    <button id="send-report-button" type="submit">Enviar reporte</button>
+                                    <button className={stylesSearcher.send_report_button} type="submit">Enviar reporte</button>
                                 </form>
                             </div>
                         </div>
