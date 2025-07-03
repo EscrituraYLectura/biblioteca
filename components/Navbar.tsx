@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Popup from "@/components/Popup"
 import { puedeEnviarReporte, registrarReporte } from "@/utils/reportLimiter";
+import stylesNavbar from "@/styles/components/navbar.module.scss";
 
 export default function NavBar() {
     const router = useRouter();
@@ -17,17 +18,17 @@ export default function NavBar() {
     const pathname = usePathname();
 
     return (
-        <nav className="navbar">
-            <div className="navbar-pages">
+        <nav className={stylesNavbar.navbar}>
+            <div className={stylesNavbar.navbar_pages}>
                 <ul>
-                    <li onClick={() => irAPagina("/buscador")} className={pathname.startsWith("/buscador") ? "pagina-activa" : ""}>🔍</li>
-                    <li onClick={() => irAPagina("/indices")} className={pathname.startsWith("/indices") ? "pagina-activa" : ""}>📄</li>
-                    <li onClick={() => irAPagina("/estadisticas")} className={pathname.startsWith("/estadisticas") ? "pagina-activa" : ""}>📊</li>
+                    <li onClick={() => irAPagina("/buscador")} className={pathname.startsWith("/buscador") ? stylesNavbar.pagina_activa : ""}>🔍</li>
+                    <li onClick={() => irAPagina("/indices")} className={pathname.startsWith("/indices") ? stylesNavbar.pagina_activa : ""}>📄</li>
+                    <li onClick={() => irAPagina("/estadisticas")} className={pathname.startsWith("/estadisticas") ? stylesNavbar.pagina_activa : ""}>📊</li>
                 </ul>
             </div>
-            <div className="navbar-info">
+            <div className={stylesNavbar.navbar_info}>
                 <ul>
-                    <li onClick={() => setPopupActivo("reportar-eyl")} className="navbar-report">❌</li>
+                    <li onClick={() => setPopupActivo("reportar-eyl")} className={stylesNavbar.navbar_report}>❌</li>
                     {popupActivo === "reportar-eyl" && (
                         <Popup onClose={() => setPopupActivo(null)}>
                             <h2>Reportar errores</h2>
@@ -37,8 +38,8 @@ export default function NavBar() {
                                 día. Al enviar el reporte, se abrirá una pestaña de Google Forms,
                                 que es el servicio que utilizamos. Es totalmente anónimo.
                             </p>
-                            <div className="reportar-eyl-form">
-                                <div className="reportar-eyl-form-inputs">
+                            <div className={stylesNavbar.reportar_eyl_form}>
+                                <div className={stylesNavbar.reportar_eyl_form_inputs}>
                                     <form
                                     action="https://docs.google.com/forms/d/e/1FAIpQLSfHE1YEpt1XLPOlbxV_cWI4-4VAKARRzWI7SRW5UKkTA_dewQ/formResponse"
                                     method="POST"
@@ -52,7 +53,7 @@ export default function NavBar() {
                                         registrarReporte();
                                     }}
                                     >
-                                        <label htmlFor="reporte-tipo">Tipo de error: <span className="error-asterisk">*</span></label>
+                                        <label htmlFor="reporte-tipo">Tipo de error: <span className={stylesNavbar.error_asterisk}>*</span></label>
                                         <select name="entry.1658570772" id="reporte-tipo" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="Página no encontrada (404)">Página no encontrada (404)</option>
@@ -62,7 +63,7 @@ export default function NavBar() {
                                             <option value="Otro">Otro</option>
                                         </select>
 
-                                        <label htmlFor="reporte-navegador">Navegador usado: <span className="error-asterisk">*</span></label>
+                                        <label htmlFor="reporte-navegador">Navegador usado: <span className={stylesNavbar.error_asterisk}>*</span></label>
                                         <select name="entry.982016317" id="reporte-navegador" required>
                                             <option value="" disabled selected>Selecciona una opción</option>
                                             <option value="Chrome">Chrome</option>
@@ -74,18 +75,18 @@ export default function NavBar() {
                                             <option value="Otro">Otro</option>
                                         </select>
 
-                                        <label htmlFor="reportar-mensaje">Explicación del error: <span className="error-asterisk">*</span></label>
+                                        <label htmlFor="reportar-mensaje">Explicación del error: <span className={stylesNavbar.error_asterisk}>*</span></label>
                                         <textarea name="entry.440380913" id="reportar-mensaje" placeholder="Describe paso a paso cómo ocurrió el error." required/>
 
-                                        <select name="entry.1024505677" id="reporte-estado" className="reportar-form-hidden" required>
+                                        <select name="entry.1024505677" id="reporte-estado" className={stylesNavbar.reportar_form_hidden} required>
                                             <option value="Faltante" selected>Faltante</option>
                                         </select>
 
-                                        <select name="entry.377379088" id="reporte-origen" className="reportar-form-hidden" required>
+                                        <select name="entry.377379088" id="reporte-origen" className={stylesNavbar.reportar_form_hidden} required>
                                             <option value="Externo" selected>Externo</option>
                                         </select>
 
-                                        <button id="send-report-button" type="submit">Enviar reporte</button>
+                                        <button id={stylesNavbar.send_report_button} type="submit">Enviar reporte</button>
                                     </form>
                                 </div>
                             </div>

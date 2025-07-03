@@ -1,0 +1,98 @@
+.navbar {
+    width: 70px;
+    background-color: #121214;
+    border-right: 1px solid #6d6e771f;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    justify-content: space-between;
+
+    .navbar_pages {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar_info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0 0.8rem;
+        list-style: none;
+
+        li {
+            border-radius: 12px;
+            background-color: #1d1d1e;
+            border: none;
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-out;
+            margin-bottom: 1rem;
+            width: 100%;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: #5764f0;
+            }
+        }
+
+        li.pagina_activa {
+            background-color: #5764f0;
+        }
+
+        .navbar_report {
+            &:hover {
+                background-color: #d22d39;
+            }
+        }
+    }
+}
+
+.reportar_eyl_form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .reportar_eyl_form_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        div,
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+}
+
+#send_report_button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #5865f2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: #4654c0;
+    }
+}
+
+.reportar_form_hidden {
+    visibility: 0;
+    display: none;
+}
+
+.error_asterisk {
+    color: red;
+}
