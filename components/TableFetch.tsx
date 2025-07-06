@@ -395,7 +395,7 @@ export default function TableFetch() {
                     </table>
                 </div>
                 <div className={stylesSearcher.barra_inferior}>
-                    <p id="numero-resultados">
+                    <p id={stylesSearcher.numero_resultados}>
                         {filteredData.length} resultado{filteredData.length !== 1 ? "s" : ""}
                         <TooltipInternal text="ⓘ">
                             <span>
