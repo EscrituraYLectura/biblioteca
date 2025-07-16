@@ -1,0 +1,3620 @@
+[
+  {
+    "Nombre": "Abdulzarak Gurna",
+    "Sexo": "Hombre",
+    "País": "Tanzania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Adam Silvera",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Adania Shibli",
+    "Sexo": "Mujer",
+    "País": "Palestina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Adela Zamudio",
+    "Sexo": "Mujer",
+    "País": "Bolivia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Adolfo Bioy Casares",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Agapito Martínez",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Agatha Christie",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Agustina Bazterrica",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Akutagawa Ryūnosuke",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alan Dean Foster",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Alan Moore",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Albert Camus",
+    "Sexo": "Hombre",
+    "País": "Algeria",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Alberto Arvelo Torrealba",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Aldous Huxley",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alejandra Pizarnik",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Alejandro Casona",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alex Rawlings",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alexander Pushkin",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alexandr Solzhenitsyn",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alexandre Dumas",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alexandre Herculano",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Alfonsina Storni",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Alice Oseman",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Alice Walker",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ally North",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Almeida Garrett",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Alonso Schökel",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Amalia Andrade",
+    "Sexo": "Mujer",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ana Caro de Mallén",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "André Breton",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Andréi Tarkovski",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Andrés Amorós",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Andrés Bello",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Andrzej Sapkowski",
+    "Sexo": "Hombre",
+    "País": "Polonia",
+    "Libros": "8"
+  },
+  {
+    "Nombre": "Andy Weir",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ángel de Saavedra",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Angela Chen",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ango Sakaguchi",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Aníbal Abadie-Aicardi",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ann Leckie",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Anna Pólux",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Anna Todd",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Antero de Quental",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Anthony Burguess",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Antoine de Saint-Exupéry",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Antón Chéjov",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Antonin Artaud",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Antonio Buero Vallejo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Antonio Escohotado Espinosa",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Antonio Guzmán Guerra",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "António José da Silva",
+    "Sexo": "Hombre",
+    "País": "Brasil",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Antonio Machado",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Antonio Sánchez Jiménez",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Antonio Velasco Piña",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Aristóteles",
+    "Sexo": "Hombre",
+    "País": "Grecia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Armando Discépolo",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Arthur Charles Clarke",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Arthur Conan Doyle",
+    "Sexo": "Hombre",
+    "País": "Escocia",
+    "Libros": "9"
+  },
+  {
+    "Nombre": "Arthur Golden",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Arthur Schnitzler",
+    "Sexo": "Hombre",
+    "País": "Austria",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Arthur Schopenhauer",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Arturo Pérez-Reverte",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Ashley Audrain",
+    "Sexo": "Mujer",
+    "País": "Canadá",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Audre Lorde",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Auguste Maquet",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Augusto Roa Bastos",
+    "Sexo": "Hombre",
+    "País": "Paraguay",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Ayn Rand",
+    "Sexo": "Mujer",
+    "País": "Rusia",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Azorín",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Baltasar Gracián",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Barbara Wertheim Tuchman",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Becca Rothfeld",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Becky Chambers",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Benito Pérez Galdós",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Benjamin Alire Sáenz",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Bill Mantlo",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Boecio",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Bram Stoker",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Brandon Sanderson",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Brian Herbert",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Bruce Sterling",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Byung-Chul Han",
+    "Sexo": "Hombre",
+    "País": "Corea del Sur",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Calle y Poché",
+    "Sexo": "Mujer",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Camila Sosa Villada",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Camilla Läckberg",
+    "Sexo": "Mujer",
+    "País": "Suecia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Camilo Castelo Branco",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Camilo José Cela",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Carilda Oliver Labra",
+    "Sexo": "Mujer",
+    "País": "Cuba",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Carl Jonas Love Almqvist",
+    "Sexo": "Hombre",
+    "País": "Suecia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Carl Sagan",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Carlos Fuentes",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Carlos Pezoa Véliz",
+    "Sexo": "Hombre",
+    "País": "Chile",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Carlos Ruiz Zafón",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Carlos Sisí",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Carmen Laforet",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Caroline O'Donoghue",
+    "Sexo": "Mujer",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "César Vallejo",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Charles Bukowski",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Charles Dickens",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "China Miéville",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Chris Offutt",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Chris Pueyo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Christopher Vogler",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ciara Smyth",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ciro Alegría",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Claire Kann",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Clara Duarte",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Clive Staples Lewis",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "8"
+  },
+  {
+    "Nombre": "Colin Ellard",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Colson Whitehead",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Colum McCann",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Cormac McCarthy",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Coronel Segismundo Casado",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Cristian Acevedo",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Cristóbal de Virués",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Dámaso Alonso",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Daniel Jiménez Palencia",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Daniel Keyes",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Daniel Tubau",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "David Crespo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "David Finch",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "David Foster Wallace",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "David Grann",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "David Hume",
+    "Sexo": "Hombre",
+    "País": "Escocia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "David Levithan",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "David Lloyd",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "David Lodge",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Denis Diderot",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Dereck Landy",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Derek Parfit",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Diego Cuéllar",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Dolores Veintimilla",
+    "Sexo": "Mujer",
+    "País": "Ecuador",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Donald F. Glut",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Donald Ray Pollock",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Douglas Preston",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "E. T. A. Hoffmann",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "E.J. Noyes",
+    "Sexo": "Mujer",
+    "País": "Australia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Edgar Allan Poe",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Edgar Choberón Torchia",
+    "Sexo": "Hombre",
+    "País": "Panamá",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Edmund Spenser",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Eduardo Galeano",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Eduardo Gutiérrez",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Edward Packard",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Edward Snowden",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Edward William Cooke",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Edwin Abbott Abbott",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Efrén Rebolledo",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Egeria",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Elaine Kraf",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Elena Garro",
+    "Sexo": "Mujer",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Elinor Glyn",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Elizabeth Bishop",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Elizabeth Von Arnim",
+    "Sexo": "Mujer",
+    "País": "Australia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Émile Zola",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Emily Brontë",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Emily Dickinson",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Emily Noon",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Emma Barrandéguy",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Enrique Banchs",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Enrique Finot",
+    "Sexo": "Hombre",
+    "País": "Bolivia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Enrique Jardiel Poncela",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Enrique Linares Martí",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Erasmo de Rotterdam",
+    "Sexo": "Hombre",
+    "País": "Países Bajos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Eric S. Nylund",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Erich Fromm",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Erich Maria Remarque",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Erin Hunter",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Ernest Hemingway",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Ernesto Castro Córdoba",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ernesto Sabato",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ernst Jünger",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Esteban Echeverría",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Eugène Ionesco",
+    "Sexo": "Hombre",
+    "País": "Rumanía",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Eurípides",
+    "Sexo": "Hombre",
+    "País": "Grecia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Federico Díaz-Granados",
+    "Sexo": "Hombre",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Federico García Lorca",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "7"
+  },
+  {
+    "Nombre": "Federico Lara Peinado",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ferdinand de Saussure",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fern Brady",
+    "Sexo": "Mujer",
+    "País": "Escocia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fernanda Melchor",
+    "Sexo": "Mujer",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fernando de Rojas",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fernando del Paso",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fernando Pessoa",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Fernando Rodríguez-Izquierdo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fernando Trujillo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fiódor Dostoievski",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "7"
+  },
+  {
+    "Nombre": "Florencio Sánchez",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Francesco Petrarca",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Francis Scott Fitzgerald",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Francisco Alfaro Pareja",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "François Ethuin",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "François Rabelais",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Frank Herbert",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Franz Kafka",
+    "Sexo": "Hombre",
+    "País": "República Checa",
+    "Libros": "7"
+  },
+  {
+    "Nombre": "Fred Uhlman",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Friedrich Engels",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Friedrich Schiller",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Fukuda Chiyo-Ni",
+    "Sexo": "Mujer",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gabriel García Márquez",
+    "Sexo": "Hombre",
+    "País": "Colombia",
+    "Libros": "9"
+  },
+  {
+    "Nombre": "Gabriele Pallotti",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Garci Rodríguez de Montalvo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gaston Leroux",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gay Talase",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gayo Valerio Catulo",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Geoffrey Alan Landis",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Georg Lukács",
+    "Sexo": "Hombre",
+    "País": "Hungría",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "George Eliot",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "George Orwell",
+    "Sexo": "Hombre",
+    "País": "India",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "George R. R. Martin",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Georges Remi (Hergé)",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "25"
+  },
+  {
+    "Nombre": "Gérard Genette",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gillian Flynn",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Giovanni Boccaccio",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Greg Bear",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Guillaume Apollinaire",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gustave Flaubert",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Gustavo Adolfo Bécquer",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Guy de Maupassant",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Hannah Kent",
+    "Sexo": "Mujer",
+    "País": "Australia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Harlan Coben",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Harlan Ellison",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Harold Gould Henderson",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Harper Lee",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Haruki Murakami",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Henrik Ibsen",
+    "Sexo": "Hombre",
+    "País": "Noruega",
+    "Libros": "7"
+  },
+  {
+    "Nombre": "Herbert George Wells",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Herberto Hélder",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Herman Melville",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Hermann Hesse",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Hernán Loyola",
+    "Sexo": "Hombre",
+    "País": "Chile",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Hernando Téllez",
+    "Sexo": "Hombre",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Hildegarda de Bingen",
+    "Sexo": "Mujer",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Homero",
+    "Sexo": "Hombre",
+    "País": "Grecia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Honoré de Balzac",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Horacio Quiroga",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Howard Mittelmark",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Howard Phillips Lovecraft",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Hugh Magennis",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Iain Reid",
+    "Sexo": "Hombre",
+    "País": "Canadá",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ian Fleming",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "14"
+  },
+  {
+    "Nombre": "Ibéyise Pacheco",
+    "Sexo": "Mujer",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ildefonso Falcones",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Inio Asano",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Iria G. Parente",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Iria López Teijeiro",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Iris Chang",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Irvin David Yalom",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Isaac Asimov",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "19"
+  },
+  {
+    "Nombre": "Isabel Allende",
+    "Sexo": "Mujer",
+    "País": "Chile",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ismail Kadare",
+    "Sexo": "Hombre",
+    "País": "Albania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Italo Calvino",
+    "Sexo": "Hombre",
+    "País": "Cuba",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Izumi Kirihara",
+    "Sexo": "Mujer",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "J. K. Rowling",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "14"
+  },
+  {
+    "Nombre": "J. R. R. Tolkien",
+    "Sexo": "Hombre",
+    "País": "Sudáfrica",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "J.-H. Rosny",
+    "Sexo": "Hombre",
+    "País": "Bélgica",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "J.E. Leak",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Jack C. Richards",
+    "Sexo": "Hombre",
+    "País": "Nueva Zelanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jack Ketchum",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Jacques Martel",
+    "Sexo": "Hombre",
+    "País": "Bélgica",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jaime Balyly",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "James Dashner",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "James Graham Ballard",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "James Joyce",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "James Kahn",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "James Mallahan Cain",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jane Austen",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Janet Mock",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jason Fry",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Javier Cosnava",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jean Racine",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jean-Paul Sartre",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jeff VanderMeer",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Jeph Loeb",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Jerome David Salinger",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jerzy Kosiński",
+    "Sexo": "Hombre",
+    "País": "Polonia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Joan Didion",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "João de Deus",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "João de Lemos",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Joaquín Cifuentes Sepúlveda",
+    "Sexo": "Hombre",
+    "País": "Chile",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Joe Haldeman",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Joe Hill",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "John Green",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "John Katzenbach",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "John le Carré",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "10"
+  },
+  {
+    "Nombre": "John Milton",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "John Osborne",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "John Saul",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "John Scalzi",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "John Steinbeck",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jonathan Swift",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jordan Bernt Peterson",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Jordi Sierra i Fabra",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jorge Luis Borges",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "19"
+  },
+  {
+    "Nombre": "José Adiak Montoya",
+    "Sexo": "Hombre",
+    "País": "Nicaragua",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Antonio Marina",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Eustasio Rivera",
+    "Sexo": "Hombre",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José González Castillo",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Juan Tablada",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José María Arguedas",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Podestá",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Santos Chocano",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Saramago",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Josefa Rosalía Luque Álvarez",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Joseph Staten",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Josh McDowell",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Jostein Gaarder",
+    "Sexo": "Hombre",
+    "País": "Noruega",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan Andrés",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan de Mena",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan José Benítez",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan José Plans",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan León Mera",
+    "Sexo": "Hombre",
+    "País": "Ecuador",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan Montalvo",
+    "Sexo": "Hombre",
+    "País": "Ecuador",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan Ramón Jiménez",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Juan Ruiz, arcipreste de Hita",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan Rulfo",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juan Vernet",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Juana de Ibarbourou",
+    "Sexo": "Mujer",
+    "País": "Uruguay",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Juana Manuela Gorriti",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Julia Navarro",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Julián Marías",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Julio Cortázar",
+    "Sexo": "Hombre",
+    "País": "Bélgica",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Julio Ramón Ribeyro",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Julio Verne",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "7"
+  },
+  {
+    "Nombre": "Jung Chang",
+    "Sexo": "Mujer",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "K.L. Hughes",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Kakuzō Okakura",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Karin Slaughter",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Karl Marx",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Karl Meir Baer (N.O. Body)",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Kate Bornstein",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Katherine Neville",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Kazuo Ishiguro",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Kelly Quindlen",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Kenzaburo Oé",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Kevin James Anderson",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Kiera Cass",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Kim Stanley Robinson",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Knut Hamsun",
+    "Sexo": "Hombre",
+    "País": "Noruega",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Koji Suzuki",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Laini Taylor",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lao Tsé",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Laura Alcoba",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Laura Esquivel",
+    "Sexo": "Mujer",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Laura Gallego",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Laura Ramos",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Laura Restrepo",
+    "Sexo": "Mujer",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Leopoldo Alas",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Leopoldo Lugones",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "12"
+  },
+  {
+    "Nombre": "Leslie Alexander Geddes",
+    "Sexo": "Hombre",
+    "País": "Escocia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Leslie Feinberg",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lev Nikoláievich Tolstói",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Lewis Carroll",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Lily R. Mason",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Lindaura Anzoátegui Campero",
+    "Sexo": "Mujer",
+    "País": "Bolivia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Liu Cixin",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Lope de Vega",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Lord Dusany",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Louis-Ferdinand Céline",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lucy Maud Montgomery",
+    "Sexo": "Mujer",
+    "País": "Canadá",
+    "Libros": "9"
+  },
+  {
+    "Nombre": "Ludwig von Mises",
+    "Sexo": "Hombre",
+    "País": "Ucrania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Luis de Góngora y Argote",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Luis Martín-Santos",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lynn Galli",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lynne Norris",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Macedonio Fernández",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Machado de Assis",
+    "Sexo": "Hombre",
+    "País": "Brasil",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Madeline Miller",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mahoko Yoshimoto",
+    "Sexo": "Mujer",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Manuel Gil de Oto",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Manuel Puig",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marc Bloch",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marcel Proust",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "8"
+  },
+  {
+    "Nombre": "Marco Aurelio Antonino",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marco Fabio Quintiliano",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marco Valerio Marcial",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marcus Zusak",
+    "Sexo": "Hombre",
+    "País": "Australia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Margaret Mitchell",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Margaret Rogerson",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Margarita Guerrero",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marguerite Duras",
+    "Sexo": "Mujer",
+    "País": "Vietnam",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marguerite Yourcenar",
+    "Sexo": "Mujer",
+    "País": "Bélgica",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "María de Zayas y Sotomayor",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "María Esther Vázquez",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Maria Kodama",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "María Paz Grillo Torres",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "María Rosa de Gálvez",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Mariano José de Larra",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marie Kondo",
+    "Sexo": "Mujer",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Marie Springer",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mario Benedetti",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Mario Mendoza",
+    "Sexo": "Hombre",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mario Vargas Llosa",
+    "Sexo": "Hombre",
+    "País": "Perú",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Marissa Meyer",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Mark Goulston",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mark T. Sullivan",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mark Twain",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Marqués de Sade",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Marqués de Santillana",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Martín Caparrós",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Masaoka Shiki",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Mathias Malzieu",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Matthew Lewis",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Matthew Woodring Stover",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Maxine Rae",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "May Dawney",
+    "Sexo": "Mujer",
+    "País": "Países Bajos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Michael Ende",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Michael Langford",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Michael Moorcock",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Michel Chion",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Miguel Ángel Asturias",
+    "Sexo": "Hombre",
+    "País": "Guatemala",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Miguel Ángel Buonarroti",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Miguel de Cervantes Saavedra",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "10"
+  },
+  {
+    "Nombre": "Miguel de Unamuno",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Miguel Hernández",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Miguel Otero Silva",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mijaíl Aguéyev",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mijaíl Bakunin",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mijaíl Bulgákov",
+    "Sexo": "Hombre",
+    "País": "Ucrania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mijaíl Shólojov",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mika Waltari",
+    "Sexo": "Hombre",
+    "País": "Finlandia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Milan Kundera",
+    "Sexo": "Hombre",
+    "País": "Checoslovaquia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Minetarou Mochizuki",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Mitch Albom",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Mò Xiāng Tóng Xiù",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Mò Xiāng Tóngxiù",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Montse Bizarro Amat",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Nancy Garden",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Nancy Springer",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Naoki Urasawa",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Natasha Preston",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Natsume Sōseki",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Neil Gaiman",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Neil McDonald",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Nelson Johnson",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Nicolás del Castillo Mathieu",
+    "Sexo": "Hombre",
+    "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Nicolás Maquiavelo",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Nicole Maser",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Nikolái Vasílievich Gógol",
+    "Sexo": "Hombre",
+    "País": "Ucrania",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Nina LaCour",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Noam Chomsky",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Norman Thomas Di Giovanni",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Oakley Hall",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Oliveira Martins",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Olly Richards",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Orson Scott Card",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Osamu Dazai",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Oscar Wilde",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Otrova Gomas",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ovidio",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Pablo Andrés Wunderlich Padilla",
+    "Sexo": "Hombre",
+    "País": "Guatemala",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Pablo Neruda",
+    "Sexo": "Hombre",
+    "País": "Chile",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Patricia Highsmith",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Patrick Ness",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Patrick Rothfuss",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Paul Auster",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paul B. Preciado",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paul Ekman",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paul Granger",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paul Pimsleur",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paul R. Kroeger",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paul Valéry",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Paulo Coelho",
+    "Sexo": "Hombre",
+    "País": "Brasil",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Pedro Calderón de la Barca",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Pedro Juan Gutiérrez",
+    "Sexo": "Hombre",
+    "País": "Cuba",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Philip Kindred Dick",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Philip Pullman",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Pierre Ceria",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Pío Baroja",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Platón",
+    "Sexo": "Hombre",
+    "País": "Grecia",
+    "Libros": "8"
+  },
+  {
+    "Nombre": "Qiu Xialong",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "8"
+  },
+  {
+    "Nombre": "Rabindranath Tagore",
+    "Sexo": "Hombre",
+    "País": "India",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rachel Hartman",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Rae Carson",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rafael Alberti",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rafael Cadenas",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ramón de Campoamor",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ramón Domingo Perés",
+    "Sexo": "Hombre",
+    "País": "Cuba",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Ramón Gómez de la Serna",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ramón María del Valle-Inclán",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Raúl Castillo",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ray Bradbury",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Raymond Carver",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Raymond Chandler",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Reginald Horace Blyth",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "René Guénon",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Renée Vivien",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ricardo Güiraldes",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Richard Schmidt",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rick Leonardi",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Rick Riordan",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Roald Dahl",
+    "Sexo": "Hombre",
+    "País": "Gales",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Robert Anthony Salvatore",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Robert Ervin Howard",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Robert Greene",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Robert Jordan",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "15"
+  },
+  {
+    "Nombre": "Robert Louis Stevenson",
+    "Sexo": "Hombre",
+    "País": "Escocia",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Robert Mckee",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Roberto Alifano",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Roberto Arlt",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rogelio Sinán",
+    "Sexo": "Hombre",
+    "País": "Panamá",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Roger Price",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rómulo Gallegos",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rosalía de Castro",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Roswitha de Gandersheim",
+    "Sexo": "Mujer",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rui Lage",
+    "Sexo": "Hombre",
+    "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ruperto Long",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sabine Baring-Gould",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Safo de Lesbos",
+    "Sexo": "Mujer",
+    "País": "Grecia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Sally Rooney",
+    "Sexo": "Mujer",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Samantha Shannon",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Samuel Beckett",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Santiago Posteguillo",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Santiago Rusiñol",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sarah Fuller Flower Adams",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sarah Waters",
+    "Sexo": "Mujer",
+    "País": "Gales",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Saúl Alvídrez",
+    "Sexo": "Hombre",
+    "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sebastian Fitzek",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Selby Wynn Schwartz",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Shaun Tan",
+    "Sexo": "Hombre",
+    "País": "Australia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sheridan le Fanu",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Shirley Jackson",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Silvia Adela Kohan",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sófocles",
+    "Sexo": "Hombre",
+    "País": "Grecia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sohn Won-pyung",
+    "Sexo": "Mujer",
+    "País": "Corea del Sur",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sor Juana Inés de la Cruz",
+    "Sexo": "Mujer",
+    "País": "México",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Søren Sveistrup",
+    "Sexo": "Hombre",
+    "País": "Dinamarca",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Stefan Zweig",
+    "Sexo": "Hombre",
+    "País": "Austria",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Stephanie Danelle Perry",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "7"
+  },
+  {
+    "Nombre": "Stephen Chbosky",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Stephen Hawking",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Stephen King",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "20"
+  },
+  {
+    "Nombre": "Steve Brusatte",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Steven Pinker",
+    "Sexo": "Hombre",
+    "País": "Canadá",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Steven Turner",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Stina Jackson",
+    "Sexo": "Mujer",
+    "País": "Suecia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sugita Hisajo",
+    "Sexo": "Mujer",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sun Tzu",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Susan Elizabeth Phillips",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Suzanne Collins",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Svetlana Aleksiévich",
+    "Sexo": "Mujer",
+    "País": "Ucrania",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Sydney George Hopkins (Fynn)",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sylvia Molloy",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sylvia Plath",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tabitha Suzuma",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tamsyn Muir",
+    "Sexo": "Mujer",
+    "País": "Nueva Zelanda",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Taneda Santōka",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tatiana Țîbuleac",
+    "Sexo": "Mujer",
+    "País": "Moldavia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Taylor Jenkins Reid",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Ted Hughes",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tennessee Williams",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Teresa Driscoll",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Teresa Lamas Rodríguez",
+    "Sexo": "Mujer",
+    "País": "Paraguay",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Terry Brooks",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Terry Eagleton",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Terry Pratchett",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Thomas Harris",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Thomas Ligotti",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Thomas Mann",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Thomas Stearns Eliot",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Thomas Tryon",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tobias S. Buckell",
+    "Sexo": "Hombre",
+    "País": "Granada",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tom Clancy",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "15"
+  },
+  {
+    "Nombre": "Tom Cullen",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tom Rob Smith",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Tomás Navarro Tomás",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Toñi Sánchez Verdejo",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Torcuato Luca de Tena",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Truman Capote",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "3"
+  },
+  {
+    "Nombre": "Umberto Eco",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Ursula Kroeber Le Guin",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Valeria Calvo Chaves",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Veronica Roth",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "4"
+  },
+  {
+    "Nombre": "Vicente Garrido",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Vicente Haya",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Victor Hugo",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Viktor Emil Frankl",
+    "Sexo": "Hombre",
+    "País": "Austria",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Virginia Black",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Virginia Woolf",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "5"
+  },
+  {
+    "Nombre": "Vita Sackville-West",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Viviana Hervé Fernández",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Vladimir Nabokov",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Voltaire",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Vsévolod Meyerhold",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Waldo Japussy",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Walt Whitman",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Walter Tevis",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "William C. Dietz",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "William Faulkner",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "William Golding",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "William Seward Burroughs",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "William Shakespeare",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "William Wayne Farris",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Wisława Szymborska",
+    "Sexo": "Mujer",
+    "País": "Polonia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Wladyslaw Szpilman",
+    "Sexo": "Hombre",
+    "País": "Polonia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yan Lianke",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yasmina Reza",
+    "Sexo": "Mujer",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yasutaka Tsutsui",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yei Theodora Ozaki",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yevgueni Zamiatin",
+    "Sexo": "Hombre",
+    "País": "Rusia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yoru Sumino",
+    "Sexo": "Mujer",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yosa Buson",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yukio Mishima",
+    "Sexo": "Hombre",
+    "País": "Japón",
+    "Libros": "6"
+  },
+  {
+    "Nombre": "Yuval Noah Harari",
+    "Sexo": "Hombre",
+    "País": "Israel",
+    "Libros": "2"
+  },
+  {
+    "Nombre": "Zhuang Zhou",
+    "Sexo": "Hombre",
+    "País": "China",
+    "Libros": "1"
+  }
+]
