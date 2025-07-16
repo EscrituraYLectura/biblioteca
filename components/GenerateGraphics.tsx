@@ -14,6 +14,7 @@ import {
     ChartOptions,
 } from "chart.js";
 import data from "@/public/libros.json";
+import autores from "@/public/autores.json";
 import { TooltipInternal } from "@/components/Tooltip";
 
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
@@ -221,6 +222,8 @@ export default function GraficoSubidas() {
     const datosIdioma = generarDatosPie(data.map((book) => book.Idioma || ""));
     const datosOriginal = generarDatosPie(data.map((book) => book.Original || ""));
     const datosTemas = generarDatosTopTemas(data.map((book) => book.Tema || ""));
+    const datosSexoAutor = generarDatosPie(autores.map((autor) => autor.Sexo || "Sin especificar"));
+    const datosPaisAutor = generarDatosPie(autores.map((autor) => autor.País || "Sin especificar"));
     const [tiposSeleccionados, setTiposSeleccionados] = useState<string[]>([]);
 
     // Obtener todos los tipos únicos
@@ -388,6 +391,53 @@ export default function GraficoSubidas() {
                             </div>
                         </div>
                     </div>
+
+                    <div className={stylesStatistics.contenedor_grafico}>
+                        <h2>Distribución por sexo de autores</h2>
+                        <Pie data={datosSexoAutor} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <div className={stylesStatistics.grafico_opciones}>
+                            <div className={stylesStatistics.tag_container}>
+                                {datosSexoAutor.labels.map((label, i) => (
+                                    <span
+                                        key={label}
+                                        className={stylesStatistics.tag}
+                                        style={{
+                                            backgroundColor: datosSexoAutor.datasets[0].backgroundColor[i],
+                                            color: "white",
+                                            border: "none",
+                                            cursor: "default",
+                                        }}
+                                    >
+                                        {label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <div className={stylesStatistics.contenedor_grafico}>
+                        <h2>Distribución por país de autores</h2>
+                        <Pie data={datosPaisAutor} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <div className={stylesStatistics.grafico_opciones}>
+                            <div className={stylesStatistics.tag_container}>
+                                {datosPaisAutor.labels.map((label, i) => (
+                                    <span
+                                        key={label}
+                                        className={stylesStatistics.tag}
+                                        style={{
+                                            backgroundColor: datosPaisAutor.datasets[0].backgroundColor[i],
+                                            color: "white",
+                                            border: "none",
+                                            cursor: "default",
+                                        }}
+                                    >
+                                        {label}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </main>
         </>
