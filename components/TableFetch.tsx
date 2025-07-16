@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { TooltipInternal } from "@/components/Tooltip";
 import Popup from "@/components/Popup"
 import data from "@/public/libros.json";
+import autores from "@/public/autores.json";
 import reportes from "@/public/reportes.json";
 import stylesSearcher from "@/styles/pages/buscador.module.scss"
 
@@ -37,6 +38,8 @@ interface Filters {
     Original: string;
     Saga: string;
     Editado: string;
+    Sexo: string;
+    País: string;
 }
 
 const defaultFilters: Filters = {
@@ -49,6 +52,8 @@ const defaultFilters: Filters = {
     Original: "",
     Saga: "",
     Editado: "",
+    Sexo: "",
+    País: "",
 };
 
 function parseQuery(searchParams: URLSearchParams): Filters {
@@ -102,7 +107,6 @@ export default function TableFetch() {
         return () => clearTimeout(timeout);
     }, [filters]);
 
-
     const temasSet = useMemo(() => {
         const set = new Set<string>();
         data.forEach((book: Book) => {
@@ -136,7 +140,8 @@ export default function TableFetch() {
 
     const filteredData = useMemo(() => {
         return data.filter((book: Book) => {
-            return (
+            // Filtros por campos del libro
+            const pasaFiltrosLibro =
                 (!filters.Título || book.Título.toLowerCase().includes(filters.Título.toLowerCase())) &&
                 (!filters.Autor || book.Autor.toLowerCase().includes(filters.Autor.toLowerCase())) &&
                 (!filters.Publicación || book.Publicación.includes(filters.Publicación)) &&
@@ -145,8 +150,27 @@ export default function TableFetch() {
                 (!filters.Idioma || book.Idioma === filters.Idioma) &&
                 (!filters.Original || book.Original === filters.Original) &&
                 (!filters.Saga || book.Saga.toLowerCase().includes(filters.Saga.toLowerCase())) &&
-                (!filters.Editado || book.Editado === filters.Editado)
-            );
+                (!filters.Editado || book.Editado === filters.Editado);
+
+            if (!pasaFiltrosLibro) return false;
+
+            // Filtros por sexo del autor y país del autor (usando autores.json)
+            const autoresLibro = book.Autor.split(",").map((nombre) => nombre.trim());
+            const datosAutores = autoresLibro
+                .map((nombre) =>
+                    autores.find((a) => a.Nombre.toLowerCase() === nombre.toLowerCase())
+                )
+                .filter(Boolean);
+
+            if (filters.Sexo && !datosAutores.some((a) => a?.Sexo === filters.Sexo)) {
+                return false;
+            }
+
+            if (filters.País && !datosAutores.some((a) => a?.País === filters.País)) {
+                return false;
+            }
+
+            return true;
         });
     }, [filters]);
 
@@ -189,6 +213,16 @@ export default function TableFetch() {
         "estilo_tipo_verde": ["Manga", "Cómic", "Arte"],
     };
 
+    const sexos = useMemo(() => {
+        const set = new Set(autores.map((a) => a.Sexo).filter(Boolean));
+        return Array.from(set);
+    }, []);
+
+    const paises = useMemo(() => {
+        const set = new Set(autores.map((a) => a.País).filter(Boolean));
+        return Array.from(set).sort((a, b) => a.localeCompare(b));
+    }, []);
+
     return (
         <>
             <aside className={stylesSearcher.sidebar}>
@@ -208,6 +242,8 @@ export default function TableFetch() {
                         Original: "",
                         Saga: "",
                         Editado: "",
+                        Sexo: "",
+                        País: "",
                         });
                     router.replace("/buscador");
                     setSortConfig({ key: "Título", direction: "asc" });
@@ -307,6 +343,22 @@ export default function TableFetch() {
                 value={filters.Saga}
                 onChange={(e) => updateFilter("Saga", e.target.value)}
                 />
+
+                <label htmlFor="sexo">Sexo del autor:</label>
+                <select id="sexo" name="sexo" value={filters.Sexo || ""} onChange={(e) => updateFilter("Sexo", e.target.value)}>
+                <option value="">Hombre y mujer</option>
+                    {sexos.map((sexo) => (
+                      <option key={sexo} value={sexo}>{sexo}</option>
+                    ))}
+                </select>
+
+                <label htmlFor="pais">País del autor:</label>
+                <select id="pais" name="pais" value={filters.País || ""} onChange={(e) => updateFilter("País", e.target.value)}>
+                <option value="">Todos los países</option>
+                    {paises.map((pais) => (
+                      <option key={pais} value={pais}>{pais}</option>
+                    ))}
+                </select>
             </aside>
 
             <main className={stylesSearcher.results}>
