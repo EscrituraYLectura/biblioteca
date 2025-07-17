@@ -252,6 +252,8 @@ export default function TableFetch() {
                     Borrar filtros
                 </button>
 
+                <hr className={stylesSearcher.barra_separadora}/>
+
                 <label htmlFor="título">Título:</label>
                 <input
                 id="título"
@@ -343,6 +345,8 @@ export default function TableFetch() {
                 value={filters.Saga}
                 onChange={(e) => updateFilter("Saga", e.target.value)}
                 />
+
+                <hr className={stylesSearcher.barra_separadora}/>
 
                 <label htmlFor="sexo">Sexo del autor:</label>
                 <select id="sexo" name="sexo" value={filters.Sexo || ""} onChange={(e) => updateFilter("Sexo", e.target.value)}>

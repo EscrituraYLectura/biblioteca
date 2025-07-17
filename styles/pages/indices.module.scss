@@ -76,11 +76,16 @@
     }
 }
 
+.barra_separadora {
+    color: #6d6e771f;
+    margin: 0 -1rem;
+}
+
 .vista_selector {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
+    margin: 1rem 0;
 
     button {
         padding: 0.4rem;
