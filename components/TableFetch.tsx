@@ -356,7 +356,9 @@ export default function TableFetch() {
                     ))}
                 </select>
 
-                <label htmlFor="pais">País del autor:</label>
+                <label htmlFor="pais">País del autor:
+                    <TooltipInternal text="ⓘ">País en el que nació el autor, que no siempre corresponde con la nacionalidad.</TooltipInternal>
+                </label>
                 <select id="pais" name="pais" value={filters.País || ""} onChange={(e) => updateFilter("País", e.target.value)}>
                 <option value="">Todos los países</option>
                     {paises.map((pais) => (
