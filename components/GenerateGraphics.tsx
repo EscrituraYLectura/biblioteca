@@ -11,7 +11,6 @@ import {
     ArcElement,
     LineElement,
     PointElement,
-    ChartOptions,
 } from "chart.js";
 import libros from "@/public/libros.json";
 import autores from "@/public/autores.json";
