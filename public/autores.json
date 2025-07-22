@@ -96,6 +96,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Alejandro Dolina",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "4"
+  },
+  {
     "Nombre": "Alex Rawlings",
     "Sexo": "Hombre",
     "País": "Inglaterra",
@@ -633,6 +639,12 @@
     "Nombre": "Clara Duarte",
     "Sexo": "Mujer",
     "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Clarissa Pinkola Estés",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
     "Libros": "1"
   },
   {
@@ -1689,7 +1701,7 @@
     "Nombre": "John Katzenbach",
     "Sexo": "Hombre",
     "País": "Estados Unidos",
-    "Libros": "3"
+    "Libros": "4"
   },
   {
     "Nombre": "John le Carré",
@@ -2164,6 +2176,12 @@
     "Sexo": "Hombre",
     "País": "España",
     "Libros": "1"
+  },
+  {
+    "Nombre": "Luna Miguel",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "6"
   },
   {
     "Nombre": "Lynn Galli",
