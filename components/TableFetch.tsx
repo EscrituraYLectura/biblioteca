@@ -4,7 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { TooltipInternal } from "@/components/Tooltip";
 import Popup from "@/components/Popup"
-import data from "@/public/libros.json";
+import libros from "@/public/libros.json";
 import autores from "@/public/autores.json";
 import reportes from "@/public/reportes.json";
 import stylesSearcher from "@/styles/pages/buscador.module.scss"
@@ -109,7 +109,7 @@ export default function TableFetch() {
 
     const temasSet = useMemo(() => {
         const set = new Set<string>();
-        data.forEach((book: Book) => {
+        libros.forEach((book: Book) => {
             book.Tema.split(",").forEach((tema) => {
                 const trimmed = tema.trim();
                 if (trimmed) set.add(trimmed);
@@ -120,7 +120,7 @@ export default function TableFetch() {
 
     const opcionesSet = (field: keyof Book): string[] => {
         const set = new Map<string, string>();
-        data.forEach((book: Book) => {
+        libros.forEach((book: Book) => {
             const value = book[field];
             if (typeof value === "string") {
                 const normalized = value.normalize("NFC").trim().toLowerCase();
@@ -139,7 +139,7 @@ export default function TableFetch() {
     };
 
     const filteredData = useMemo(() => {
-        return data.filter((book: Book) => {
+        return libros.filter((book: Book) => {
             // Filtros por campos del libro
             const pasaFiltrosLibro =
                 (!filters.Título || book.Título.toLowerCase().includes(filters.Título.toLowerCase())) &&

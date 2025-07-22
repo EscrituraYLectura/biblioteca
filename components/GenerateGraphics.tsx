@@ -13,7 +13,7 @@ import {
     PointElement,
     ChartOptions,
 } from "chart.js";
-import data from "@/public/libros.json";
+import libros from "@/public/libros.json";
 import autores from "@/public/autores.json";
 import { TooltipInternal } from "@/components/Tooltip";
 
@@ -170,7 +170,7 @@ const opcionesTemas = {
 
 export default function GraficoSubidas() {
     // Datos por mes de subida
-    const subidasMeses = data
+    const subidasMeses = libros
     .map((book: Book) => {
         const fecha = parseFechaSubida(book.Subido);
         if (!fecha) return null;
@@ -189,7 +189,7 @@ export default function GraficoSubidas() {
     const cantidadesMeses = mesesOrdenados.map((mes) => conteoMeses[mes]);
 
     // Datos por año de publicación
-    const publicacionesAnios = data
+    const publicacionesAnios = libros
     .map((book: Book) => book.Publicación?.trim())
     .filter((a): a is string => !!a && !isNaN(Number(a)));
 
@@ -218,16 +218,16 @@ export default function GraficoSubidas() {
         ],
     };
 
-    const datosTipo = generarDatosPie(data.map((book) => book.Tipo || ""));
-    const datosIdioma = generarDatosPie(data.map((book) => book.Idioma || ""));
-    const datosOriginal = generarDatosPie(data.map((book) => book.Original || ""));
-    const datosTemas = generarDatosTopTemas(data.map((book) => book.Tema || ""));
+    const datosTipo = generarDatosPie(libros.map((book) => book.Tipo || ""));
+    const datosIdioma = generarDatosPie(libros.map((book) => book.Idioma || ""));
+    const datosOriginal = generarDatosPie(libros.map((book) => book.Original || ""));
+    const datosTemas = generarDatosTopTemas(libros.map((book) => book.Tema || ""));
     const datosSexoAutor = generarDatosPie(autores.map((autor) => autor.Sexo || "Sin especificar"));
     const datosPaisAutor = generarDatosPie(autores.map((autor) => autor.País || "Sin especificar"));
     const [tiposSeleccionados, setTiposSeleccionados] = useState<string[]>([]);
 
     // Obtener todos los tipos únicos
-    const tiposUnicos = Array.from(new Set(data.map((book) => book.Tipo?.trim() || "Sin especificar"))).sort();
+    const tiposUnicos = Array.from(new Set(libros.map((book) => book.Tipo?.trim() || "Sin especificar"))).sort();
 
     const toggleTipo = (tipo: string) => {
         setTiposSeleccionados((prev) =>
@@ -238,7 +238,7 @@ export default function GraficoSubidas() {
     // Construir datasets dinámicos según selección
     const subidasPorTipo: Record<string, Record<string, number>> = {};
 
-    data.forEach((book: Book) => {
+    libros.forEach((book: Book) => {
         const tipo = book.Tipo?.trim() || "Sin especificar";
         const fecha = parseFechaSubida(book.Subido);
         if (!fecha) return;

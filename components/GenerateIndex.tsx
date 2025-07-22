@@ -1,6 +1,6 @@
 "use client";
 
-import data from "@/public/libros.json";
+import libros from "@/public/libros.json";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
@@ -190,7 +190,7 @@ export default function GenerateIndex() {
     const router = useRouter();
 
     const vistaLibros = tipo === "libros";
-    const datos = useMemo(() => vistaLibros ? agruparPorLetra(data as Book[]) : agruparPorAutor(data as Book[]), [vistaLibros]);
+    const datos = useMemo(() => vistaLibros ? agruparPorLetra(libros as Book[]) : agruparPorAutor(libros as Book[]), [vistaLibros]);
 
     const cambiarVista = (nuevaVista: string) => {
         const url = nuevaVista === "libros" ? "/indices?tipo=libros" : "/indices?tipo=autores";
