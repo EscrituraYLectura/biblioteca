@@ -29,31 +29,31 @@ interface Book {
 }
 
 interface Filters {
-    Título: string;
-    Autor: string;
-    Publicación: string;
-    Tipo: string;
-    Tema: string[];
-    Idioma: string;
-    Original: string;
-    Saga: string;
-    Editado: string;
-    Sexo: string;
-    País: string;
+    título: string;
+    autor: string;
+    publicación: string;
+    tipo: string;
+    temas: string[];
+    idioma: string;
+    original: string;
+    saga: string;
+    editado: string;
+    sexo: string;
+    país: string;
 }
 
 const defaultFilters: Filters = {
-    Título: "",
-    Autor: "",
-    Publicación: "",
-    Tipo: "",
-    Tema: [],
-    Idioma: "",
-    Original: "",
-    Saga: "",
-    Editado: "",
-    Sexo: "",
-    País: "",
+    título: "",
+    autor: "",
+    publicación: "",
+    tipo: "",
+    temas: [],
+    idioma: "",
+    original: "",
+    saga: "",
+    editado: "",
+    sexo: "",
+    país: "",
 };
 
 function parseQuery(searchParams: URLSearchParams): Filters {
@@ -61,7 +61,7 @@ function parseQuery(searchParams: URLSearchParams): Filters {
     for (const key of Object.keys(parsedFilters) as (keyof Filters)[]) {
         const value = searchParams.get(key);
         if (value) {
-            if (key === "Tema") {
+            if (key === "temas") {
                 parsedFilters[key] = value.split(",").map((v) => v.trim());
             } else {
             parsedFilters[key] = value ?? "";
@@ -75,7 +75,7 @@ function serializeFilters(filters: Filters): string {
     const params = new URLSearchParams();
     for (const key of Object.keys(filters) as (keyof Filters)[]) {
         const value = filters[key];
-        if (key === "Tema" && Array.isArray(value) && value.length > 0) {
+        if (key === "temas" && Array.isArray(value) && value.length > 0) {
             params.set(key, value.join(","));
         } else if (typeof value === "string" && value.trim() !== "") {
             params.set(key, value);
@@ -142,15 +142,15 @@ export default function TableFetch() {
         return libros.filter((book: Book) => {
             // Filtros por campos del libro
             const pasaFiltrosLibro =
-                (!filters.Título || book.Título.toLowerCase().includes(filters.Título.toLowerCase())) &&
-                (!filters.Autor || book.Autor.toLowerCase().includes(filters.Autor.toLowerCase())) &&
-                (!filters.Publicación || book.Publicación.includes(filters.Publicación)) &&
-                (!filters.Tipo || book.Tipo === filters.Tipo) &&
-                (filters.Tema.length === 0 || filters.Tema.every((t) => book.Tema.split(",").map(s => s.trim()).includes(t))) &&
-                (!filters.Idioma || book.Idioma === filters.Idioma) &&
-                (!filters.Original || book.Original === filters.Original) &&
-                (!filters.Saga || book.Saga.toLowerCase().includes(filters.Saga.toLowerCase())) &&
-                (!filters.Editado || book.Editado === filters.Editado);
+                (!filters.título || book.Título.toLowerCase().includes(filters.título.toLowerCase())) &&
+                (!filters.autor || book.Autor.toLowerCase().includes(filters.autor.toLowerCase())) &&
+                (!filters.publicación || book.Publicación.includes(filters.publicación)) &&
+                (!filters.tipo || book.Tipo === filters.tipo) &&
+                (filters.temas.length === 0 || filters.temas.every((t) => book.Tema.split(",").map(s => s.trim()).includes(t))) &&
+                (!filters.idioma || book.Idioma === filters.idioma) &&
+                (!filters.original || book.Original === filters.original) &&
+                (!filters.saga || book.Saga.toLowerCase().includes(filters.saga.toLowerCase())) &&
+                (!filters.editado || book.Editado === filters.editado);
 
             if (!pasaFiltrosLibro) return false;
 
@@ -162,11 +162,11 @@ export default function TableFetch() {
                 )
                 .filter(Boolean);
 
-            if (filters.Sexo && !datosAutores.some((a) => a?.Sexo === filters.Sexo)) {
+            if (filters.sexo && !datosAutores.some((a) => a?.Sexo === filters.sexo)) {
                 return false;
             }
 
-            if (filters.País && !datosAutores.some((a) => a?.País === filters.País)) {
+            if (filters.país && !datosAutores.some((a) => a?.País === filters.país)) {
                 return false;
             }
 
@@ -233,17 +233,17 @@ export default function TableFetch() {
                     type="button"
                     onClick={() => {
                     setFilters({
-                        Título: "",
-                        Autor: "",
-                        Publicación: "",
-                        Tipo: "",
-                        Tema: [],
-                        Idioma: "",
-                        Original: "",
-                        Saga: "",
-                        Editado: "",
-                        Sexo: "",
-                        País: "",
+                        título: "",
+                        autor: "",
+                        publicación: "",
+                        tipo: "",
+                        temas: [],
+                        idioma: "",
+                        original: "",
+                        saga: "",
+                        editado: "",
+                        sexo: "",
+                        país: "",
                         });
                     router.replace("/buscador");
                     setSortConfig({ key: "Título", direction: "asc" });
@@ -258,16 +258,16 @@ export default function TableFetch() {
                 <input
                 id="título"
                 type="text"
-                value={filters.Título}
-                onChange={(e) => updateFilter("Título", e.target.value)}
+                value={filters.título}
+                onChange={(e) => updateFilter("título", e.target.value)}
                 />
 
                 <label htmlFor="autor">Autor:</label>
                 <input
                 id="autor"
                 type="text"
-                value={filters.Autor}
-                onChange={(e) => updateFilter("Autor", e.target.value)}
+                value={filters.autor}
+                onChange={(e) => updateFilter("autor", e.target.value)}
                 />
 
                 <label htmlFor="publicación">Año de publicación:
@@ -276,15 +276,15 @@ export default function TableFetch() {
                 <input
                 id="publicación"
                 type="text"
-                value={filters.Publicación}
-                onChange={(e) => updateFilter("Publicación", e.target.value)}
+                value={filters.publicación}
+                onChange={(e) => updateFilter("publicación", e.target.value)}
                 />
 
                 <label htmlFor="tipo">Tipo:</label>
                 <select
                 id="tipo"
-                value={filters.Tipo}
-                onChange={(e) => updateFilter("Tipo", e.target.value)}
+                value={filters.tipo}
+                onChange={(e) => updateFilter("tipo", e.target.value)}
                 >
                 <option value="">Todos los tipos</option>
                 {opcionesSet("Tipo").map((opt) => (
@@ -295,7 +295,7 @@ export default function TableFetch() {
                 <label htmlFor="temas">Temas:</label>
                 <div id="temas" className={stylesSearcher.tag_container}>
                 {Array.from(temasSet).map((opt) => {
-                    const selected = filters.Tema.includes(opt);
+                    const selected = filters.temas.includes(opt);
                     return (
                         <button
                         key={opt}
@@ -303,9 +303,9 @@ export default function TableFetch() {
                         className={`${stylesSearcher.tag} ${selected ? stylesSearcher.selected : ""}`}
                         onClick={() => {
                         const newTema = selected
-                            ? filters.Tema.filter((t) => t !== opt)
-                            : [...filters.Tema, opt];
-                        updateFilter("Tema", newTema);
+                            ? filters.temas.filter((t) => t !== opt)
+                            : [...filters.temas, opt];
+                        updateFilter("temas", newTema);
                         }}
                         >
                             {opt}
@@ -317,8 +317,8 @@ export default function TableFetch() {
                 <label htmlFor="idioma">Idioma:</label>
                 <select
                 id="idioma"
-                value={filters.Idioma}
-                onChange={(e) => updateFilter("Idioma", e.target.value)}
+                value={filters.idioma}
+                onChange={(e) => updateFilter("idioma", e.target.value)}
                 >
                 <option value="">Todos los idiomas</option>
                 {opcionesSet("Idioma").map((opt) => (
@@ -329,8 +329,8 @@ export default function TableFetch() {
                 <label htmlFor="original">Idioma original:</label>
                 <select
                 id="original"
-                value={filters.Original}
-                onChange={(e) => updateFilter("Original", e.target.value)}
+                value={filters.original}
+                onChange={(e) => updateFilter("original", e.target.value)}
                 >
                 <option value="">Todos los idiomas originales</option>
                 {opcionesSet("Original").map((opt) => (
@@ -342,14 +342,14 @@ export default function TableFetch() {
                 <input
                 id="saga"
                 type="text"
-                value={filters.Saga}
-                onChange={(e) => updateFilter("Saga", e.target.value)}
+                value={filters.saga}
+                onChange={(e) => updateFilter("saga", e.target.value)}
                 />
 
                 <hr className={stylesSearcher.barra_separadora}/>
 
                 <label htmlFor="sexo">Sexo del autor:</label>
-                <select id="sexo" name="sexo" value={filters.Sexo || ""} onChange={(e) => updateFilter("Sexo", e.target.value)}>
+                <select id="sexo" name="sexo" value={filters.sexo || ""} onChange={(e) => updateFilter("sexo", e.target.value)}>
                 <option value="">Hombre y mujer</option>
                     {sexos.map((sexo) => (
                       <option key={sexo} value={sexo}>{sexo}</option>
@@ -359,7 +359,7 @@ export default function TableFetch() {
                 <label htmlFor="pais">País del autor:
                     <TooltipInternal text="ⓘ">País en el que nació el autor, que no siempre corresponde con la nacionalidad.</TooltipInternal>
                 </label>
-                <select id="pais" name="pais" value={filters.País || ""} onChange={(e) => updateFilter("País", e.target.value)}>
+                <select id="pais" name="pais" value={filters.país || ""} onChange={(e) => updateFilter("país", e.target.value)}>
                 <option value="">Todos los países</option>
                     {paises.map((pais) => (
                       <option key={pais} value={pais}>{pais}</option>
@@ -459,7 +459,7 @@ export default function TableFetch() {
                             <span>
                                 · Los números entre paréntesis indican el orden dentro de la saga.<br/>
                                 · Párate sobre <span className={stylesSearcher.bs_1}>✚</span> para ver otras ediciones del mismo libro.<br/>
-                                · Los libros con <span className={`${stylesSearcher.bs_2} ${filters.Editado === "true" ? stylesSearcher.editado_activado : ""}`} onClick={() => updateFilter("Editado", filters.Editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones hechas por EyL.<br/>
+                                · Los libros con <span className={`${stylesSearcher.bs_2} ${filters.editado === "true" ? stylesSearcher.editado_activado : ""}`} onClick={() => updateFilter("editado", filters.editado === "true" ? "" : "true")}>fondo amarillo</span> son ediciones hechas por EyL.<br/>
                                 · Haz clic en <span className={stylesSearcher.bs_3}>✖</span> para reportar información errada o faltante.
                             </span>
                         </TooltipInternal>
