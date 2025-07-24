@@ -3,7 +3,7 @@ import TopBar from "@/components/Topbar";
 import NavBar from "@/components/Navbar";
 import { Suspense } from "react";
 
-export default function Estadisticas() {
+export default function Statistics() {
     return (
         <>
             <TopBar />

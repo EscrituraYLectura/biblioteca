@@ -22,111 +22,111 @@ interface Book {
     Enlace: string;
 }
 
-const letras = [
+const letters = [
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
     "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S",
     "T", "U", "V", "W", "X", "Y", "Z", "#"
 ];
 
-const normalizar = (texto: string) =>
-    texto.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+const normalise = (text: string) =>
+    text.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
 
-const getLetra = (texto: string) => {
-    if (!texto) return "#";
-    const match = texto.match(/\p{Letter}/u);
+const getLetter = (text: string) => {
+    if (!text) return "#";
+    const match = text.match(/\p{Letter}/u);
     if (!match) return "#";
 
-    let letra = match[0].toUpperCase();
-    if (letra === "Ñ") return "Ñ";
+    let letter = match[0].toUpperCase();
+    if (letter === "Ñ") return "Ñ";
 
-    letra = letra.normalize("NFD").replace(/\p{Diacritic}/gu, "");
-    return /^[A-Z]$/.test(letra) ? letra : "#";
+    letter = letter.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    return /^[A-Z]$/.test(letter) ? letter : "#";
 };
 
-const ordenar = (a: string, b: string) => {
-    const sa = normalizar(a).replace(/[^a-zñ0-9]/gi, "");
-    const sb = normalizar(b).replace(/[^a-zñ0-9]/gi, "");
+const order = (a: string, b: string) => {
+    const sa = normalise(a).replace(/[^a-zñ0-9]/gi, "");
+    const sb = normalise(b).replace(/[^a-zñ0-9]/gi, "");
     return sa.localeCompare(sb);
 };
 
-const ordenarSaga = (a: Book, b: Book) => {
+const orderSaga = (a: Book, b: Book) => {
     const numA = parseInt(a.Título.match(/\(#(\d+)\)/)?.[1] || "0");
     const numB = parseInt(b.Título.match(/\(#(\d+)\)/)?.[1] || "0");
     return numA - numB;
 };
 
 // Agrupación por letra para libros
-const agruparPorLetra = (libros: Book[]) => {
-    const agrupado: Record<string, (Book | { saga: string; autores: Set<string>; libros: Book[] })[]> = {};
-    const sagas: Record<string, { saga: string; autores: Set<string>; libros: Book[] }> = {};
-    const sueltos: Book[] = [];
+const groupByLetter = (books: Book[]) => {
+    const grouped: Record<string, (Book | { saga: string; authors: Set<string>; books: Book[] })[]> = {};
+    const sagas: Record<string, { saga: string; authors: Set<string>; books: Book[] }> = {};
+    const individuals: Book[] = [];
 
-    for (const book of libros) {
+    for (const book of books) {
         if (book.Saga) {
             if (!sagas[book.Saga]) {
-                sagas[book.Saga] = { saga: book.Saga, autores: new Set(), libros: [] };
+                sagas[book.Saga] = { saga: book.Saga, authors: new Set(), books: [] };
             }
-            sagas[book.Saga].libros.push(book);
-            sagas[book.Saga].autores.add(book.Autor);
+            sagas[book.Saga].books.push(book);
+            sagas[book.Saga].authors.add(book.Autor);
         } else {
-            sueltos.push(book);
+            individuals.push(book);
         }
     }
 
-    sueltos.sort((a, b) => ordenar(a.Título, b.Título));
+    individuals.sort((a, b) => order(a.Título, b.Título));
     for (const key in sagas) {
-        sagas[key].libros.sort(ordenarSaga);
+        sagas[key].books.sort(orderSaga);
     }
 
-    const todo: (Book | { saga: string; autores: Set<string>; libros: Book[] })[] = [
-        ...sueltos,
+    const everything: (Book | { saga: string; authors: Set<string>; books: Book[] })[] = [
+        ...individuals,
         ...Object.values(sagas)
     ];
 
-    for (const item of todo) {
-        const texto = "Título" in item ? item.Título : item.saga;
-        const letra = getLetra(texto);
-        if (!agrupado[letra]) agrupado[letra] = [];
-        agrupado[letra].push(item);
+    for (const item of everything) {
+        const text = "Título" in item ? item.Título : item.saga;
+        const letter = getLetter(text);
+        if (!grouped[letter]) grouped[letter] = [];
+        grouped[letter].push(item);
     }
 
-    for (const letra in agrupado) {
-        agrupado[letra].sort((a, b) => {
+    for (const letter in grouped) {
+        grouped[letter].sort((a, b) => {
             const ta = "Título" in a ? a.Título : a.saga;
             const tb = "Título" in b ? b.Título : b.saga;
-            return ordenar(ta, tb);
+            return order(ta, tb);
         });
     }
 
-    return agrupado;
+    return grouped;
 };
 
 // Agrupación por autor
-const agruparPorAutor = (libros: Book[]) => {
-    const autores: Record<string, Book[]> = {};
+const groupByAuthor = (books: Book[]) => {
+    const authors: Record<string, Book[]> = {};
 
-    for (const libro of libros) {
-        const autoresLista = libro.Autor.split(",").map(a => a.trim());
+    for (const book of books) {
+        const authorList = book.Autor.split(",").map(a => a.trim());
 
-        for (const autorIndividual of autoresLista) {
-            if (!autores[autorIndividual]) autores[autorIndividual] = [];
-            autores[autorIndividual].push(libro);
+        for (const individualAuthor of authorList) {
+            if (!authors[individualAuthor]) authors[individualAuthor] = [];
+            authors[individualAuthor].push(book);
         }
     }
 
-    const ordenados = Object.entries(autores).sort(([a], [b]) => ordenar(a, b));
+    const ordered = Object.entries(authors).sort(([a], [b]) => order(a, b));
 
-    const agrupado: Record<string, { autor: string; libros: Book[] }[]> = {};
-    for (const [autor, libros] of ordenados) {
-        const letra = getLetra(autor);
-        if (!agrupado[letra]) agrupado[letra] = [];
-        agrupado[letra].push({ autor, libros });
+    const grouped: Record<string, { author: string; books: Book[] }[]> = {};
+    for (const [author, books] of ordered) {
+        const letter = getLetter(author);
+        if (!grouped[letter]) grouped[letter] = [];
+        grouped[letter].push({ author, books });
     }
 
-    return agrupado;
+    return grouped;
 };
 
-function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; libros: Book[] })[]) {
+function renderBookView(items: (Book | { saga: string; authors: Set<string>; books: Book[] })[]) {
     return items.map((item, index) => {
         if ("Título" in item) {
             return (
@@ -138,15 +138,15 @@ function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; 
                 </p>
             );
         } else {
-            const mostrarAutores = item.autores.size > 1;
+            const showAuthors = item.authors.size > 1;
             return (
                 <div key={`${item.saga}-${index}`}>
-                    <p>– {item.saga}, {mostrarAutores ? "AA. VV." : Array.from(item.autores)[0]}:</p>
+                    <p>– {item.saga}, {showAuthors ? "AA. VV." : Array.from(item.authors)[0]}:</p>
                     <ul>
-                        {item.libros.map((book, idx) => (
+                        {item.books.map((book, idx) => (
                             <li key={`${book.Título}-${book.Autor}-${idx}`}>
                             <Link href={book.Enlace} target="_blank" className={stylesIndex.i_titulo}>{book.Título}</Link>
-                            {mostrarAutores && `, ${book.Autor}`}
+                            {showAuthors && `, ${book.Autor}`}
                             {book.Idioma !== "Español" && (
                                 <span className={stylesIndex.i_mas_info}> (en {book.Idioma.toLowerCase()})</span>
                             )}
@@ -159,23 +159,23 @@ function renderVistaLibros(items: (Book | { saga: string; autores: Set<string>; 
     });
 }
 
-function renderVistaAutores(items: { autor: string; libros: Book[] }[]) {
-    return items.map(({ autor, libros }, index) => (
-        <div key={`${autor}-${index}`}>
-            <p>{autor}:</p>
+function renderAuthorView(items: { author: string; books: Book[] }[]) {
+    return items.map(({ author, books }, index) => (
+        <div key={`${author}-${index}`}>
+            <p>{author}:</p>
             <ul>
-                {libros.map((libro, idx) => {
-                    const coautores = libro.Autor.split(",").map(a => a.trim()).filter(a => a !== autor);
-                    const idiomaExtra = libro.Idioma !== "Español" ? `(en ${libro.Idioma.toLowerCase()})` : "";
-                    const colaboracion = coautores.length > 0 ? `(en colaboración con ${coautores.join(", ")})` : "";
-                    const sagaExtra = libro.Saga ? `(de la saga ${libro.Saga})` : "";
+                {books.map((book, idx) => {
+                    const coAuthors = book.Autor.split(",").map(a => a.trim()).filter(a => a !== author);
+                    const extraLanguage = book.Idioma !== "Español" ? `(en ${book.Idioma.toLowerCase()})` : "";
+                    const colab = coAuthors.length > 0 ? `(en colaboración con ${coAuthors.join(", ")})` : "";
+                    const extraSaga = book.Saga ? `(de la saga ${book.Saga})` : "";
 
                     return (
-                        <li key={`${libro.Título}-${idx}`}>
-                            <Link href={libro.Enlace} target="_blank" className={stylesIndex.i_titulo}>{libro.Título}</Link>{" "}
-                            {idiomaExtra && <span className={stylesIndex.i_mas_info}> {idiomaExtra}</span>}
-                            {colaboracion && <span className={stylesIndex.i_mas_info}> {colaboracion}</span>}
-                            {sagaExtra && <span className={stylesIndex.i_mas_info}> {sagaExtra}</span>}
+                        <li key={`${book.Título}-${idx}`}>
+                            <Link href={book.Enlace} target="_blank" className={stylesIndex.i_titulo}>{book.Título}</Link>{" "}
+                            {extraLanguage && <span className={stylesIndex.i_mas_info}> {extraLanguage}</span>}
+                            {colab && <span className={stylesIndex.i_mas_info}> {colab}</span>}
+                            {extraSaga && <span className={stylesIndex.i_mas_info}> {extraSaga}</span>}
                         </li>
                     );
                 })}
@@ -186,14 +186,14 @@ function renderVistaAutores(items: { autor: string; libros: Book[] }[]) {
 
 export default function GenerateIndex() {
     const searchParams = useSearchParams();
-    const tipo = searchParams.get("tipo") || "libros";
+    const type = searchParams.get("tipo") || "libros";
     const router = useRouter();
 
-    const vistaLibros = tipo === "libros";
-    const datos = useMemo(() => vistaLibros ? agruparPorLetra(libros as Book[]) : agruparPorAutor(libros as Book[]), [vistaLibros]);
+    const bookView = type === "libros";
+    const data = useMemo(() => bookView ? groupByLetter(libros as Book[]) : groupByAuthor(libros as Book[]), [bookView]);
 
-    const cambiarVista = (nuevaVista: string) => {
-        const url = nuevaVista === "libros" ? "/indices?tipo=libros" : "/indices?tipo=autores";
+    const changeView = (newView: string) => {
+        const url = newView === "libros" ? "/indices?tipo=libros" : "/indices?tipo=autores";
         router.push(url);
     };
 
@@ -203,17 +203,17 @@ export default function GenerateIndex() {
                 <h2 className={stylesIndex.pagina_subtitulo}>Índices</h2>
 
                 <div className={stylesIndex.vista_selector}>
-                    <button onClick={() => cambiarVista("libros")} disabled={vistaLibros}>Por título</button>
-                    <button onClick={() => cambiarVista("autores")} disabled={!vistaLibros}>Por autor</button>
+                    <button onClick={() => changeView("libros")} disabled={bookView}>Por título</button>
+                    <button onClick={() => changeView("autores")} disabled={!bookView}>Por autor</button>
                 </div>
 
                 <hr className={stylesIndex.barra_separadora}/>
 
                 <ul>
-                    {letras.map((letra) => (
-                        <li key={letra}>
-                            <a href={`#${letra === "#" ? "%23" : letra}`} className={stylesIndex.indice_enlace}>
-                            {letra === "#" ? "Otros" : `Letra ${letra}`}
+                    {letters.map((letter) => (
+                        <li key={letter}>
+                            <a href={`#${letter === "#" ? "%23" : letter}`} className={stylesIndex.indice_enlace}>
+                            {letter === "#" ? "Otros" : `Letra ${letter}`}
                             </a>
                         </li>
                     ))}
@@ -222,19 +222,19 @@ export default function GenerateIndex() {
 
             <main className={stylesIndex.contenedor_indices}>
                 <div className={`${stylesIndex.table_container} ${stylesIndex.table_container_indices}`}>
-                    {letras.map((letra) => {
-                        const items = datos[letra] ?? [];
+                    {letters.map((letter) => {
+                        const items = data[letter] ?? [];
                         const sinElementos = items.length === 0;
 
                         return (
-                            <div key={letra} id={letra} className={stylesIndex.contenedor_letra_libros}>
-                                <h2 className={stylesIndex.i_letra}>{letra}</h2>
+                            <div key={letter} id={letter} className={stylesIndex.contenedor_letra_libros}>
+                                <h2 className={stylesIndex.i_letra}>{letter}</h2>
                                 {sinElementos ? (
                                     <p className={stylesIndex.i_sin_elementos}>No hay elementos con esta letra.</p>
-                                ) : vistaLibros ? (
-                                    renderVistaLibros(items as (Book | { saga: string; autores: Set<string>; libros: Book[] })[])
+                                ) : bookView ? (
+                                    renderBookView(items as (Book | { saga: string; authors: Set<string>; books: Book[] })[])
                                 ) : (
-                                    renderVistaAutores(items as { autor: string; libros: Book[] }[])
+                                    renderAuthorView(items as { author: string; books: Book[] }[])
                                 )}
                             </div>
                         );

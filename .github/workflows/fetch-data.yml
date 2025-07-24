@@ -18,8 +18,8 @@ jobs:
       - name: Install dependencies (if needed)
         run: npm install
 
-      - name: Run data-fetch.js
-        run: node utils/data-fetch.js
+      - name: Run dataFetch.js
+        run: node utils/dataFetch.js
 
       - name: Commit and push changes
         run: |

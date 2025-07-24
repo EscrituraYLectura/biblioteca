@@ -3,17 +3,17 @@
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Popup from "@/components/Popup"
-import { puedeEnviarReporte, registrarReporte } from "@/utils/reportLimiter";
+import { canSendReport, recordReport } from "@/utils/reportLimiter";
 import stylesNavbar from "@/styles/components/navbar.module.scss";
 
 export default function NavBar() {
     const router = useRouter();
 
-    const irAPagina = (pagina: string) => {
+    const goToPage = (pagina: string) => {
         router.push(pagina);
     }
 
-    const [popupActivo, setPopupActivo] = useState<string | null>(null);
+    const [activePopup, setActivePopup] = useState<string | null>(null);
 
     const pathname = usePathname();
 
@@ -21,16 +21,16 @@ export default function NavBar() {
         <nav className={stylesNavbar.navbar}>
             <div className={stylesNavbar.navbar_pages}>
                 <ul>
-                    <li onClick={() => irAPagina("/buscador")} className={pathname.startsWith("/buscador") ? stylesNavbar.pagina_activa : ""}>🔍</li>
-                    <li onClick={() => irAPagina("/indices")} className={pathname.startsWith("/indices") ? stylesNavbar.pagina_activa : ""}>📄</li>
-                    <li onClick={() => irAPagina("/estadisticas")} className={pathname.startsWith("/estadisticas") ? stylesNavbar.pagina_activa : ""}>📊</li>
+                    <li onClick={() => goToPage("/buscador")} className={pathname.startsWith("/buscador") ? stylesNavbar.pagina_activa : ""}>🔍</li>
+                    <li onClick={() => goToPage("/indices")} className={pathname.startsWith("/indices") ? stylesNavbar.pagina_activa : ""}>📄</li>
+                    <li onClick={() => goToPage("/estadisticas")} className={pathname.startsWith("/estadisticas") ? stylesNavbar.pagina_activa : ""}>📊</li>
                 </ul>
             </div>
             <div className={stylesNavbar.navbar_info}>
                 <ul>
-                    <li onClick={() => setPopupActivo("reportar-eyl")} className={stylesNavbar.navbar_report}>❌</li>
-                    {popupActivo === "reportar-eyl" && (
-                        <Popup onClose={() => setPopupActivo(null)}>
+                    <li onClick={() => setActivePopup("reportar-eyl")} className={stylesNavbar.navbar_report}>❌</li>
+                    {activePopup === "reportar-eyl" && (
+                        <Popup onClose={() => setActivePopup(null)}>
                             <h2>Reportar errores</h2>
                             <p>
                                 Si encuentras algún error en el funcionamiento del sitio, puedes
@@ -45,12 +45,12 @@ export default function NavBar() {
                                     method="POST"
                                     target="_blank"
                                     onSubmit={(e) => {
-                                        if (!puedeEnviarReporte()) {
+                                        if (!canSendReport()) {
                                             e.preventDefault();
                                             alert("Sólo puede enviarse un reporte por día. Inténtalo de nuevo mañana.");
                                             return;
                                         }
-                                        registrarReporte();
+                                        recordReport();
                                     }}
                                     >
                                         <label htmlFor="reporte-tipo">Tipo de error: <span className={stylesNavbar.error_asterisk}>*</span></label>
@@ -92,9 +92,9 @@ export default function NavBar() {
                             </div>
                         </Popup>
                     )}
-                    <li onClick={() => setPopupActivo("sobre-eyl")}>ℹ️</li>
-                    {popupActivo === "sobre-eyl" && (
-                        <Popup onClose={() => setPopupActivo(null)}>
+                    <li onClick={() => setActivePopup("sobre-eyl")}>ℹ️</li>
+                    {activePopup === "sobre-eyl" && (
+                        <Popup onClose={() => setActivePopup(null)}>
                             <h2>Sobre la Biblioteca</h2>
                             <p>
                                 Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript).

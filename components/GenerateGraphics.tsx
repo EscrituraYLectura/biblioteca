@@ -12,8 +12,8 @@ import {
     LineElement,
     PointElement,
 } from "chart.js";
-import libros from "@/public/libros.json";
-import autores from "@/public/autores.json";
+import books from "@/public/libros.json";
+import authors from "@/public/autores.json";
 import { TooltipInternal } from "@/components/Tooltip";
 
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend);
@@ -29,38 +29,38 @@ interface Book {
     Tema?: string;
 }
 
-const parseFechaSubida = (subido: string): Date | null => {
-    const match = subido.match(/Date\((\d+),(\d+),(\d+)\)/);
+const parseUploadDate = (uploaded: string): Date | null => {
+    const match = uploaded.match(/Date\((\d+),(\d+),(\d+)\)/);
     if (!match) return null;
     const [_, year, month, day] = match.map(Number);
     return new Date(year, month, day);
 };
 
-const generarDatosPorAño = (items: string[]): { años: string[]; cantidades: number[] } => {
-    const conteo: Record<string, number> = {};
+const generateDataPerYear = (items: string[]): { years: string[]; quantities: number[] } => {
+    const count: Record<string, number> = {};
 
-    items.forEach((año) => {
-        if (año && !isNaN(Number(año))) {
-            conteo[año] = (conteo[año] || 0) + 1;
+    items.forEach((year) => {
+        if (year && !isNaN(Number(year))) {
+            count[year] = (count[year] || 0) + 1;
         }
     });
 
-    const años = Object.keys(conteo).sort();
-    const cantidades = años.map((año) => conteo[año]);
+    const years = Object.keys(count).sort();
+    const quantities = years.map((year) => count[year]);
 
-    return { años, cantidades };
+    return { years, quantities };
 };
 
-const generarDatosPie = (items: string[]) => {
-    const conteo: Record<string, number> = {};
+const generatePieData = (items: string[]) => {
+    const count: Record<string, number> = {};
 
-    items.forEach((valor) => {
-        const clave = valor.trim() || "Sin especificar";
-        conteo[clave] = (conteo[clave] || 0) + 1;
+    items.forEach((value) => {
+        const key = value.trim() || "Sin especificar";
+        count[key] = (count[key] || 0) + 1;
     });
 
-    const labels = Object.keys(conteo);
-    const data = Object.values(conteo);
+    const labels = Object.keys(count);
+    const data = Object.values(count);
 
     const backgroundColors = labels.map((_l, i) =>
         `hsl(${(i * 360) / labels.length}, 70%, 60%)`
@@ -78,25 +78,25 @@ const generarDatosPie = (items: string[]) => {
     };
 };
 
-const generarDatosTopTemas = (items: string[], topN: number = 10) => {
-    const conteo: Record<string, number> = {};
+const generateTopData = (items: string[], topN: number = 10) => {
+    const count: Record<string, number> = {};
 
-    items.forEach((valor) => {
-        valor
+    items.forEach((value) => {
+        value
         .split(",")
-        .map((tema) => tema.trim())
-        .filter((tema) => tema.length > 0)
-        .forEach((tema) => {
-            conteo[tema] = (conteo[tema] || 0) + 1;
+        .map((theme) => theme.trim())
+        .filter((theme) => theme.length > 0)
+        .forEach((theme) => {
+            count[theme] = (count[theme] || 0) + 1;
         });
     });
 
-    const entradasOrdenadas = Object.entries(conteo)
+    const orderedEntries = Object.entries(count)
     .sort((a, b) => b[1] - a[1])
     .slice(0, topN);
 
-    const labels = entradasOrdenadas.map(([tema]) => tema);
-    const data = entradasOrdenadas.map(([_, cantidad]) => cantidad);
+    const labels = orderedEntries.map(([theme]) => theme);
+    const data = orderedEntries.map(([_, quantity]) => quantity);
 
     return {
         labels,
@@ -111,7 +111,7 @@ const generarDatosTopTemas = (items: string[], topN: number = 10) => {
     };
 };
 
-const crearOpciones = (etiquetas: string[]) => ({
+const createOptions = (tags: string[]) => ({
     responsive: true,
     plugins: {
         legend: { display: false },
@@ -121,12 +121,12 @@ const crearOpciones = (etiquetas: string[]) => ({
             grid: { display: false },
             ticks: {
                 callback: function (_val: any, index: number) {
-                    const label = etiquetas[index];
-                    if (index === 0 || index === etiquetas.length - 1) {
+                    const label = tags[index];
+                    if (index === 0 || index === tags.length - 1) {
                         if (label.includes("-")) {
-                            const [año, mes] = label.split("-");
-                            const nombresMeses = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
-                            return `${nombresMeses[+mes - 1]} ${año}`;
+                            const [year, month] = label.split("-");
+                            const monthNames = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
+                            return `${monthNames[+month - 1]} ${year}`;
                         } else {
                             return label; // solo año
                         }
@@ -147,7 +147,7 @@ const crearOpciones = (etiquetas: string[]) => ({
     },
 });
 
-const opcionesTemas = {
+const themeOptions = {
     responsive: true,
     indexAxis: "y" as const,
     plugins: {
@@ -167,87 +167,87 @@ const opcionesTemas = {
     },
 };
 
-export default function GraficoSubidas() {
+export default function GenerateGraphics() {
     // Datos por mes de subida
-    const subidasMeses = libros
+    const monthlyUploads = books
     .map((book: Book) => {
-        const fecha = parseFechaSubida(book.Subido);
-        if (!fecha) return null;
-        const mes = (fecha.getMonth() + 1).toString().padStart(2, "0");
-        return `${fecha.getFullYear()}-${mes}`;
+        const date = parseUploadDate(book.Subido);
+        if (!date) return null;
+        const month = (date.getMonth() + 1).toString().padStart(2, "0");
+        return `${date.getFullYear()}-${month}`;
     })
     .filter((a): a is string => !!a);
 
     // Generar conteo por mes
-    const conteoMeses: Record<string, number> = {};
-    subidasMeses.forEach((mes) => {
-        conteoMeses[mes] = (conteoMeses[mes] || 0) + 1;
+    const monthCount: Record<string, number> = {};
+    monthlyUploads.forEach((month) => {
+        monthCount[month] = (monthCount[month] || 0) + 1;
     });
 
-    const mesesOrdenados = Object.keys(conteoMeses).sort();
-    const cantidadesMeses = mesesOrdenados.map((mes) => conteoMeses[mes]);
+    const orderedMonths = Object.keys(monthCount).sort();
+    const monthQuantities = orderedMonths.map((month) => monthCount[month]);
 
     // Datos por año de publicación
-    const publicacionesAnios = libros
+    const yearlyUploads = books
     .map((book: Book) => book.Publicación?.trim())
     .filter((a): a is string => !!a && !isNaN(Number(a)));
 
-    const { años: añosPublicacionRaw, cantidades: cantidadesPublicacionRaw } = generarDatosPorAño(publicacionesAnios);
+    const { years: rawYearlyUploads, quantities: rawUploadQuantities } = generateDataPerYear(yearlyUploads);
 
     // Filtrar años con al menos 2 libros
-    const añosPublicacion: string[] = [];
-    const cantidadesPublicacion: number[] = [];
+    const uploadYears: string[] = [];
+    const uploadQuantities: number[] = [];
     
-    añosPublicacionRaw.forEach((año, idx) => {
-        if (cantidadesPublicacionRaw[idx] >= 2) {
-            añosPublicacion.push(año);
-            cantidadesPublicacion.push(cantidadesPublicacionRaw[idx]);
+    rawYearlyUploads.forEach((year, idx) => {
+        if (rawUploadQuantities[idx] >= 2) {
+            uploadYears.push(year);
+            uploadQuantities.push(rawUploadQuantities[idx]);
         }
     });
     
-    const datosPublicacion = {
-        labels: añosPublicacion,
+    const uploadData = {
+        labels: uploadYears,
         datasets: [
             {
                 label: "Libros por año de publicación",
-                data: cantidadesPublicacion,
+                data: uploadQuantities,
                 backgroundColor: "rgba(255, 159, 64, 0.6)",
                 borderRadius: 8,
             },
         ],
     };
 
-    const datosTipo = generarDatosPie(libros.map((book) => book.Tipo || ""));
-    const datosIdioma = generarDatosPie(libros.map((book) => book.Idioma || ""));
-    const datosOriginal = generarDatosPie(libros.map((book) => book.Original || ""));
-    const datosTemas = generarDatosTopTemas(libros.map((book) => book.Tema || ""));
-    const datosSexoAutor = generarDatosPie(autores.map((autor) => autor.Sexo || "Sin especificar"));
-    const datosPaisAutor = generarDatosPie(autores.map((autor) => autor.País || "Sin especificar"));
-    const [tiposSeleccionados, setTiposSeleccionados] = useState<string[]>([]);
+    const tipoData = generatePieData(books.map((book) => book.Tipo || ""));
+    const idiomaData = generatePieData(books.map((book) => book.Idioma || ""));
+    const originalData = generatePieData(books.map((book) => book.Original || ""));
+    const themeData = generateTopData(books.map((book) => book.Tema || ""));
+    const sexoAutorData = generatePieData(authors.map((autor) => autor.Sexo || "Sin especificar"));
+    const paisAutorData = generatePieData(authors.map((autor) => autor.País || "Sin especificar"));
+    const [selectedTipos, setSelectedTipos] = useState<string[]>([]);
 
     // Obtener todos los tipos únicos
-    const tiposUnicos = Array.from(new Set(libros.map((book) => book.Tipo?.trim() || "Sin especificar"))).sort();
+    const uniqueTipos = Array.from(new Set(books.map((book) => book.Tipo?.trim() || "Sin especificar"))).sort();
 
-    const toggleTipo = (tipo: string) => {
-        setTiposSeleccionados((prev) =>
-            prev.includes(tipo) ? prev.filter((t) => t !== tipo) : [...prev, tipo]
+    const toggleTipo = (type: string) => {
+        setSelectedTipos((prev) =>
+            prev.includes(type) ? prev.filter((t) => t !== type) : [...prev, type]
         );
     };
 
     // Construir datasets dinámicos según selección
-    const subidasPorTipo: Record<string, Record<string, number>> = {};
+    const uploadsPerType: Record<string, Record<string, number>> = {};
 
-    libros.forEach((book: Book) => {
-        const tipo = book.Tipo?.trim() || "Sin especificar";
-        const fecha = parseFechaSubida(book.Subido);
-        if (!fecha) return;
-        const mes = `${fecha.getFullYear()}-${(fecha.getMonth() + 1).toString().padStart(2, "0")}`;
-        if (!subidasPorTipo[tipo]) subidasPorTipo[tipo] = {};
-        subidasPorTipo[tipo][mes] = (subidasPorTipo[tipo][mes] || 0) + 1;
+    books.forEach((book: Book) => {
+        const type = book.Tipo?.trim() || "Sin especificar";
+        const date = parseUploadDate(book.Subido);
+        if (!date) return;
+        const month = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}`;
+        if (!uploadsPerType[type]) uploadsPerType[type] = {};
+        uploadsPerType[type][month] = (uploadsPerType[type][month] || 0) + 1;
     });
 
-    const etiquetasMeses = Object.keys(conteoMeses).sort();
-    const colores = [
+    const monthTags = Object.keys(monthCount).sort();
+    const colours = [
         "rgba(255, 99, 132, 0.8)",
         "rgba(54, 162, 235, 0.8)",
         "rgba(255, 206, 86, 0.8)",
@@ -256,14 +256,14 @@ export default function GraficoSubidas() {
         "rgba(255, 159, 64, 0.8)",
     ];
 
-    const datosSubidasFiltrado = {
-        labels: etiquetasMeses,
+    const filteredUploadsData = {
+        labels: monthTags,
         datasets:
-            tiposSeleccionados.length === 0
+            selectedTipos.length === 0
                 ? [
                     {
                         label: "Libros subidos por mes",
-                        data: cantidadesMeses,
+                        data: monthQuantities,
                         borderColor: "rgba(75, 192, 192, 1)",
                         backgroundColor: "rgba(75, 192, 192, 0.2)",
                         fill: true,
@@ -272,13 +272,13 @@ export default function GraficoSubidas() {
                         pointHoverRadius: 6,
                     },
                 ]
-                : tiposSeleccionados.map((tipo, idx) => {
-                    const dataMeses = etiquetasMeses.map((mes) => subidasPorTipo[tipo]?.[mes] || 0);
+                : selectedTipos.map((type, idx) => {
+                    const monthData = monthTags.map((month) => uploadsPerType[type]?.[month] || 0);
                     return {
-                        label: `${tipo}`,
-                        data: dataMeses,
-                        borderColor: colores[idx % colores.length],
-                        backgroundColor: colores[idx % colores.length].replace("0.8", "0.2"),
+                        label: `${type}`,
+                        data: monthData,
+                        borderColor: colours[idx % colours.length],
+                        backgroundColor: colours[idx % colours.length].replace("0.8", "0.2"),
                         fill: true,
                         tension: 0.3,
                         pointRadius: 4,
@@ -294,16 +294,16 @@ export default function GraficoSubidas() {
                 <div className={stylesStatistics.contenedor_grid_estadisticas}>
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Libros subidos por año</h2>
-                        <Line data={datosSubidasFiltrado} options={crearOpciones(etiquetasMeses)} />
+                        <Line data={filteredUploadsData} options={createOptions(monthTags)} />
                         <div className={stylesStatistics.grafico_opciones}>
                             <div className={stylesStatistics.tag_container}>
-                                {tiposUnicos.map((tipo) => (
+                                {uniqueTipos.map((type) => (
                                     <button
-                                        key={tipo}
-                                        onClick={() => toggleTipo(tipo)}
-                                        className={`${stylesStatistics.tag} ${tiposSeleccionados.includes(tipo) ? stylesStatistics.selected : ""}`}
+                                        key={type}
+                                        onClick={() => toggleTipo(type)}
+                                        className={`${stylesStatistics.tag} ${selectedTipos.includes(type) ? stylesStatistics.selected : ""}`}
                                     >
-                                        {tipo}
+                                        {type}
                                     </button>
                                 ))}
                             </div>
@@ -314,20 +314,20 @@ export default function GraficoSubidas() {
                         <h2>Libros por año de publicación
                             <TooltipInternal text="ⓘ">No se muestran los años con sólo 1 libro.</TooltipInternal>
                         </h2>
-                        <Bar data={datosPublicacion} options={crearOpciones(añosPublicacion)} />
+                        <Bar data={uploadData} options={createOptions(uploadYears)} />
                     </div>
 
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por tipo</h2>
-                        <Pie data={datosTipo} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <Pie data={tipoData} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
                         <div className={stylesStatistics.grafico_opciones}>
                             <div className={stylesStatistics.tag_container}>
-                                {datosTipo.labels.map((label, i) => (
+                                {tipoData.labels.map((label, i) => (
                                     <span
                                         key={label}
                                         className={stylesStatistics.tag}
                                         style={{
-                                            backgroundColor: datosTipo.datasets[0].backgroundColor[i],
+                                            backgroundColor: tipoData.datasets[0].backgroundColor[i],
                                             color: "white",
                                             border: "none",
                                             cursor: "default",
@@ -342,20 +342,20 @@ export default function GraficoSubidas() {
 
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Top 10 de temas más frecuentes</h2>
-                        <Bar data={datosTemas} options={opcionesTemas} />
+                        <Bar data={themeData} options={themeOptions} />
                     </div>
 
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por idioma</h2>
-                        <Pie data={datosIdioma} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <Pie data={idiomaData} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
                         <div className={stylesStatistics.grafico_opciones}>
                             <div className={stylesStatistics.tag_container}>
-                                {datosIdioma.labels.map((label, i) => (
+                                {idiomaData.labels.map((label, i) => (
                                     <span
                                         key={label}
                                         className={stylesStatistics.tag}
                                         style={{
-                                            backgroundColor: datosIdioma.datasets[0].backgroundColor[i],
+                                            backgroundColor: idiomaData.datasets[0].backgroundColor[i],
                                             color: "white",
                                             border: "none",
                                             cursor: "default",
@@ -370,15 +370,15 @@ export default function GraficoSubidas() {
 
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por idioma original</h2>
-                        <Pie data={datosOriginal} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <Pie data={originalData} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
                         <div className={stylesStatistics.grafico_opciones}>
                             <div className={stylesStatistics.tag_container}>
-                                {datosOriginal.labels.map((label, i) => (
+                                {originalData.labels.map((label, i) => (
                                     <span
                                         key={label}
                                         className={stylesStatistics.tag}
                                         style={{
-                                            backgroundColor: datosOriginal.datasets[0].backgroundColor[i],
+                                            backgroundColor: originalData.datasets[0].backgroundColor[i],
                                             color: "white",
                                             border: "none",
                                             cursor: "default",
@@ -393,15 +393,15 @@ export default function GraficoSubidas() {
 
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por sexo de autores</h2>
-                        <Pie data={datosSexoAutor} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <Pie data={sexoAutorData} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
                         <div className={stylesStatistics.grafico_opciones}>
                             <div className={stylesStatistics.tag_container}>
-                                {datosSexoAutor.labels.map((label, i) => (
+                                {sexoAutorData.labels.map((label, i) => (
                                     <span
                                         key={label}
                                         className={stylesStatistics.tag}
                                         style={{
-                                            backgroundColor: datosSexoAutor.datasets[0].backgroundColor[i],
+                                            backgroundColor: sexoAutorData.datasets[0].backgroundColor[i],
                                             color: "white",
                                             border: "none",
                                             cursor: "default",
@@ -416,15 +416,15 @@ export default function GraficoSubidas() {
                             
                     <div className={stylesStatistics.contenedor_grafico}>
                         <h2>Distribución por país de autores</h2>
-                        <Pie data={datosPaisAutor} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
+                        <Pie data={paisAutorData} options={{ aspectRatio: 1.5, plugins: { legend: { display: false } } }} />
                         <div className={stylesStatistics.grafico_opciones}>
                             <div className={stylesStatistics.tag_container}>
-                                {datosPaisAutor.labels.map((label, i) => (
+                                {paisAutorData.labels.map((label, i) => (
                                     <span
                                         key={label}
                                         className={stylesStatistics.tag}
                                         style={{
-                                            backgroundColor: datosPaisAutor.datasets[0].backgroundColor[i],
+                                            backgroundColor: paisAutorData.datasets[0].backgroundColor[i],
                                             color: "white",
                                             border: "none",
                                             cursor: "default",

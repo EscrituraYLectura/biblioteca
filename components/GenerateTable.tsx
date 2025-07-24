@@ -4,12 +4,12 @@ import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { TooltipInternal } from "@/components/Tooltip";
 import Popup from "@/components/Popup"
-import libros from "@/public/libros.json";
-import autores from "@/public/autores.json";
-import reportes from "@/public/reportes.json";
+import books from "@/public/libros.json";
+import authors from "@/public/autores.json";
+import reports from "@/public/reportes.json";
 import stylesSearcher from "@/styles/pages/buscador.module.scss"
 
-const reportados: string[] = reportes as string[];
+const reported: string[] = reports as string[];
 
 interface Book {
     Título: string;
@@ -84,9 +84,9 @@ function serializeFilters(filters: Filters): string {
     return params.toString();
 }
 
-export default function TableFetch() {
-    const [popupActivo, setPopupActivo] = useState<string | null>(null);
-    const [libroSeleccionado, setLibroSeleccionado] = useState<Book | null>(null);
+export default function GenerateTable() {
+    const [activePopup, setActivePopup] = useState<string | null>(null);
+    const [selectedBook, setSelectedBook] = useState<Book | null>(null);
 
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -107,9 +107,9 @@ export default function TableFetch() {
         return () => clearTimeout(timeout);
     }, [filters]);
 
-    const temasSet = useMemo(() => {
+    const themesSet = useMemo(() => {
         const set = new Set<string>();
-        libros.forEach((book: Book) => {
+        books.forEach((book: Book) => {
             book.Tema.split(",").forEach((tema) => {
                 const trimmed = tema.trim();
                 if (trimmed) set.add(trimmed);
@@ -118,9 +118,9 @@ export default function TableFetch() {
         return Array.from(set).sort();
     }, []);
 
-    const opcionesSet = (field: keyof Book): string[] => {
+    const optionsSet = (field: keyof Book): string[] => {
         const set = new Map<string, string>();
-        libros.forEach((book: Book) => {
+        books.forEach((book: Book) => {
             const value = book[field];
             if (typeof value === "string") {
                 const normalized = value.normalize("NFC").trim().toLowerCase();
@@ -139,9 +139,9 @@ export default function TableFetch() {
     };
 
     const filteredData = useMemo(() => {
-        return libros.filter((book: Book) => {
+        return books.filter((book: Book) => {
             // Filtros por campos del libro
-            const pasaFiltrosLibro =
+            const filtersPerBook =
                 (!filters.título || book.Título.toLowerCase().includes(filters.título.toLowerCase())) &&
                 (!filters.autor || book.Autor.toLowerCase().includes(filters.autor.toLowerCase())) &&
                 (!filters.publicación || book.Publicación.includes(filters.publicación)) &&
@@ -152,21 +152,21 @@ export default function TableFetch() {
                 (!filters.saga || book.Saga.toLowerCase().includes(filters.saga.toLowerCase())) &&
                 (!filters.editado || book.Editado === filters.editado);
 
-            if (!pasaFiltrosLibro) return false;
+            if (!filtersPerBook) return false;
 
             // Filtros por sexo del autor y país del autor (usando autores.json)
-            const autoresLibro = book.Autor.split(",").map((nombre) => nombre.trim());
-            const datosAutores = autoresLibro
-                .map((nombre) =>
-                    autores.find((a) => a.Nombre.toLowerCase() === nombre.toLowerCase())
+            const bookAuthors = book.Autor.split(",").map((name) => name.trim());
+            const authorData = bookAuthors
+                .map((name) =>
+                    authors.find((a) => a.Nombre.toLowerCase() === name.toLowerCase())
                 )
                 .filter(Boolean);
 
-            if (filters.sexo && !datosAutores.some((a) => a?.Sexo === filters.sexo)) {
+            if (filters.sexo && !authorData.some((a) => a?.Sexo === filters.sexo)) {
                 return false;
             }
 
-            if (filters.país && !datosAutores.some((a) => a?.País === filters.país)) {
+            if (filters.país && !authorData.some((a) => a?.País === filters.país)) {
                 return false;
             }
 
@@ -213,13 +213,13 @@ export default function TableFetch() {
         "estilo_tipo_verde": ["Manga", "Cómic", "Arte"],
     };
 
-    const sexos = useMemo(() => {
-        const set = new Set(autores.map((a) => a.Sexo).filter(Boolean));
+    const sex = useMemo(() => {
+        const set = new Set(authors.map((a) => a.Sexo).filter(Boolean));
         return Array.from(set);
     }, []);
 
-    const paises = useMemo(() => {
-        const set = new Set(autores.map((a) => a.País).filter(Boolean));
+    const countries = useMemo(() => {
+        const set = new Set(authors.map((a) => a.País).filter(Boolean));
         return Array.from(set).sort((a, b) => a.localeCompare(b));
     }, []);
 
@@ -287,14 +287,14 @@ export default function TableFetch() {
                 onChange={(e) => updateFilter("tipo", e.target.value)}
                 >
                 <option value="">Todos los tipos</option>
-                {opcionesSet("Tipo").map((opt) => (
+                {optionsSet("Tipo").map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
                 ))}
                 </select>
 
                 <label htmlFor="temas">Temas:</label>
                 <div id="temas" className={stylesSearcher.tag_container}>
-                {Array.from(temasSet).map((opt) => {
+                {Array.from(themesSet).map((opt) => {
                     const selected = filters.temas.includes(opt);
                     return (
                         <button
@@ -321,7 +321,7 @@ export default function TableFetch() {
                 onChange={(e) => updateFilter("idioma", e.target.value)}
                 >
                 <option value="">Todos los idiomas</option>
-                {opcionesSet("Idioma").map((opt) => (
+                {optionsSet("Idioma").map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
                 ))}
                 </select>
@@ -333,7 +333,7 @@ export default function TableFetch() {
                 onChange={(e) => updateFilter("original", e.target.value)}
                 >
                 <option value="">Todos los idiomas originales</option>
-                {opcionesSet("Original").map((opt) => (
+                {optionsSet("Original").map((opt) => (
                     <option key={opt} value={opt}>{opt}</option>
                 ))}
                 </select>
@@ -351,7 +351,7 @@ export default function TableFetch() {
                 <label htmlFor="sexo">Sexo del autor:</label>
                 <select id="sexo" name="sexo" value={filters.sexo || ""} onChange={(e) => updateFilter("sexo", e.target.value)}>
                 <option value="">Hombre y mujer</option>
-                    {sexos.map((sexo) => (
+                    {sex.map((sexo) => (
                       <option key={sexo} value={sexo}>{sexo}</option>
                     ))}
                 </select>
@@ -361,7 +361,7 @@ export default function TableFetch() {
                 </label>
                 <select id="pais" name="pais" value={filters.país || ""} onChange={(e) => updateFilter("país", e.target.value)}>
                 <option value="">Todos los países</option>
-                    {paises.map((pais) => (
+                    {countries.map((pais) => (
                       <option key={pais} value={pais}>{pais}</option>
                     ))}
                 </select>
@@ -434,13 +434,13 @@ export default function TableFetch() {
                                 <td><span className={`${stylesSearcher.estilo_tipo} ${stylesSearcher[Object.entries(typeStyles).find(([, list]) => list.includes(book.Tipo))?.[0] ?? ""]}`}>{book.Tipo}</span></td>
                                 <td>{book.Tema}</td>
                                 <td>
-                                    {!reportados.includes(book.ID) && (
+                                    {!reported.includes(book.ID) && (
                                         <button
                                         className={stylesSearcher.report_button}
                                         type="button"
                                         onClick={() => {
-                                            setLibroSeleccionado(book);
-                                            setPopupActivo("reportar-libro");
+                                            setSelectedBook(book);
+                                            setActivePopup("reportar-libro");
                                         }}
                                         >
                                         ❌
@@ -466,12 +466,12 @@ export default function TableFetch() {
                     </p>
                     <p>Puedes ayudar al servidor <a href="https://discord.com/channels/403377475947855882/1290810391089123388" target="_blank">donando los libros que tengas</a>. ¡Te lo agradecemos muchísimo!</p>
                 </div>
-                {popupActivo === "reportar-libro" && libroSeleccionado && (
-                    <Popup onClose={() => { setPopupActivo(null); setLibroSeleccionado(null); }}>
+                {activePopup === "reportar-libro" && selectedBook && (
+                    <Popup onClose={() => { setActivePopup(null); setSelectedBook(null); }}>
                         <h2>Reportar libro</h2>
                         <p>
                             Rellena este formulario para reportar información errada, faltante, o que quieras
-                            añadir al libro <span className={stylesSearcher.reportar_form_titulo_libro}>{libroSeleccionado.Título}</span>.
+                            añadir al libro <span className={stylesSearcher.reportar_form_titulo_libro}>{selectedBook.Título}</span>.
                             ¡Es de mucha ayuda que nos ayudes a clasificar los libros según sus temas! Sé lo más descriptivo
                             posible. Al enviar el reporte, se abrirá una pestaña de Google Forms, que es el servicio que
                             utilizamos. Es totalmente anónimo.
@@ -479,9 +479,9 @@ export default function TableFetch() {
                         <div className={stylesSearcher.reportar_eyl_form}>
                             <div className={stylesSearcher.reportar_eyl_form_inputs}>
                                 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdZ02qn6Q_GOFbqeKiD0vwl6xH62XHGBFnVJ43OOEmSiGpT6Q/formResponse" method="POST" target="_blank">
-                                    <input name="entry.491655063" id="reportar-id-libro" type="text" value={libroSeleccionado.ID} className={stylesSearcher.reportar_form_hidden} readOnly/>
+                                    <input name="entry.491655063" id="reportar-id-libro" type="text" value={selectedBook.ID} className={stylesSearcher.reportar_form_hidden} readOnly/>
 
-                                    <input name="entry.431514674" id="reportar-titulo-libro" type="text" value={libroSeleccionado.Título} className={stylesSearcher.reportar_form_hidden} readOnly/>
+                                    <input name="entry.431514674" id="reportar-titulo-libro" type="text" value={selectedBook.Título} className={stylesSearcher.reportar_form_hidden} readOnly/>
 
                                     <label htmlFor="reportar-mensaje-libro">Explicación del reporte: <span className={stylesSearcher.error_asterisk}>*</span></label>
                                     <textarea name="entry.1960922008" id="reportar-mensaje-libro" placeholder="Describe los cambios que quieras ver." required/>
