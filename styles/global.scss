@@ -112,27 +112,6 @@ textarea {
         padding: 0.5rem;
     }
 
-    .navbar {
-        flex-direction: row;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #6d6e771f;
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            padding: 0.5rem;
-
-            li {
-                font-size: 1.5rem;
-                margin-bottom: 0;
-                height: auto;
-            }
-        }
-    }
-
     .contenedor {
         flex-direction: column;
         height: auto;

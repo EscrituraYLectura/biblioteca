@@ -8,3 +8,11 @@
     align-items: center;
     height: 5vh;
 }
+
+// Estilos para teléfonos
+
+@media (max-width: 768px) {
+    .topbar {
+        border-bottom: 1px solid #6d6e771f;
+    }
+}

@@ -1,3 +1,5 @@
+// Estilos por defecto
+
 .navbar {
     width: 70px;
     background-color: #121214;
@@ -6,16 +8,6 @@
     flex-direction: column;
     overflow-y: auto;
     justify-content: space-between;
-
-    .navbar_pages {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .navbar_info {
-        display: flex;
-        flex-direction: column;
-    }
 
     ul {
         margin: 0;
@@ -95,4 +87,30 @@
 
 .error_asterisk {
     color: red;
+}
+
+// Estilos para teléfonos
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        border-right: none;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 0.5rem;
+            gap: 0.7rem;
+
+            li {
+                font-size: 28px;
+                margin-bottom: 0;
+                height: auto;
+                padding: 0.5rem;
+            }
+        }
+    }
 }
