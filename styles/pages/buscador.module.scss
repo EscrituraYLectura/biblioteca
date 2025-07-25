@@ -295,6 +295,13 @@
 // Estilos para teléfonos
 
 @media (max-width: 768px) {
+    .sidebar {
+        width: auto;
+        border-right: none;
+        border-top: none;
+        max-height: auto;
+    }
+
     .pagina_subtitulo {
         font-size: large;
     }
