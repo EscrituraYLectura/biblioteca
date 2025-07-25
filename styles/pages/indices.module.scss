@@ -134,3 +134,17 @@
     top: 0;
     z-index: 4;
 }
+
+// Estilos para teléfonos
+
+@media (max-width: 768px) {
+    .contenedor_indices {
+        .table_container_indices {
+            padding-right: 1.5rem;
+        }
+    }
+
+    .pagina_subtitulo {
+        font-size: large;
+    }
+}

@@ -291,3 +291,11 @@
     top: 0;
     z-index: 4;
 }
+
+// Estilos para teléfonos
+
+@media (max-width: 768px) {
+    .pagina_subtitulo {
+        font-size: large;
+    }
+}

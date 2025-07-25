@@ -106,12 +106,6 @@ textarea {
 
 // Estilos para pantallas pequeñas (móviles)
 @media (max-width: 768px) {
-    .topbar {
-        flex-direction: column;
-        height: auto;
-        padding: 0.5rem;
-    }
-
     .contenedor {
         flex-direction: column;
         height: auto;
