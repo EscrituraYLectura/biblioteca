@@ -97,11 +97,11 @@ export default function NavBar() {
                         <Popup onClose={() => setActivePopup(null)}>
                             <h2>Sobre la Biblioteca</h2>
                             <p>
-                                Creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript).
-                                Hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+                                Este sitio web ofrece un buscador, un índice y estadísticas sobre todos los libros de la Biblioteca.
+                                Está creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript) y
+                                hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
                                 Puedes ver el código fuente <a href="https://github.com/EscrituraYLectura/biblioteca">aquí</a>.
-                                Si quieres contribuir, puedes abrir
-                                un issue o pull request en el repositorio. En la wiki hay más información.
+                                Si quieres contribuir, puedes abrir un issue o pull request en el repositorio. En la wiki hay más información.
                                 Usamos Google Drive para guardar los datos de los libros; puedes ver
                                 el archivo <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">aquí</a>.
                                 El estilo es una imitación del <a href="https://discord.com/branding" target="_blank">estilo de Discord</a>.
