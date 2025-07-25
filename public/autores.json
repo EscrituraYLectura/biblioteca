@@ -906,6 +906,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Elías Regules",
+    "Sexo": "Hombre",
+    "País": "Uruguay",
+    "Libros": "8"
+  },
+  {
     "Nombre": "Elinor Glyn",
     "Sexo": "Mujer",
     "País": "Inglaterra",
