@@ -412,7 +412,7 @@ export default function GenerateTable() {
                                         : "▼"}
                                     </span>
                                 </th>
-                                <th>Tema(s)</th>
+                                <th></th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -432,7 +432,26 @@ export default function GenerateTable() {
                                             : book.Publicación}
                                 </td>
                                 <td><span className={`${stylesSearcher.estilo_tipo} ${stylesSearcher[Object.entries(typeStyles).find(([, list]) => list.includes(book.Tipo))?.[0] ?? ""]}`}>{book.Tipo}</span></td>
-                                <td>{book.Tema}</td>
+                                <td>
+                                    <TooltipInternal text="Más información">
+                                        {book.Tema !== "" ? (
+                                            <span>
+                                                <b>Tema(s):</b> {book.Tema}<br/>
+                                            </span>
+                                        ) : (
+                                            <span>
+                                                <b>Tema(s):</b> (Aún no hay temas.)<br/>
+                                            </span>
+                                        )}
+                                        <b>Idioma:</b> {book.Idioma}<br/>
+                                        <b>Idioma original:</b> {book.Original}<br/>
+                                        {book.Saga !== "" && (
+                                            <span>
+                                                <b>Saga:</b> {book.Saga}
+                                            </span>
+                                        )}
+                                    </TooltipInternal>
+                                </td>
                                 <td>
                                     {!reported.includes(book.ID) && (
                                         <button
