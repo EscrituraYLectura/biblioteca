@@ -4,6 +4,7 @@ import { useMemo, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { TooltipInternal } from "@/components/Tooltip";
 import Popup from "@/components/Popup"
+import mobileDetection from "@/hooks/mobileDetection"
 import books from "@/public/libros.json";
 import authors from "@/public/autores.json";
 import reports from "@/public/reportes.json";
@@ -93,6 +94,8 @@ export default function GenerateTable() {
 
     const initialFilters = useMemo(() => parseQuery(searchParams), []);
     const [filters, setFilters] = useState<Filters>(initialFilters);
+
+    const isMobile = mobileDetection();
 
     useEffect(() => {
         const query = serializeFilters(filters);
@@ -222,6 +225,8 @@ export default function GenerateTable() {
         const set = new Set(authors.map((a) => a.País).filter(Boolean));
         return Array.from(set).sort((a, b) => a.localeCompare(b));
     }, []);
+
+    const moreInfoText = isMobile ? "ⓘ" : "Más información"
 
     return (
         <>
@@ -392,26 +397,30 @@ export default function GenerateTable() {
                                         : "▼"}
                                     </span>
                                 </th>
-                                <th>
-                                    Año
-                                    <span onClick={() => toggleSort("Publicación")} className={stylesSearcher.sort_arrow}>
-                                    {sortConfig?.key === "Publicación"
-                                        ? sortConfig.direction === "asc"
-                                            ? "▲"
-                                            : "▼"
-                                        : "▼"}
-                                    </span>
-                                </th>
-                                <th>
-                                    Tipo
-                                    <span onClick={() => toggleSort("Tipo")} className={stylesSearcher.sort_arrow}>
-                                    {sortConfig?.key === "Tipo"
-                                        ? sortConfig.direction === "asc"
-                                            ? "▲"
-                                            : "▼"
-                                        : "▼"}
-                                    </span>
-                                </th>
+                                {!isMobile && (
+                                    <th>
+                                        Año
+                                        <span onClick={() => toggleSort("Publicación")} className={stylesSearcher.sort_arrow}>
+                                        {sortConfig?.key === "Publicación"
+                                            ? sortConfig.direction === "asc"
+                                                ? "▲"
+                                                : "▼"
+                                            : "▼"}
+                                        </span>
+                                    </th>
+                                )}
+                                {!isMobile && (
+                                    <th>
+                                        Tipo
+                                        <span onClick={() => toggleSort("Tipo")} className={stylesSearcher.sort_arrow}>
+                                        {sortConfig?.key === "Tipo"
+                                            ? sortConfig.direction === "asc"
+                                                ? "▲"
+                                                : "▼"
+                                            : "▼"}
+                                        </span>
+                                    </th>
+                                )}
                                 <th></th>
                                 <th></th>
                             </tr>
@@ -424,16 +433,20 @@ export default function GenerateTable() {
                                     {book.Otros !== "" ? <TooltipInternal text="✚">Otras ediciones: {book.Otros}</TooltipInternal> : undefined}
                                 </td>
                                 <td>{book.Autor}</td>
+                                {!isMobile && (
+                                    <td>
+                                        {book.Publicación.startsWith("-")
+                                            ? `${book.Publicación.slice(1)} a. C.`
+                                            : book.Publicación.startsWith("0")
+                                                ? book.Publicación.replace(/^0+/, "")
+                                                : book.Publicación}
+                                    </td>
+                                )}
+                                {!isMobile && (
+                                    <td><span className={`${stylesSearcher.estilo_tipo} ${stylesSearcher[Object.entries(typeStyles).find(([, list]) => list.includes(book.Tipo))?.[0] ?? ""]}`}>{book.Tipo}</span></td>
+                                )}
                                 <td>
-                                    {book.Publicación.startsWith("-")
-                                        ? `${book.Publicación.slice(1)} a. C.`
-                                        : book.Publicación.startsWith("0")
-                                            ? book.Publicación.replace(/^0+/, "")
-                                            : book.Publicación}
-                                </td>
-                                <td><span className={`${stylesSearcher.estilo_tipo} ${stylesSearcher[Object.entries(typeStyles).find(([, list]) => list.includes(book.Tipo))?.[0] ?? ""]}`}>{book.Tipo}</span></td>
-                                <td>
-                                    <TooltipInternal text="Más información">
+                                    <TooltipInternal text={moreInfoText}>
                                         {book.Tema !== "" ? (
                                             <span>
                                                 <b>Tema(s):</b> {book.Tema}<br/>
