@@ -24,9 +24,9 @@ export default function Popup({ children, onClose }: PopupProps) {
     }, [onClose]);
 
     return (
-        <div className="popup-overlay">
-            <div className="popup-box" ref={popupRef}>
-                <button className="popup-close" onClick={onClose}>×</button>
+        <div className="popup_overlay">
+            <div className="popup_box" ref={popupRef}>
+                <button className="popup_close" onClick={onClose}>×</button>
                 {children}
             </div>
         </div>
