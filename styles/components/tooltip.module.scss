@@ -34,8 +34,7 @@
     pointer-events: auto;
 }
 
-// Estilos para teléfonos
-
+// Estilos para pantallas pequeñas (teléfonos)
 @media (max-width: 768px) {
     .tooltip {
         font-size: 24px;

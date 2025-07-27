@@ -87,8 +87,7 @@
     color: red;
 }
 
-// Estilos para teléfonos
-
+// Estilos para pantallas pequeñas (teléfonos)
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
