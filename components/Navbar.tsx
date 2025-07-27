@@ -99,7 +99,7 @@ export default function NavBar() {
                             <p>
                                 Este sitio web ofrece un buscador, un índice y estadísticas sobre todos los libros de la Biblioteca.
                                 Está creado con <a href="https://nextjs.org/" target="_blank">Next.js</a> (usando TypeScript) y
-                                hosteado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+                                alojado en <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
                                 Puedes ver el código fuente <a href="https://github.com/EscrituraYLectura/biblioteca">aquí</a>.
                                 Si quieres contribuir, puedes abrir un issue o pull request en el repositorio. En la wiki hay más información.
                                 Usamos Google Drive para guardar los datos de los libros; puedes ver
