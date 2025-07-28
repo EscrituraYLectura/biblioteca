@@ -1356,6 +1356,12 @@
     "Libros": "3"
   },
   {
+    "Nombre": "Helen Fisher",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Henrik Ibsen",
     "Sexo": "Hombre",
     "País": "Noruega",
