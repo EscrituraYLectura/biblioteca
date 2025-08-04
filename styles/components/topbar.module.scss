@@ -1,5 +1,5 @@
 .topbar {
-    background-color: #121214;
+    background-color: var(--outer-bg-color);
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -12,6 +12,6 @@
 // Estilos para pantallas pequeñas (teléfonos)
 @media (max-width: 768px) {
     .topbar {
-        border-bottom: 1px solid #6d6e771f;
+        border-bottom: 1px solid var(--border-bg-color);
     }
 }

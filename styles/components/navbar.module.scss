@@ -1,7 +1,7 @@
 .navbar {
     width: 70px;
-    background-color: #121214;
-    border-right: 1px solid #6d6e771f;
+    background-color: var(--outer-bg-color);
+    border-right: 1px solid var(--border-bg-color);
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -14,7 +14,7 @@
 
         li {
             border-radius: 12px;
-            background-color: #1d1d1e;
+            background-color: var(--button-bg-color);
             border: none;
             color: #fff;
             font-size: 22px;

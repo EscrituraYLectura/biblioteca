@@ -1,8 +1,8 @@
 .sidebar {
     width: 320px;
-    background-color: var(--sidebar-bg-color);
-    border-right: 1px solid #6d6e771f;
-    border-top: 1px solid #6d6e771f;
+    background-color: var(--outer-bg-color);
+    border-right: 1px solid var(--border-bg-color);
+    border-top: 1px solid var(--border-bg-color);
     position: sticky;
     top: 0;
     display: flex;
@@ -56,14 +56,14 @@
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    background-color: #1a1a1e;
-    border-top: 1px solid #6d6e771f;
+    background-color: var(--inner-bg-color);
+    border-top: 1px solid var(--border-bg-color);
 }
 
 .table_container {
     flex: 1;
     overflow-y: auto;
-    border-bottom: 1px solid #6d6e771f;
+    border-bottom: 1px solid var(--border-bg-color);
 }
 
 .tabla_principal {
@@ -78,9 +78,9 @@
     thead {
         position: sticky;
         top: 0;
-        background-color: #121214;
+        background-color: var(--outer-bg-color);
         z-index: 4;
-        border-bottom: 1px solid #6d6e771f;
+        border-bottom: 1px solid var(--border-bg-color);
     }
 
     th, td {
@@ -94,26 +94,26 @@
             user-select: none;
             margin-left: 0.5rem;
             font-size: 0.75rem;
-            color: #999;
+            color: var(--label-text-color);
             font-weight: normal;
         }
     }
 
     td {
-        border-bottom: 1px solid #6d6e771f;
+        border-bottom: 1px solid var(--border-bg-color);
 
         a {
-            background-color: #292c51;
+            background-color: var(--bookurl-bg-color);
             transition: background-color 0.1s ease-out,color 0.1s ease-out;
             padding: 0.2rem;
             border-radius: 3px;
-            color: #a9baff;
+            color: var(--booktext-bg-color);
             text-decoration: none;
             line-height: 1.6rem;
 
             &:hover {
-                background-color: #5865f2;
-                color: #fff;
+                background-color: var(--bookurl-bg-color-hover);
+                color: var(--booktext-bg-color-hover);
             }
         }
     }
@@ -122,14 +122,14 @@
         transition: background-color 0.2s ease-out;
 
         &:hover {
-            background: #242428;
+            background-color: var(--item-bg-color-hover);
         }
     }
 }
 
 .barra_separadora {
-    border-top: 1px solid #6d6e771f;
-    color: #121214;
+    border-top: 1px solid var(--border-bg-color);
+    color: var(--border-bg-color);
     margin: 0 -1rem;
 }
 
@@ -160,9 +160,9 @@
 }
 
 .tag {
-    color: #82838b;
-    border: 1px solid #97979f33;
-    background-color: #121214;
+    color: var(--label-text-color);
+    border: 1px solid var(--border-bg-color);
+    background-color: var(--field-bg-color);
     border-radius: 8px;
     padding: 0.4rem;
     cursor: pointer;
@@ -170,14 +170,14 @@
     transition: background-color 0.2s ease-out,color 0.2 ease-out;
 
     &:hover {
-        background-color: #1d1d1e;
-        color: #efeff0;
+        background-color: var(--third-bg-color);
+        color: var(--label-text-color);
     }
 }
 
 .tag.selected {
-    background-color: #2c2c30;
-    color: white;
+    background-color: var(--item-bg-color-hover);
+    color: var(--label-text-color);
 }
 
 .libro_editado {
@@ -193,7 +193,7 @@
 #clear_filters_button {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    background-color: #202024;
+    background-color: var(--button-bg-color);
     color: #f57976;
     border: none;
     cursor: pointer;
@@ -212,7 +212,7 @@
 .report_button {
     padding: 0.5rem;
     border-radius: 0.5rem;
-    background-color: #202024;
+    background-color: var(--button-bg-color);
     border: none;
     color: #f57976;
     cursor: pointer;
@@ -276,7 +276,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 0.6rem;
-    background-color: #202024;
+    background-color: var(--third-bg-color);
 }
 
 .pagina_subtitulo {
@@ -284,8 +284,8 @@
     font-size: small;
     margin: 0 -1rem;
     padding: 0.64rem 1rem;
-    border-bottom: 1px solid #6d6e771f;
-    background-color: #121214;
+    border-bottom: 1px solid var(--border-bg-color);
+    background-color: var(--outer-bg-color);
     position: sticky;
     top: 0;
     z-index: 4;
@@ -302,6 +302,6 @@
 
     .pagina_subtitulo {
         font-size: large;
-        border-top: 1px solid #6d6e771f;
+        border-top: 1px solid var(--border-bg-color);
     }
 }

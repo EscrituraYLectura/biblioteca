@@ -15,9 +15,9 @@
     text-align: left;
     pointer-events: none;
     position: absolute;
-    background-color: #242429;
-    color: #82838b;
-    border: 1px solid #6d6e771f;
+    background-color: var(--tooltip-bg-color);
+    color: var(--label-text-color);
+    border: 1px solid var(--border-bg-color);
     border-radius: 4px;
     padding: 0.7rem;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);

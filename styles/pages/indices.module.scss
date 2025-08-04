@@ -4,8 +4,8 @@
     flex-direction: column;
     height: 100%;
     overflow: auto;
-    background-color: #1a1a1e;
-    border-top: 1px solid #6d6e771f;
+    background-color: var(--inner-bg-color);
+    border-top: 1px solid var(--border-bg-color);
     font-size: medium;
 
     .table_container_indices {
@@ -25,7 +25,7 @@
         }
 
         .i_mas_info {
-            color: #969696;
+            color: var(--label-text-color);
         }
 
         ul {
@@ -40,9 +40,9 @@
 
 .sidebar_indices {
     width: 190px;
-    background-color: #121214;
-    border-right: 1px solid #6d6e771f;
-    border-top: 1px solid #6d6e771f;
+    background-color: var(--outer-bg-color);
+    border-right: 1px solid var(--border-bg-color);
+    border-top: 1px solid var(--border-bg-color);
     position: sticky;
     top: 0;
     display: flex;
@@ -62,14 +62,14 @@
                 display: block;
                 padding: 0.5rem;
                 border-radius: 8px;
-                background-color: #121214;
+                background-color: var(--outer-bg-color);
                 transition: background-color 0.1s ease-out;
                 color: #82838b;
                 text-decoration: none;
 
                 &:hover {
-                    background-color: #1d1d1e;
-                    color: #efeff0;
+                    background-color: var(--item-bg-color-hover);
+                    color: var(--label-text-color);
                 }
             }
         }
@@ -77,8 +77,8 @@
 }
 
 .barra_separadora {
-    border-top: 1px solid #6d6e771f;
-    color: #121214;
+    border-top: 1px solid var(--border-bg-color);
+    color: var(--border-bg-color);
     margin: 0 -1rem;
 }
 
@@ -90,21 +90,21 @@
 
     button {
         padding: 0.4rem;
-        border: 1px solid #97979f33;
-        background-color: #121214;
+        border: 1px solid var(--border-bg-color);
+        background-color: var(--outer-bg-color);
         cursor: pointer;
-        color: #82838b;
+        color: var(--label-text-color);
         width: 100%;
         transition: background-color 0.2s ease-out,color 0.2 ease-out;
 
         &:hover:not(:disabled) {
-            background-color: #1d1d1e;
-            color: #efeff0;
+            background-color: var(--third-bg-color);
+            color: var(--label-text-color);
         }
 
         &:disabled {
-            background-color: #2c2c30;
-            color: white;
+            background-color: var(--item-bg-color-hover);
+            color: var(--label-text-color);
         }
 
         &:nth-child(1) {
@@ -128,8 +128,8 @@
     font-size: small;
     margin: 0 -1rem;
     padding: 0.64rem 1rem;
-    border-bottom: 1px solid #6d6e771f;
-    background-color: #121214;
+    border-bottom: 1px solid var(--border-bg-color);
+    background-color: var(--outer-bg-color);
     position: sticky;
     top: 0;
     z-index: 4;
@@ -152,6 +152,6 @@
 
     .pagina_subtitulo {
         font-size: large;
-        border-top: 1px solid #6d6e771f;
+        border-top: 1px solid var(--border-bg-color);
     }
 }
