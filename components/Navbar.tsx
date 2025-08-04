@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Popup from "@/components/Popup"
 import { canSendReport, recordReport } from "@/utils/reportLimiter";
 import stylesNavbar from "@/styles/components/navbar.module.scss";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function NavBar() {
     const router = useRouter();
@@ -28,6 +29,7 @@ export default function NavBar() {
             </div>
             <div className={stylesNavbar.navbar_info}>
                 <ul>
+                    <ThemeSwitcher />
                     <li onClick={() => setActivePopup("reportar-eyl")} className={stylesNavbar.navbar_report}>❌</li>
                     {activePopup === "reportar-eyl" && (
                         <Popup onClose={() => setActivePopup(null)}>
