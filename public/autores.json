@@ -792,6 +792,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Diego Hurtado de Mendoza",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Dolores Veintimilla",
     "Sexo": "Mujer",
     "País": "Ecuador",
