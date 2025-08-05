@@ -9,6 +9,7 @@
     top: 0;
     position: sticky;
     z-index: 4;
+    color: var(--title-text-color);
 }
 
 .contenedor_estadisticas {
@@ -52,7 +53,7 @@
 }
 
 .tag {
-    color: var(--label-text-color);
+    color: var(--paragraph-text-color);
     border: 1px solid var(--border-bg-color);
     background-color: var(--field-bg-color);
     border-radius: 8px;
@@ -63,13 +64,13 @@
 
     &:hover {
         background-color: var(--third-bg-color);
-        color: var(--label-text-color);
+        color: var(--paragraph-text-color);
     }
 }
 
 .tag.selected {
     background-color: var(--item-bg-color-hover);
-    color: var(--label-text-color);
+    color: var(--paragraph-text-color);
 }
 
 // Estilos para pantallas pequeñas (teléfonos)

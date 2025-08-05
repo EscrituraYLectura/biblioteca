@@ -39,14 +39,14 @@
     color: #dde0eb;
 }
 
-.editado_activado {
-    background-color: #ce9c5c;
-}
-
 .bs_3 {
     border-radius: 0.5rem;
     background-color: #202024;
     color: #f57976;
+}
+
+.editado_activado {
+    background-color: #ce9c5c;
 }
 
 // Tabla de resultados
@@ -94,7 +94,7 @@
             user-select: none;
             margin-left: 0.5rem;
             font-size: 0.75rem;
-            color: var(--label-text-color);
+            color: var(--title-text-color);
             font-weight: normal;
         }
     }
@@ -129,7 +129,6 @@
 
 .barra_separadora {
     border-top: 1px solid var(--border-bg-color);
-    color: var(--border-bg-color);
     margin: 0 -1rem;
 }
 
@@ -160,7 +159,7 @@
 }
 
 .tag {
-    color: var(--label-text-color);
+    color: var(--paragraph-text-color);
     border: 1px solid var(--border-bg-color);
     background-color: var(--field-bg-color);
     border-radius: 8px;
@@ -171,13 +170,13 @@
 
     &:hover {
         background-color: var(--third-bg-color);
-        color: var(--label-text-color);
+        color: var(--paragraph-text-color);
     }
 }
 
 .tag.selected {
     background-color: var(--item-bg-color-hover);
-    color: var(--label-text-color);
+    color: var(--title-text-color);
 }
 
 .libro_editado {
@@ -289,6 +288,7 @@
     position: sticky;
     top: 0;
     z-index: 4;
+    color: var(--title-text-color);
 }
 
 // Estilos para pantallas pequeñas (teléfonos)

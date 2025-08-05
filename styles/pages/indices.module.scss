@@ -25,7 +25,7 @@
         }
 
         .i_mas_info {
-            color: var(--label-text-color);
+            color: var(--paragraph-text-color);
         }
 
         ul {
@@ -69,7 +69,7 @@
 
                 &:hover {
                     background-color: var(--item-bg-color-hover);
-                    color: var(--label-text-color);
+                    color: var(--paragraph-text-color);
                 }
             }
         }
@@ -78,7 +78,6 @@
 
 .barra_separadora {
     border-top: 1px solid var(--border-bg-color);
-    color: var(--border-bg-color);
     margin: 0 -1rem;
 }
 
@@ -93,18 +92,18 @@
         border: 1px solid var(--border-bg-color);
         background-color: var(--outer-bg-color);
         cursor: pointer;
-        color: var(--label-text-color);
+        color: var(--paragraph-text-color);
         width: 100%;
         transition: background-color 0.2s ease-out,color 0.2 ease-out;
 
         &:hover:not(:disabled) {
             background-color: var(--third-bg-color);
-            color: var(--label-text-color);
+            color: var(--paragraph-text-color);
         }
 
         &:disabled {
             background-color: var(--item-bg-color-hover);
-            color: var(--label-text-color);
+            color: var(--paragraph-text-color);
         }
 
         &:nth-child(1) {
@@ -133,6 +132,7 @@
     position: sticky;
     top: 0;
     z-index: 4;
+    color: var(--title-text-color);
 }
 
 // Estilos para pantallas pequeñas (teléfonos)

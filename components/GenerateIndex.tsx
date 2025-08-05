@@ -207,7 +207,7 @@ export default function GenerateIndex() {
                     <button onClick={() => changeView("autores")} disabled={!bookView}>Por autor</button>
                 </div>
 
-                <hr className={stylesIndex.barra_separadora}/>
+                <div className={stylesIndex.barra_separadora}></div>
 
                 <ul>
                     {letters.map((letter) => (

@@ -257,7 +257,7 @@ export default function GenerateTable() {
                     Borrar filtros
                 </button>
 
-                <hr className={stylesSearcher.barra_separadora}/>
+                <div className={stylesSearcher.barra_separadora}></div>
 
                 <label htmlFor="título">Título:</label>
                 <input
@@ -351,7 +351,7 @@ export default function GenerateTable() {
                 onChange={(e) => updateFilter("saga", e.target.value)}
                 />
 
-                <hr className={stylesSearcher.barra_separadora}/>
+                <div className={stylesSearcher.barra_separadora}></div>
 
                 <label htmlFor="sexo">Sexo del autor:</label>
                 <select id="sexo" name="sexo" value={filters.sexo || ""} onChange={(e) => updateFilter("sexo", e.target.value)}>
@@ -430,7 +430,7 @@ export default function GenerateTable() {
                             <tr key={index} className={book.Editado ? stylesSearcher.libro_editado : undefined}>
                                 <td>
                                     {book.Enlace !== "" ? <a href={book.Enlace} target="_blank">{book.Título}</a> : book.Título}
-                                    {book.Otros !== "" ? <TooltipInternal text="✚">Otras ediciones: {book.Otros}</TooltipInternal> : undefined}
+                                    {book.Otros !== "" ? <TooltipInternal text="✚"><b>Otras ediciones:</b> {book.Otros}</TooltipInternal> : undefined}
                                 </td>
                                 <td>{book.Autor}</td>
                                 {!isMobile && (
