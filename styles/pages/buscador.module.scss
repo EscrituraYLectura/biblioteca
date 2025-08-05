@@ -41,7 +41,6 @@
 
 .bs_3 {
     border-radius: 0.5rem;
-    background-color: #202024;
     color: #f57976;
 }
 
@@ -138,18 +137,18 @@
 }
 
 .estilo_tipo_morado {
-    background-color: #4b2951;
-    color: #f1a8ff;
+    background-color: var(--purple-type-style-bg-color);
+    color: var(--purple-type-style-text-color);
 }
 
 .estilo_tipo_azul {
-    background-color: #293851;
-    color: #a8c8ff;
+    background-color: var(--blue-type-style-bg-color);
+    color: var(--blue-type-style-text-color);
 }
 
 .estilo_tipo_verde {
-    background-color: #3a5129;
-    color: #caffa8;
+    background-color: var(--green-type-style-bg-color);
+    color: var(--green-type-style-text-color);
 }
 
 .tag_container {
@@ -180,12 +179,12 @@
 }
 
 .libro_editado {
-    background-color: #25201c;
-    border-left: 2px solid #ce9c5c;
+    background-color: var(--edited-book-bg-color);
+    border-left: 3px solid var(--edited-book-bar-bg-color);
     transition: background-color 0.2s ease-out;
 
     &:hover {
-        background-color: #312d29;
+        background-color: var(--edited-book-bg-color-hover);
     }
 }
 
