@@ -21,6 +21,7 @@ interface Book {
     Idioma: string;
     Original: string;
     Saga: string;
+    Editorial: string;
     Otros: string;
     Subido: string;
     Formato: string;
@@ -466,6 +467,11 @@ export default function GenerateTable() {
                                                     <b>Saga:</b> {book.Saga}
                                                 </span>
                                             )}
+                                            {book.Editorial !== "" && (
+                                                <span>
+                                                    <b>Editorial:</b> {book.Editorial}
+                                                </span>
+                                            )}
                                         </TooltipInternal>
                                     </td>
                                 ) : (
@@ -485,6 +491,11 @@ export default function GenerateTable() {
                                             {book.Saga !== "" && (
                                                 <span>
                                                     <b>Saga:</b> {book.Saga}
+                                                </span>
+                                            )}
+                                            {book.Editorial !== "" && (
+                                                <span>
+                                                    <b>Editorial:</b> {book.Editorial}
                                                 </span>
                                             )}
                                         </TooltipInternal>
