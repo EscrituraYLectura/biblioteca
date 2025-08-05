@@ -445,26 +445,51 @@ export default function GenerateTable() {
                                 {!isMobile && (
                                     <td><span className={`${stylesSearcher.estilo_tipo} ${stylesSearcher[Object.entries(typeStyles).find(([, list]) => list.includes(book.Tipo))?.[0] ?? ""]}`}>{book.Tipo}</span></td>
                                 )}
-                                <td>
-                                    <TooltipInternal text={moreInfoText}>
-                                        {book.Tema !== "" ? (
-                                            <span>
-                                                <b>Tema(s):</b> {book.Tema}<br/>
-                                            </span>
-                                        ) : (
-                                            <span>
-                                                <b>Tema(s):</b> (Aún no hay temas.)<br/>
-                                            </span>
-                                        )}
-                                        <b>Idioma:</b> {book.Idioma}<br/>
-                                        <b>Idioma original:</b> {book.Original}<br/>
-                                        {book.Saga !== "" && (
-                                            <span>
-                                                <b>Saga:</b> {book.Saga}
-                                            </span>
-                                        )}
-                                    </TooltipInternal>
-                                </td>
+                                {isMobile ? (
+                                    <td>
+                                        <TooltipInternal text={moreInfoText}>
+                                            <b>Año de publicación:</b> {book.Publicación}<br/>
+                                            <b>Tipo</b>: {book.Tipo}<br/>
+                                            {book.Tema !== "" ? (
+                                                <span>
+                                                    <b>Tema(s):</b> {book.Tema}<br/>
+                                                </span>
+                                            ) : (
+                                                <span>
+                                                    <b>Tema(s):</b> (Aún no hay temas.)<br/>
+                                                </span>
+                                            )}
+                                            <b>Idioma:</b> {book.Idioma}<br/>
+                                            <b>Idioma original:</b> {book.Original}<br/>
+                                            {book.Saga !== "" && (
+                                                <span>
+                                                    <b>Saga:</b> {book.Saga}
+                                                </span>
+                                            )}
+                                        </TooltipInternal>
+                                    </td>
+                                ) : (
+                                    <td>
+                                        <TooltipInternal text={moreInfoText}>
+                                            {book.Tema !== "" ? (
+                                                <span>
+                                                    <b>Tema(s):</b> {book.Tema}<br/>
+                                                </span>
+                                            ) : (
+                                                <span>
+                                                    <b>Tema(s):</b> (Aún no hay temas.)<br/>
+                                                </span>
+                                            )}
+                                            <b>Idioma:</b> {book.Idioma}<br/>
+                                            <b>Idioma original:</b> {book.Original}<br/>
+                                            {book.Saga !== "" && (
+                                                <span>
+                                                    <b>Saga:</b> {book.Saga}
+                                                </span>
+                                            )}
+                                        </TooltipInternal>
+                                    </td>
+                                )}
                                 <td>
                                     {!reported.includes(book.ID) && (
                                         <button
