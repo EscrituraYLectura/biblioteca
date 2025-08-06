@@ -22,6 +22,7 @@ interface Book {
     Original: string;
     Saga: string;
     Editorial: string;
+    Traducción: string;
     Otros: string;
     Subido: string;
     Formato: string;
@@ -450,7 +451,7 @@ export default function GenerateTable() {
                                     <td>
                                         <TooltipInternal text={moreInfoText}>
                                             <b>Año de publicación:</b> {book.Publicación}<br/>
-                                            <b>Tipo</b>: {book.Tipo}<br/>
+                                            <b>Tipo:</b> {book.Tipo}<br/>
                                             {book.Tema !== "" ? (
                                                 <span>
                                                     <b>Tema(s):</b> {book.Tema}<br/>
@@ -470,6 +471,11 @@ export default function GenerateTable() {
                                             {book.Editorial !== "" && (
                                                 <span>
                                                     <b>Editorial:</b> {book.Editorial}
+                                                </span>
+                                            )}
+                                            {book.Traducción !== "" && (
+                                                <span>
+                                                    <b>Traducido por:</b> {book.Traducción}
                                                 </span>
                                             )}
                                         </TooltipInternal>
@@ -496,6 +502,11 @@ export default function GenerateTable() {
                                             {book.Editorial !== "" && (
                                                 <span>
                                                     <b>Editorial:</b> {book.Editorial}
+                                                </span>
+                                            )}
+                                            {book.Traducción !== "" && (
+                                                <span>
+                                                    <b>Traducido por:</b> {book.Traducción}
                                                 </span>
                                             )}
                                         </TooltipInternal>
