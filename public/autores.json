@@ -552,6 +552,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Carlos Rangel",
+    "Sexo": "Hombre",
+    "País": "Venezuela",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Carlos Ruiz Zafón",
     "Sexo": "Hombre",
     "País": "España",
@@ -855,7 +861,7 @@
     "Nombre": "Eduardo Galeano",
     "Sexo": "Hombre",
     "País": "Uruguay",
-    "Libros": "2"
+    "Libros": "3"
   },
   {
     "Nombre": "Eduardo Gutiérrez",
