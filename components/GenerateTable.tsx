@@ -22,6 +22,7 @@ interface Book {
     Original: string;
     Saga: string;
     Editorial: string;
+    Edición: string;
     Traducción: string;
     Otros: string;
     Subido: string;
@@ -465,12 +466,17 @@ export default function GenerateTable() {
                                             <b>Idioma original:</b> {book.Original}<br/>
                                             {book.Saga !== "" && (
                                                 <span>
-                                                    <b>Saga:</b> {book.Saga}
+                                                    <b>Saga:</b> {book.Saga}<br/>
                                                 </span>
                                             )}
                                             {book.Editorial !== "" && (
                                                 <span>
-                                                    <b>Editorial:</b> {book.Editorial}
+                                                    <b>Editorial:</b> {book.Editorial}<br/>
+                                                </span>
+                                            )}
+                                            {book.Edición !== "" && (
+                                                <span>
+                                                    <b>Edición:</b> {book.Edición}<br/>
                                                 </span>
                                             )}
                                             {book.Traducción !== "" && (
@@ -496,12 +502,17 @@ export default function GenerateTable() {
                                             <b>Idioma original:</b> {book.Original}<br/>
                                             {book.Saga !== "" && (
                                                 <span>
-                                                    <b>Saga:</b> {book.Saga}
+                                                    <b>Saga:</b> {book.Saga}<br/>
                                                 </span>
                                             )}
                                             {book.Editorial !== "" && (
                                                 <span>
-                                                    <b>Editorial:</b> {book.Editorial}
+                                                    <b>Editorial:</b> {book.Editorial}<br/>
+                                                </span>
+                                            )}
+                                            {book.Edición !== "" && (
+                                                <span>
+                                                    <b>Edición:</b> {book.Edición}<br/>
                                                 </span>
                                             )}
                                             {book.Traducción !== "" && (
