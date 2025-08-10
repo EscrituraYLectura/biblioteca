@@ -106,7 +106,7 @@ export default function NavBar() {
                                 Usamos Google Drive para guardar los datos de los libros; puedes ver
                                 el archivo <a href="https://docs.google.com/spreadsheets/d/1KzBwhtz-t_5i1V9vl6FdALE17SM_5Ep9sKwWG2jN-hM/edit?usp=sharing" target="_blank">aquí</a>.
                                 El estilo es una imitación del <a href="https://discord.com/branding" target="_blank">estilo de Discord</a>.
-                                Los datos fueron actualizados por última vez el <b>8 de agosto de 2025</b>.
+                                Los datos fueron actualizados por última vez el <b>10 de agosto de 2025</b>.
                             </p>
                         </Popup>
                     )}
