@@ -1959,7 +1959,7 @@
     "Nombre": "Julio Cortázar",
     "Sexo": "Hombre",
     "País": "Bélgica",
-    "Libros": "6"
+    "Libros": "7"
   },
   {
     "Nombre": "Julio Ramón Ribeyro",
@@ -2118,6 +2118,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Leopoldo Díaz",
+    "Sexo": "Hombre",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Leopoldo Lugones",
     "Sexo": "Hombre",
     "País": "Argentina",
@@ -2169,7 +2175,7 @@
     "Nombre": "Lope de Vega",
     "Sexo": "Hombre",
     "País": "España",
-    "Libros": "5"
+    "Libros": "8"
   },
   {
     "Nombre": "Lord Dusany",
@@ -2188,6 +2194,12 @@
     "Sexo": "Mujer",
     "País": "Canadá",
     "Libros": "9"
+  },
+  {
+    "Nombre": "Ludovico Ariosto",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
   },
   {
     "Nombre": "Ludwig von Mises",
@@ -3045,12 +3057,6 @@
     "Nombre": "Roger Price",
     "Sexo": "Hombre",
     "País": "Estados Unidos",
-    "Libros": "1"
-  },
-  {
-    "Nombre": "Rómulo Gallegos",
-    "Sexo": "Hombre",
-    "País": "Venezuela",
     "Libros": "1"
   },
   {
