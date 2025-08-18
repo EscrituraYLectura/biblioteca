@@ -780,7 +780,7 @@
     "Libros": "1"
   },
   {
-    "Nombre": "Dereck Landy",
+    "Nombre": "Derek Landy",
     "Sexo": "Hombre",
     "País": "Irlanda",
     "Libros": "1"
@@ -2109,6 +2109,12 @@
     "Nombre": "Laura Restrepo",
     "Sexo": "Mujer",
     "País": "Colombia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Leonor de la Cueva y Silva",
+    "Sexo": "Mujer",
+    "País": "España",
     "Libros": "1"
   },
   {
@@ -3513,7 +3519,7 @@
     "Nombre": "Virginia Woolf",
     "Sexo": "Mujer",
     "País": "Inglaterra",
-    "Libros": "5"
+    "Libros": "6"
   },
   {
     "Nombre": "Vita Sackville-West",
