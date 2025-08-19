@@ -69,7 +69,7 @@
     "Nombre": "Albert Camus",
     "Sexo": "Hombre",
     "País": "Algeria",
-    "Libros": "6"
+    "Libros": "7"
   },
   {
     "Nombre": "Alberto Arvelo Torrealba",
@@ -228,6 +228,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Ángela de Acevedo",
+    "Sexo": "Mujer",
+    "País": "Portugal",
+    "Libros": "2"
+  },
+  {
     "Nombre": "Ango Sakaguchi",
     "Sexo": "Hombre",
     "País": "Japón",
@@ -355,6 +361,12 @@
   },
   {
     "Nombre": "Arthur Golden",
+    "Sexo": "Hombre",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Arthur Miller",
     "Sexo": "Hombre",
     "País": "Estados Unidos",
     "Libros": "1"
@@ -582,6 +594,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Caryl Churchill",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
     "Nombre": "César Vallejo",
     "Sexo": "Hombre",
     "País": "Perú",
@@ -615,6 +633,12 @@
     "Nombre": "Chris Pueyo",
     "Sexo": "Hombre",
     "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Christopher Marlowe",
+    "Sexo": "Hombre",
+    "País": "Inglaterra",
     "Libros": "1"
   },
   {
@@ -915,7 +939,7 @@
     "Nombre": "Elena Garro",
     "Sexo": "Mujer",
     "País": "México",
-    "Libros": "1"
+    "Libros": "2"
   },
   {
     "Nombre": "Elías Regules",
@@ -1082,6 +1106,12 @@
   {
     "Nombre": "Federico Lara Peinado",
     "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Feliciana Enríquez de Guzmán",
+    "Sexo": "Mujer",
     "País": "España",
     "Libros": "1"
   },
@@ -1287,6 +1317,12 @@
     "Nombre": "Gérard Genette",
     "Sexo": "Hombre",
     "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gertrudis Gómez de Avellaneda",
+    "Sexo": "Mujer",
+    "País": "Cuba",
     "Libros": "1"
   },
   {
@@ -1938,6 +1974,12 @@
     "Libros": "2"
   },
   {
+    "Nombre": "Juana Escabias",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Juana Manuela Gorriti",
     "Sexo": "Mujer",
     "País": "Argentina",
@@ -2070,6 +2112,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Laila Ripoll Cuetos",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Laini Taylor",
     "Sexo": "Mujer",
     "País": "Estados Unidos",
@@ -2178,6 +2226,12 @@
     "Libros": "3"
   },
   {
+    "Nombre": "Lola Blasco",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Lope de Vega",
     "Sexo": "Hombre",
     "País": "España",
@@ -2187,6 +2241,12 @@
     "Nombre": "Lord Dusany",
     "Sexo": "Hombre",
     "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lorraine Hansberry",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
     "Libros": "1"
   },
   {
@@ -2235,6 +2295,12 @@
     "Nombre": "Lynn Galli",
     "Sexo": "Mujer",
     "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lynn Nottage",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
     "Libros": "1"
   },
   {
@@ -2374,6 +2440,12 @@
     "Sexo": "Mujer",
     "País": "España",
     "Libros": "2"
+  },
+  {
+    "Nombre": "María Velasco",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
   },
   {
     "Nombre": "Mariano José de Larra",
@@ -2544,6 +2616,12 @@
     "Libros": "2"
   },
   {
+    "Nombre": "Miguel Mihura",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Miguel Otero Silva",
     "Sexo": "Hombre",
     "País": "Venezuela",
@@ -2608,6 +2686,12 @@
     "Sexo": "Hombre",
     "País": "China",
     "Libros": "1"
+  },
+  {
+    "Nombre": "Molière",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "2"
   },
   {
     "Nombre": "Montse Bizarro Amat",
@@ -3138,6 +3222,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Sarah Kane",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Sarah Waters",
     "Sexo": "Mujer",
     "País": "Gales",
@@ -3414,6 +3504,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Tirso de Molina",
+    "Sexo": "Hombre",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Tobias S. Buckell",
     "Sexo": "Hombre",
     "País": "Granada",
@@ -3501,7 +3597,7 @@
     "Nombre": "Victor Hugo",
     "Sexo": "Hombre",
     "País": "Francia",
-    "Libros": "2"
+    "Libros": "3"
   },
   {
     "Nombre": "Viktor Emil Frankl",
