@@ -678,6 +678,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Claudia Cecilia Alatorre",
+    "Sexo": "Mujer",
+    "País": "",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Clive Staples Lewis",
     "Sexo": "Hombre",
     "País": "Irlanda",
@@ -1074,6 +1080,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Esquilo",
+    "Sexo": "Hombre",
+    "País": "Grecia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Esteban Echeverría",
     "Sexo": "Hombre",
     "País": "Argentina",
@@ -1342,6 +1354,12 @@
     "Sexo": "Hombre",
     "País": "Estados Unidos",
     "Libros": "3"
+  },
+  {
+    "Nombre": "Griselda Gambaro",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
   },
   {
     "Nombre": "Guillaume Apollinaire",
@@ -1752,6 +1770,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Johann Wolfgang von Goethe",
+    "Sexo": "Hombre",
+    "País": "Alemania",
+    "Libros": "1"
+  },
+  {
     "Nombre": "John Green",
     "Sexo": "Hombre",
     "País": "Estados Unidos",
@@ -1881,6 +1905,12 @@
     "Nombre": "José Saramago",
     "Sexo": "Hombre",
     "País": "Portugal",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "José Zorrilla",
+    "Sexo": "Hombre",
+    "País": "España",
     "Libros": "1"
   },
   {
@@ -2283,6 +2313,12 @@
     "Nombre": "Luis Martín-Santos",
     "Sexo": "Hombre",
     "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Luisa Josefina Hernández",
+    "Sexo": "Mujer",
+    "País": "México",
     "Libros": "1"
   },
   {
@@ -3015,7 +3051,7 @@
     "Nombre": "Ramón María del Valle-Inclán",
     "Sexo": "Hombre",
     "País": "España",
-    "Libros": "2"
+    "Libros": "3"
   },
   {
     "Nombre": "Raúl Castillo",
