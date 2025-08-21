@@ -234,6 +234,12 @@
     "Libros": "2"
   },
   {
+    "Nombre": "Angelina Weld Grimké",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Ango Sakaguchi",
     "Sexo": "Hombre",
     "País": "Japón",
@@ -250,6 +256,12 @@
     "Sexo": "Mujer",
     "País": "Estados Unidos",
     "Libros": "3"
+  },
+  {
+    "Nombre": "Anna Cora Mowatt",
+    "Sexo": "Mujer",
+    "País": "Francia",
+    "Libros": "1"
   },
   {
     "Nombre": "Anna Pólux",
@@ -333,6 +345,12 @@
     "Nombre": "Antonio Velasco Piña",
     "Sexo": "Hombre",
     "País": "México",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Aphra Behn",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
     "Libros": "1"
   },
   {
@@ -684,6 +702,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Claudia Rankine",
+    "Sexo": "Mujer",
+    "País": "Jamaica",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Clive Staples Lewis",
     "Sexo": "Hombre",
     "País": "Irlanda",
@@ -963,6 +987,12 @@
     "Nombre": "Elizabeth Bishop",
     "Sexo": "Mujer",
     "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Elizabeth Inchbald",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
     "Libros": "1"
   },
   {
@@ -1318,6 +1348,12 @@
     "Sexo": "Hombre",
     "País": "Estados Unidos",
     "Libros": "6"
+  },
+  {
+    "Nombre": "George Sand",
+    "Sexo": "Mujer",
+    "País": "Francia",
+    "Libros": "1"
   },
   {
     "Nombre": "Georges Remi (Hergé)",
@@ -2256,6 +2292,12 @@
     "Libros": "3"
   },
   {
+    "Nombre": "Lola Arias",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Lola Blasco",
     "Sexo": "Mujer",
     "País": "España",
@@ -2283,6 +2325,12 @@
     "Nombre": "Louis-Ferdinand Céline",
     "Sexo": "Hombre",
     "País": "Francia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Lourdes Ortiz",
+    "Sexo": "Mujer",
+    "País": "España",
     "Libros": "1"
   },
   {
@@ -2460,6 +2508,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "María Irene Fornés",
+    "Sexo": "Mujer",
+    "País": "Cuba",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Maria Kodama",
     "Sexo": "Mujer",
     "País": "Argentina",
@@ -2476,6 +2530,12 @@
     "Sexo": "Mujer",
     "País": "España",
     "Libros": "2"
+  },
+  {
+    "Nombre": "María Teresa León",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
   },
   {
     "Nombre": "María Velasco",
@@ -2826,6 +2886,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Ntozake Shange",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Oakley Hall",
     "Sexo": "Hombre",
     "País": "Estados Unidos",
@@ -2884,6 +2950,12 @@
     "Sexo": "Hombre",
     "País": "Chile",
     "Libros": "3"
+  },
+  {
+    "Nombre": "Patricia Cornelius",
+    "Sexo": "Mujer",
+    "País": "Australia",
+    "Libros": "1"
   },
   {
     "Nombre": "Patricia Highsmith",
@@ -2998,6 +3070,12 @@
     "Sexo": "Hombre",
     "País": "China",
     "Libros": "8"
+  },
+  {
+    "Nombre": "Quiara Alegría Hudes",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
   },
   {
     "Nombre": "Rabindranath Tagore",
@@ -3405,6 +3483,18 @@
     "Nombre": "Susan Elizabeth Phillips",
     "Sexo": "Mujer",
     "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Susan Glaspell",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Susanna Centlivre",
+    "Sexo": "Mujer",
+    "País": "Inglaterra",
     "Libros": "1"
   },
   {
