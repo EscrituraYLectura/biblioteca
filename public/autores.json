@@ -954,6 +954,12 @@
     "Libros": "2"
   },
   {
+    "Nombre": "Efua Theodora Sutherland",
+    "Sexo": "Mujer",
+    "País": "Ghana",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Egeria",
     "Sexo": "Mujer",
     "País": "España",
@@ -970,6 +976,12 @@
     "Sexo": "Mujer",
     "País": "México",
     "Libros": "2"
+  },
+  {
+    "Nombre": "Elfriede Jelinek",
+    "Sexo": "Hombre",
+    "País": "Austria",
+    "Libros": "1"
   },
   {
     "Nombre": "Elías Regules",
@@ -1131,6 +1143,12 @@
     "Nombre": "Eurípides",
     "Sexo": "Hombre",
     "País": "Grecia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Eve Ensler",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
     "Libros": "1"
   },
   {
@@ -2703,7 +2721,7 @@
     "Nombre": "Miguel de Unamuno",
     "Sexo": "Hombre",
     "País": "España",
-    "Libros": "3"
+    "Libros": "4"
   },
   {
     "Nombre": "Miguel Hernández",
@@ -2791,6 +2809,12 @@
   },
   {
     "Nombre": "Montse Bizarro Amat",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Monzaemon Chikamatsu",
     "Sexo": "Hombre",
     "País": "",
     "Libros": "1"
@@ -3048,6 +3072,12 @@
     "Libros": "4"
   },
   {
+    "Nombre": "Philippe Quinault",
+    "Sexo": "Hombre",
+    "País": "Francia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Pierre Ceria",
     "Sexo": "Hombre",
     "País": "",
@@ -3081,6 +3111,12 @@
     "Nombre": "Rabindranath Tagore",
     "Sexo": "Hombre",
     "País": "India",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Rachel Crothers",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
     "Libros": "1"
   },
   {
@@ -3399,6 +3435,12 @@
     "Nombre": "Sohn Won-pyung",
     "Sexo": "Mujer",
     "País": "Corea del Sur",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Sophie Treadwell",
+    "Sexo": "Mujer",
+    "País": "Estados Unidos",
     "Libros": "1"
   },
   {
@@ -3774,6 +3816,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "W. B. Yeats",
+    "Sexo": "Hombre",
+    "País": "Irlanda",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Waldo Japussy",
     "Sexo": "Hombre",
     "País": "",
@@ -3879,6 +3927,18 @@
     "Nombre": "Yosa Buson",
     "Sexo": "Hombre",
     "País": "Japón",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Young Jean Lee",
+    "Sexo": "Mujer",
+    "País": "Corea del Sur",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Yu Li",
+    "Sexo": "Mujer",
+    "País": "China",
     "Libros": "1"
   },
   {
