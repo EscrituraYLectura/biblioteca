@@ -2520,6 +2520,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "María Elena Walsh",
+    "Sexo": "Mujer",
+    "País": "Argentina",
+    "Libros": "1"
+  },
+  {
     "Nombre": "María Esther Vázquez",
     "Sexo": "Mujer",
     "País": "Argentina",
@@ -2535,6 +2541,12 @@
     "Nombre": "Maria Kodama",
     "Sexo": "Mujer",
     "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "María Lejárraga",
+    "Sexo": "Mujer",
+    "País": "España",
     "Libros": "1"
   },
   {
