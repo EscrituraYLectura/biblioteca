@@ -102,6 +102,12 @@
     "Libros": "4"
   },
   {
+    "Nombre": "Alessandro Guidi",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Alex Rawlings",
     "Sexo": "Hombre",
     "País": "Inglaterra",
@@ -136,6 +142,12 @@
     "Sexo": "Mujer",
     "País": "Argentina",
     "Libros": "2"
+  },
+  {
+    "Nombre": "Alfonso X de Castilla",
+    "Sexo": "Hombre",
+    "País": "",
+    "Libros": "1"
   },
   {
     "Nombre": "Alice Oseman",
@@ -237,6 +249,12 @@
     "Nombre": "Angelina Weld Grimké",
     "Sexo": "Mujer",
     "País": "Estados Unidos",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Angelo Poliziano",
+    "Sexo": "Hombre",
+    "País": "Italia",
     "Libros": "1"
   },
   {
@@ -516,6 +534,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Burchiello",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Byung-Chul Han",
     "Sexo": "Hombre",
     "País": "Corea del Sur",
@@ -618,6 +642,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Cecco Angiolieri",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "César Vallejo",
     "Sexo": "Hombre",
     "País": "Perú",
@@ -669,6 +699,12 @@
     "Nombre": "Ciara Smyth",
     "Sexo": "Mujer",
     "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Cino da Pistoia",
+    "Sexo": "Hombre",
+    "País": "Italia",
     "Libros": "1"
   },
   {
@@ -750,6 +786,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Cristina Peri Rossi",
+    "Sexo": "Mujer",
+    "País": "Uruguay",
+    "Libros": "6"
+  },
+  {
     "Nombre": "Cristóbal de Virués",
     "Sexo": "Hombre",
     "País": "España",
@@ -778,6 +820,12 @@
     "Sexo": "Hombre",
     "País": "España",
     "Libros": "1"
+  },
+  {
+    "Nombre": "Dante Alighieri",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "3"
   },
   {
     "Nombre": "David Crespo",
@@ -1314,9 +1362,27 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Gabriello Chiabrera",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Galeazzo di Tarsia",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Garci Rodríguez de Montalvo",
     "Sexo": "Hombre",
     "País": "España",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Gaspara Stampa",
+    "Sexo": "Mujer",
+    "País": "Italia",
     "Libros": "1"
   },
   {
@@ -1398,7 +1464,19 @@
     "Libros": "3"
   },
   {
+    "Nombre": "Giosuè Carducci",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "4"
+  },
+  {
     "Nombre": "Giovanni Boccaccio",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Giovanni della Casa",
     "Sexo": "Hombre",
     "País": "Italia",
     "Libros": "1"
@@ -1413,6 +1491,18 @@
     "Nombre": "Griselda Gambaro",
     "Sexo": "Mujer",
     "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Guido Cavalcanti",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Guido Guinizzelli",
+    "Sexo": "Hombre",
+    "País": "Italia",
     "Libros": "1"
   },
   {
@@ -1908,6 +1998,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "José Ángel Buesa",
+    "Sexo": "Hombre",
+    "País": "Cuba",
+    "Libros": "1"
+  },
+  {
     "Nombre": "José Antonio Marina",
     "Sexo": "Hombre",
     "País": "España",
@@ -2361,12 +2457,18 @@
     "Nombre": "Ludovico Ariosto",
     "Sexo": "Hombre",
     "País": "Italia",
-    "Libros": "1"
+    "Libros": "2"
   },
   {
     "Nombre": "Ludwig von Mises",
     "Sexo": "Hombre",
     "País": "Ucrania",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Luís de Camões",
+    "Sexo": "Hombre",
+    "País": "Portugal",
     "Libros": "1"
   },
   {
@@ -2664,6 +2766,18 @@
     "Libros": "6"
   },
   {
+    "Nombre": "Matteo Bandello",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Matteo Maria Boiardo",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "2"
+  },
+  {
     "Nombre": "Matthew Lewis",
     "Sexo": "Hombre",
     "País": "Inglaterra",
@@ -2712,16 +2826,16 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Michelangelo Buonarroti",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "2"
+  },
+  {
     "Nombre": "Miguel Ángel Asturias",
     "Sexo": "Hombre",
     "País": "Guatemala",
     "Libros": "3"
-  },
-  {
-    "Nombre": "Miguel Ángel Buonarroti",
-    "Sexo": "Hombre",
-    "País": "Italia",
-    "Libros": "1"
   },
   {
     "Nombre": "Miguel de Cervantes Saavedra",
@@ -3060,6 +3174,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Paulo Leminski",
+    "Sexo": "Hombre",
+    "País": "Brasil",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Pedro Calderón de la Barca",
     "Sexo": "Hombre",
     "País": "España",
@@ -3093,6 +3213,12 @@
     "Nombre": "Pierre Ceria",
     "Sexo": "Hombre",
     "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Pietro Bembo",
+    "Sexo": "Hombre",
+    "País": "Italia",
     "Libros": "1"
   },
   {
@@ -3207,7 +3333,7 @@
     "Nombre": "Reginald Horace Blyth",
     "Sexo": "Hombre",
     "País": "Inglaterra",
-    "Libros": "1"
+    "Libros": "2"
   },
   {
     "Nombre": "René Guénon",
@@ -3732,6 +3858,12 @@
     "Libros": "1"
   },
   {
+    "Nombre": "Torquato Tasso",
+    "Sexo": "Hombre",
+    "País": "Italia",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Truman Capote",
     "Sexo": "Hombre",
     "País": "Estados Unidos",
@@ -3753,6 +3885,12 @@
     "Nombre": "Valeria Calvo Chaves",
     "Sexo": "Mujer",
     "País": "",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Veronica Gambara",
+    "Sexo": "Mujer",
+    "País": "Italia",
     "Libros": "1"
   },
   {
