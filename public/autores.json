@@ -624,6 +624,12 @@
     "Libros": "3"
   },
   {
+    "Nombre": "Carmen Jodra Davó",
+    "Sexo": "Mujer",
+    "País": "España",
+    "Libros": "1"
+  },
+  {
     "Nombre": "Carmen Laforet",
     "Sexo": "Mujer",
     "País": "España",
@@ -3423,6 +3429,12 @@
     "Nombre": "Roberto Arlt",
     "Sexo": "Hombre",
     "País": "Argentina",
+    "Libros": "1"
+  },
+  {
+    "Nombre": "Robin Sharma",
+    "Sexo": "Hombre",
+    "País": "Canadá",
     "Libros": "1"
   },
   {
